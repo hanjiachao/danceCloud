@@ -1,0 +1,8 @@
+<!--pages/aboutUs/aboutUs.wxml-->
+<view class="bg"></view>
+<view class="login-logo" wx:if="{{show}}">
+	<view wx:for="{{list}}" wx:for-index="index" wx:for-item="item" bindtap="selectCity" data-name="{{item.name}}" data-level="{{item.level}}" data-id="{{item.id}}">
+		<image src="../../images/a_06.png"></image>
+		{{item.name}}
+	</view>
+</view>

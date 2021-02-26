@@ -1,0 +1,72 @@
+<!--pages/search/search.wxml-->
+<view class="bg"></view>
+		<view class="content-box">
+			<view class="search_view">
+				<view class="searchPage">
+					<image src="../../images/a_43.png" class='a_43'></image>
+					<view class="search_box cancel-box">
+						<view class="left"><image src="../../images/a_10.png"></image></view>
+						<view class="search cancel-search">
+							<view class="shu"></view>
+							<view class='button' bindtap="cancelSearch">取消</view>
+						</view>
+						<view class="center"><input type="text" placeholder="请输入商品名称..."  bindchange="shoopinginput" value="{{info.skey}}"/></view>
+					</view>
+				</view>
+				<view class="Collage-menu ul">
+					<view class="{{'li ' + (typename == '商品'?'active':'')}}" bindtap="shoppingClick" data-name="商品">
+						商品
+						<view class="xian"></view>
+					</view>
+					<view class="{{'li ' + (typename == '拼团'?'active':'')}}" bindtap="shoppingClick" data-name="拼团">
+						拼团
+						<view class="xian"></view>
+					</view>
+				</view>
+			</view>
+			<view style="height: 108px;"></view>
+		<view class="my-release detail-current">
+			<view class="ul" wx:if="{{searchsta}}">
+				<view class="order li" wx:if="{{typename == '商品'}}" wx:for="{{list}}" wx:for-index="index" wx:for-item="item" bindtap="shoopdetail" data-id="{{item.go_id}}">
+					<view class="left">
+						<label class="contact">
+							<image src="{{item.go_logo}}" class="order-tu"></image>
+						</label>
+					</view>
+					<view class="right index-right">
+						<label>
+							{{item.go_name}}
+						</label>
+						<view style="height:20px"></view>
+						<label class="jiage">
+							￥{{item.go_price}}
+						</label>
+					</view>
+					<view class="clearfix"></view>
+				</view>
+				<view class="order li" wx:if="{{typename == '拼团'}}" wx:for="{{list}}" wx:for-index="index" wx:for-item="item" bindtap="shoopdetail" data-id="{{item.go_id}}">
+					<view class="left">
+						<label class="contact">
+							<image src="{{item.go_logo}}" class="order-tu"></image>
+						</label>
+					</view>
+					<view class="right index-right">
+						<label>
+							{{item.go_name}}
+						</label>
+						<label class="two">
+							还差 <span>{{item.number}}</span>人成团
+						</label>
+						<label  class="three">
+							拼团价格：<span>￥{{item.go_group_price}}</span>   <view class="enter right">立即参团</view>
+							<view class="clearfix"></view>
+						</label>
+					</view>
+					<view class="clearfix"></view>
+				</view>
+			</view>
+			<view wx:if="{{!searchsta}}" class="nosta">
+                暂无商品
+			</view>
+		</view>
+	</view>

@@ -1,0 +1,27 @@
+<!--pages/musicList/musicList.wxml-->
+<view class="conts">
+  <view class="head">
+    <image src="{{info.al_cover}}"></image>
+    <view class="top">
+      <image src="../../images/CD01.png"></image>
+      <view class="img">
+        <image src="{{info.al_cover}}"></image>
+      </view>
+    </view>
+  </view>
+  <view class="tit">
+    <view class="text">{{info.al_name}}</view>
+    <image src="../../images/a_25.png"></image>
+  </view>
+  <view class="list">
+    <view class="item" wx:for="{{musicList}}" wx:key="index" data-index="{{index}}" bindtap="playMusic">
+      <view class="img">
+        <image src="{{item.mu_cover}}"></image>
+      </view>
+      <view class="msg">
+        <view class="name">{{item.mu_name}}</view>
+        <view class="text">{{info.al_name}}</view>
+      </view>
+    </view>
+  </view>
+</view>

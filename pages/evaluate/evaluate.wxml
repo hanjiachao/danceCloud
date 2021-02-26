@@ -1,0 +1,60 @@
+<!--pages/evaluate/evaluate.wxml-->
+<view v-cloak v-if="{{show}}">
+	<view class="bgb"></view>
+	<view class="content-box" >
+		<view class="evaluate-box">
+			<view class="evaluate-one ul" wx:for="{{info}}" wx:key="{{index}}">
+				<view class="li"><image src="{{item.go_logo}}"></image></view>
+				<view class="li">{{item.go_name}}</view>
+				<view class="clearfix"></view>
+			</view>
+			<view class="evaluate-two">
+				<image src="../../images/a_105.png" class="a_105"></image>
+				<span>商品评级</span>
+				<view class="evaluate-star ul">
+					<view class="li" wx:for="{{star}}" wx:item="item" wx:index="{{index}}" bindtap="selectStar" data-index="{{item}}">
+						<image src="../../images/a_106.png" class="a_106" wx:if="{{item <= curr_index}}"></image>
+						<image src="../../images/a_107.png" class="a_106" wx:else></image>
+					</view>
+					<view class="clearfix"></view>
+				</view>
+				<view class="clearfix"></view>
+			</view>
+			<view class="evaluate-two">
+				<textarea placeholder="请在此处写下您对商品的评价....." class="evaluate-textarea" placeholder-class="phcolor" bindinput="evaluteinput"></textarea>
+			</view>
+			<view class="release-tu community">
+				<view class="li" wx:for="{{image}}" wx:key="{{index}}">
+					<view class="deleteimage" bindtap="delimage" data-index="{{index}}">
+                       <image src="../../images/a_63.png"></image>
+					</view>
+					<span>
+						<image src="{{item}}" class="add1"></image>
+					</span>
+				</view>
+				<view class="li" bindtap="selectimage" wx:if="{{lengthimage < 9}}">
+					<span>
+						<image src="../../images/add1.png" class="add1"></image>
+					</span>
+				</view>
+				<view class="clearfix"></view>
+			</view>
+		</view>
+	</view>
+	<!--确定发布-->
+	<view class="evaluate-btn">
+		<view class='ul active'>
+			<view class="li">
+				<view class='niming' bindtap="showName">
+					<image src="../../images/a_75.png" wx:if="{{eva.is_show == '否'}}"></image>
+					<image src="../../images/a_75_s.png" wx:if="{{eva.is_show == '是'}}"></image>
+				</view>
+				<radio  name="choice" hidden="true"/>
+				<label>匿名</label></view>
+			<view class="li" bindtap="uploadFile">提交</view>
+			<view class="clearfix"></view>
+		</view>
+	</view>
+	<!--确定发布-->
+
+</view>

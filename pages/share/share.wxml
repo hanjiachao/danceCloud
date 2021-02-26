@@ -1,0 +1,31 @@
+<view wx:if="{{isshow}}">
+	<view class="bgs"></view>
+	<view class="content-box">
+		<view class="daka">
+			<button open-type="share" class="shareBtn"></button>
+		</view>
+		<view class="bg_share">
+			<image src="../../images/shareBg.jpg"></image>
+		</view>
+		<view class="share-content">
+			<view class="tou">
+				<image src="{{info.headimg}}"></image>
+			</view>
+			<p class="">{{info.nickname}}</p>
+			<view class="share-title">
+				<image src="../../images/yongjin.png"></image>
+				<!--<span>分享好友得佣金</span>
+                <img class="right" src="images/lineRight.png">-->
+			</view>
+			<view class="erweima">
+				<image src="{{info.qrcode}}" class="erweima-tu"></image>
+			</view>
+			<image src="../../images/VIP.png" class="share_vip" wx:if="{{info.grade != '小白'}}"></image>
+			<image src="../../images/a_121.png" class="a_121" wx:if="{{info.grade == '群舞小草'}}"></image>
+			<image src="../../images/a_123.png" class="a_121" wx:if="{{info.grade == '领舞绿叶'}}"></image>
+			<image src="../../images/a_125.png" class="a_121" wx:if="{{info.grade == '独舞红花'}}"></image>
+			<image src="../../images/a_127.png" class="a_121" wx:if="{{info.grade == '首席大咖'}}"></image>
+		</view>
+	</view>
+
+</view>

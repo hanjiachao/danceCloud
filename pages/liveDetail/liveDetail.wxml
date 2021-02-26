@@ -1,0 +1,102 @@
+<!--pages/liveDetail/liveDetail.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+<view class="bgb"></view>
+<view class="content-box"  wx:if="{{show}}">
+  <!--<image src="../../image/b_08.png" class="b_08"></image>-->
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height:200px;">
+    <block wx:for="{{detail.dc_images}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="detail-box">
+    <p>{{detail.dc_name}}</p>
+    <p>
+      <!--<span class="lan">团购价格：<span class="price-lan">￥399</span></span>-->
+      <span class="price-lan" wx:if="{{detail.dc_now_price != 0}}">￥{{detail.dc_now_price}}</span>
+      <span class="price-lan" wx:else>免费</span>
+      <span class="hui">
+        ￥{{detail.dc_old_price}}
+        <image src="../../images/a_67.png" class="a_67"></image>
+      </span>
+      <image src="../../images/a_26.png" class="a_26" wx:if="{{!collect_status}}" bindtap="collect"></image>
+      <image src="../../images/a_26_s.png" class="a_26" wx:if="{{collect_status}}" bindtap="collect"></image>
+      <image src="../../images/a_25.png" class="a_25" bindtap="share"></image>
+    </p>
+    <p>
+      <span>观看人数：</span><span style="margin-right:5px;color: #29D5D0">{{detail.dc_see_num}}</span>
+      <span>购买人数：</span><span style="color: #29D5D0">{{detail.dc_buy_num}}</span>
+    </p>
+    <p class="youhui one">
+      <image src="../../images/a_21.png" class="a_21"></image>可用代金券
+      <image src="../../images/a_22.png" class="a_21 quan"></image>会员优惠{{member_discount}}折
+    </p>
+    <p class="youhui">
+      <image src="../../images/a_23.png" class="a_21"></image>可用积分
+    </p>
+  </view>
+  <view class="content-detail"  style="margin-bottom:{{detail.dc_now_price != 0 && order_no == ''?0:54}}px">
+    <image src="../../images/detail.png" class="a_12"></image>
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+  </view>
+  <!--确定-->
+ <view wx:if="{{detail.dc_now_price != 0}}">
+   <view class="confirm-box" bindtap="menu" wx:if="{{order_no == '' && !isIos}}">
+     <view class="button">立即购买</view>
+   </view>
+   <view class="confirm-box" bindtap="canvideo" wx:if="{{order_no != ''}}">
+     <view class="button">立即观看</view>
+   </view>
+ </view>
+  <view class="confirm-box" bindtap="canvideo" wx:else>
+    <view class="button">立即观看</view>
+  </view>
+  <!--确定-->
+</view>
+<!-- 赠送会员 -->
+<view class="member" wx:if="{{!member_status && order_no == ''}}">
+  <view class="withdrawContent">
+    <p class="title">
+      <image src="../../images/a_29.png" class="a_29"></image>提示</p>
+    <p class="text">
+      <!-- 购买会员可享受{{member_discount}}折优惠 是否前去购买？ -->
+      {{buy_prompt}}
+    </p>
+    <view class="btnGroup">
+      <view class="cancel" bindtap='cancelmember'>否</view>
+      <view class="submit" bindtap='next_two'>是</view>
+    </view>
+  </view>
+  <view class="withdrawContent">
+    <p class="title">
+      <image src="../../images/a_29.png" class="a_29"></image>提示</p>
+    <p class="text">
+      <!-- 购买会员可享受{{member_discount}}折优惠 是否前去购买？ -->
+      {{buy_prompt}}
+    </p>
+    <view class="btnGroup">
+      <view class="cancel" style='margin: 0 auto;' bindtap='cancelmember'>OK</view>
+      <!-- <view class="submit" bindtap='next_two'>是</view> -->
+    </view>
+  </view>
+</view>
+<!-- 赠送会员 -->
+<!-- 分享 -->
+<view class="share" wx:if="{{sharebtn}}" bindtap="shareSta">
+  <view class="withdrawContent">
+    <ul class="ul">
+      <view class="li">
+        <button open-type="share" class="shareBtn"></button>
+        <!--<image src="../../images/a_44.png" class="a_44"></image>-->
+        <p class="share_p">微信</p>
+      </view>
+      <view class="li" catchtap="shareGroup">
+        <image src="../../images/a_45.png" class="a_45"></image>
+        <p>社群</p>
+      </view>
+      <view class="clearfix"></view>
+    </ul>
+  </view>
+</view>
+<!-- 分享 -->

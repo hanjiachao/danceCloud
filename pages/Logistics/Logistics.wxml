@@ -1,0 +1,38 @@
+<view v-cloak wx:if="{{show}}">
+	<view class="bgb"></view>
+	<view class="my-release detail-current">
+		<view class="ul">
+			<view class="order li">
+				<view class="left">
+					<label class="contact">
+						<image src="{{image}}" class="order-tu"></image>
+					</label>
+				</view>
+				<view class="right index-right">
+					<view>
+						{{express}}快递
+					</view>
+					<!-- <view style="height:20px"></view> -->
+					<view class="">
+						运单编号：{{express_no}}
+					</view>
+				</view>
+				<view class="clearfix"></view>
+			</view>
+		</view>
+	</view>
+	<view class="logistics">
+		<view class="ul" wx:for="{{list}}" wx:key="{{index}}">
+			<view class="li">
+				<image src="../../images/a_72.png" class="a_c" wx:if="{{(list.length-1) != index}}"></image>
+			</view>
+			<view class="li">
+				<image src="../../images/a_103.png" class="a_104" wx:if="{{index == 0}}"></image>
+				<image src="../../images/a_104.png" class="a_103" wx:else></image>
+			</view>
+			<view class="li">{{item.remark}}<span class="lan">{{item.datetime}}</span>
+				正在为您派件</view>
+			<view class="clearfix"></view>
+		</view>
+	</view>
+</view>

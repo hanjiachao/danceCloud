@@ -1,0 +1,232 @@
+/* pages/DC-pay-success/DC-pay-success.wxss */
+/*dc代言人成功*/
+.share-dc{
+	background: #fff;
+	position: absolute;
+	z-index:222;
+	width:48px;
+	height:48px;
+	border-radius: 50%;
+	text-align: center;
+	margin:0 auto;
+	top:10px;
+	right:15px;
+}
+button::after {
+	border: none;
+}
+.shareBtn{
+	display: block;
+	width:100%;
+	position:absolute;
+	z-index:33333333333333;
+	top:40px;
+	height:40px;
+	left:0px;
+	background:rgba(0,0,0,0);
+
+}
+.shares {
+	position: absolute;
+	right: 6px;
+	top: 6px;
+	width: 7px;
+	height: 7px;
+	display: block;
+	margin: 0 !important;
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAlCAYAAADFniADAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjcyRDQxQzM1ODMxQzExRTg4NUE4OERGNTI3OEQ2NTY2IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjcyRDQxQzM2ODMxQzExRTg4NUE4OERGNTI3OEQ2NTY2Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NzJENDFDMzM4MzFDMTFFODg1QTg4REY1Mjc4RDY1NjYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NzJENDFDMzQ4MzFDMTFFODg1QTg4REY1Mjc4RDY1NjYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5WaM9zAAACYElEQVR42uyYT0hUURSHZ6xRNPyzU6hFIrpwE6aoK1EwIkoRWoq60RLBRS4EESzJTaUbCYtQiMhAlAgJF4rQIlFbVQujXChhC3GhIg7qwvE7cIKHvTfemffG3mIOfNwZ7p07v3veOefe+4KRSCTgN0sJ+NCSokztolNH8cq3OzQPoAIuOQzrhOdR5r8AT+ErTMLB6QErxdf++VHQLtARNEDTC7/hI2w5/OkE/IgiKg2+QxFswxt4JVpiEoWgOpppneAePzqM5mrGm4RILdyHen06n2FUvMf8YZOY6oY1aDtLkKEdwyzchQIYhkJ4DTssasQkpsphBEFHHsXtVWiEWzp3yNIXOvXd0VOpsOuBmOvwQb0uMZqhXmqFJR3ziMW3GWefC8uGJxKPsK/ZJ/GzqsIkcSqhA17EVBLitBKYgnx4qRm8bRErCVQVTZDXom7Ae/WOfJ639GVqsJdBE7yNq3jGaFXqhXW4qfXNajVQCs0wHndFj8EKVNAfqIZNmzHSnwXhhO991BhZ1DvdTm47CPprYdN53XqqU2tPC/z876cEvJRD8xA+6Zbki6NLu6Z5j4s5QizusieimCiolXnBUp3jMTka/fLKU6WadW4fW4biiahabWf8dByWjFtjM93wk6gi6+nRL6JytYL7SpQE596532bOMDkrffGVKAJ8PJBAs3t8R1qpz8Ny7cLATtQiNFC10xIsKB3kwrtsImpIbyBjCRSWrrvBFXhmekPup+mDDT3ob3ooKE89JBtxH/H52EiUCpN7Wpe+S8j0UNSuPrJBmDN+l5B8FZQU5cJOBBgAwtGY5CP+B6kAAAAASUVORK5CYII=);
+	background-size: 100% 100%;
+	border: none !important;
+	outline: none !important;
+	padding:10px;
+	border-radius: 50%;
+}
+.dc-success{
+	position: relative;
+}
+.dc-success .li {
+    background-color: transparent;
+    font-size: 14px;
+}
+.dc-success  .li .left {
+    float: left;
+	width: 70px;
+	margin-top: 12px;
+}
+.comment-tu {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 7px;
+}
+.dc-detail .ul .li .left {
+    margin-right: 10px;
+}
+.my-release .ul .li .left {
+    float: left;
+}
+.dc-tu{
+	width: 60px;
+    height: 60px;
+    margin-right: 15px;
+    border-radius: 30px;
+}
+.dc-success  .li .index-right {
+    float: left;
+    width: calc(100% - 70px);
+}
+.dc-success  .li .index-right  label{
+	color: white;
+	font-size: 14px;
+	display: block;
+	margin: 5px 0;
+}
+.dc-success  .li .index-right  .dengji span{
+	color: #fff66e;
+}
+.dc-success  .li .index-right  .dengji{
+	color: #fff;
+}
+.content-dc{
+	padding: 10px 15px;
+}
+.dc-success  .li .index-right  .dengji .Explain{
+	padding: 1px 8px;
+	background-color: #fff;
+	border-radius: 12px;
+	margin-left: 10px;
+	color: #29D5D0;
+}
+.jdt {
+	width: 45%;
+	height: 7px;
+	background: rgba(255,255,255,0.5);
+	border: 1px solid #fff;
+	border-radius: 12px;
+	margin-top: 16px;
+	position: relative;
+  	margin-right: 8px;
+	overflow: hidden;
+}
+.erweima-tu{
+	width: 92%;
+    vertical-align: middle;
+    margin-top: 5px;
+}
+
+.jdtI {
+	height: 7px;
+	background: #fff66e;
+	border-radius: 12px 0px 0px 12px;
+	margin-top: 16px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.jindu{
+	color: #fff;
+	margin-bottom: 18px;
+	font-size:14px;
+}
+.molecule{
+	color: #fff66e;
+}
+span {
+    display: inline-block;
+}
+.tream{
+	padding: 10px 20px 0;
+	background-color: white;
+	border-radius: 10px;
+}
+.tream p{
+	line-height: 30px;
+	color: #29D5D0;
+	text-align: center;
+	font-size:14px;
+}
+.tream p span{
+	color: #ff2c5e;
+	font-size: 16px;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+.dc-detail .li{
+	padding: 0px 0px ;
+}
+.dc-detail .ul .li .left {
+   margin-right: 15px;
+}
+.dc-detail .ul .li .index-right {
+    float: left;
+    line-height: 40px;
+    width: calc(100% - 65px);
+    font-size:14px;
+
+}
+.dc-detail .ul .order .right label {
+    line-height: 50px;
+    height: 50px;
+	font-size: 12px;
+}
+.dc-detail .ul .order .gong{
+	color: #999;
+	float: right;
+	font-size: 12px;
+}
+.dc-detail .order {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 10px 0px;
+}
+.share-dc{
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	background-color: white;
+	text-align: center;
+	position: absolute;
+	top: 5px;
+	right: 0px;
+}
+.share-dc image{
+	width: 60%;
+	height: 60%;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 7px;
+}
+.description{
+	padding: 50px 15px 0px 15px;
+}
+/*dc代言人成功*/
+.withdrawContent .text input{
+	border: 1px solid #29D5D0;
+	border-radius: 16px;
+	width: 90%;
+	height: 32px;
+	line-height: 32px;
+	margin: 5px 5%;
+}
+.pos{
+    position: fixed;
+	width:100%;
+	left:0px;
+	height: 100%;
+	top:0px;
+	z-index:888888;
+	background: rgba(0,0,0,.5);
+}
+.pos_ml{
+	position: absolute;
+	width:100%;
+	height:100px;
+	background: #fff;
+	bottom: 0px;
+	font-size: 14px;
+}
+.pos_ml view{
+	border-bottom: 1px solid #cccccc;
+	line-height: 50px;
+	padding-left:15px;
+	color: #000;
+}

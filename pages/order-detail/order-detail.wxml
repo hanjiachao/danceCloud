@@ -1,0 +1,215 @@
+<view v-cloak wx:if="{{show}}">
+    <view class="bgb"></view>
+    <view class="content-box">
+
+        <view class="jyxx or" wx:if="{{address.length == 0}}">
+            <view>
+                <view style="margin-top:14px;">地址暂无</view>
+                <view class="local"><image src="../../images/a_71.png" class="a_53"></image></view>
+            </view>
+        </view>
+        <view class="jyxx or"  wx:else>
+            <view>
+                <view>{{address.ua_name}} <view class="fl_right">{{address.ua_mobile}}</view></view>
+                <view class="address">{{address.ua_province}}{{address.ua_city}}{{address.ua_county}}{{address.ua_address}}</view>
+                <view class="local"><image src="../../images/a_71.png" class="a_53"></image></view>
+            </view>
+        </view>
+    </view>
+    <view class="menu_detail">
+        <view class="detail_li">
+            订单编号：{{list.gor_order_no}}
+        </view>
+        <view class="detail_li">
+            订单状态：
+            <view class="detail_span">
+                {{status}}
+            </view>
+        </view>
+        <view class="detail_li">
+            订单日期：{{list.time}}
+        </view>
+        <view class="detail_li">
+            订单备注：{{list.gor_remark}}
+        </view>
+    </view>
+    <view class="menu_detail menu_kl" wx:for="{{list.detail}}" wx:key="{{index}}">
+        <view class="detai_img">
+            <image src="{{item.go_logo}}"></image>
+        </view>
+        <view class="detail_content">
+            <view class="detail_title">
+                {{item.go_name}}
+            </view>
+            <view class="color_style">
+                已选：{{item.god_specs}}
+            </view>
+            <view class="num_style">
+                <view class="num" wx:if="{{list.gor_goods_type == '拼团'}}">
+                    团购价格:￥{{item.go_group_price}}
+                </view>
+                <view class="num" wx:if="{{list.gor_goods_type == '商品'}}">
+                    价格:￥{{item.god_price}}
+                </view>
+                <view class="num_kl">
+                    数量：×{{item.god_number}}
+                </view>
+            </view>
+        </view>
+
+    </view>
+    <view class="add_num">
+        实付：
+        <view class="">
+            ￥{{list.gor_read_price}}
+        </view>
+    </view>
+    <view class="my-release comment-detail order-comment" wx:if="{{list.gor_status == '已评价'}}">
+        <view class="comment_title"><image src="../../images/a_110.png" class="a_110"></image>评价详情</view>
+        <view>
+            <view class="order ">
+                <view class="left">
+                    <view class="contact">
+                        <image src="{{list.headimg}}" class="comment-tu"></image>
+                    </view>
+                </view>
+                <view class="right index-right">
+                    <view class="collectionc">
+                        {{list.nickname}}
+                    </view>
+
+                </view>
+                <view class="star ul">
+                    <view class="li" wx:for="{{star}}" wx:key="{{index_star}}" wx:for-item="item_star">
+                        <image src="../../images/a_106.png" class="a_106" wx:if="{{item_star <= list.gor_evaluation_star}}"></image>
+                        <image src="../../images/a_107.png" class="a_106" wx:else></image>
+                    </view>
+                    <view class="clearfix"></view>
+                </view>
+                <view class="clearfix"></view>
+                <!--<view class="star" wx:if="list.nickname == '匿名'">-->
+                    <!--匿名评价-->
+                <!--</view>-->
+
+                <view class="clearfix"></view>
+                <view>
+                    {{list.gor_evaluation}}
+                </view>
+                <view class="eva_image">
+                    <view wx:for="{{list.image}}" wx:key="{{index}}" wx:for-item="item" class="eva_li" bindtap="lookImage" data-item="{{item}}">
+                        <image src="{{item}}"></image>
+                    </view>
+                </view>
+                <view class="comment-time">
+                    {{list.evaluation_time}}
+                </view>
+                <view class="clearfix"></view>
+            </view>
+        </view>
+    </view>
+    <view style="height:60px;"></view>
+    <!--确定发布-->
+    <view class="confirm-box" wx:if="{{list.gor_status == '待支付'}}">
+        <view class="confirm_box_ul">
+            <view class="confirm_box_btn" bindtap="cancelmoney">取消</view>
+            <view class="confirm_cancel_btn" bindtap="paymoney">付款</view>
+            <view class="clearfix"></view>
+        </view>
+    </view>
+    <view class="confirm-box" wx:if="{{list.gor_status == '已收货'}}">
+        <view class="confirm_box_ul">
+            <view class="confirm_cancel_btn" style="width:100%;" bindtap="eva">评价</view>
+            <view class="clearfix"></view>
+        </view>
+    </view>
+    <view class="confirm-box" wx:if="{{list.gor_status == '已取消'}}">
+        <view class="confirm_box_ul">
+            <view class="confirm_cancel_btn" style="width:100%;" bindtap="delmenu">删除</view>
+            <view class="clearfix"></view>
+        </view>
+    </view>
+    <view class="confirm-box" wx:if="{{status == '待成团'}}">
+        <view class="confirm_box_ul">
+            <view class="confirm_cancel_btn" style="width:100%;" bindtap="share">分享</view>
+            <view class="clearfix"></view>
+        </view>
+    </view>
+    <view class="confirm-box" wx:if="{{status == '未成团'}}">
+        <view class="confirm_box_ul">
+            <view class="confirm_cancel_btn" style="width:100%;" bindtap="delmenu">删除</view>
+            <view class="clearfix"></view>
+        </view>
+    </view>
+
+    <!--确定发布-->
+    <!--确定发布-->
+    <view class="confirm-box" wx:if="{{list.gor_status == '已发货'}}">
+        <view class="confirm_box_ul">
+            <view class="confirm_box_btn" bindtap="logistics">查看物流</view>
+            <view class="confirm_cancel_btn" bindtap="suregoods">确认收货</view>
+            <view class="clearfix"></view>
+        </view>
+    </view>
+    <!--确定发布-->
+    <!--取消订单-->
+    <view class="member" wx:if="{{showDel}}">
+        <view class="withdrawContent">
+            <view class="title">
+                <image src="../../images/a_29.png" class="a_29"></image>
+                提示
+            </view>
+            <view class="text">
+                确定要取消订单吗？
+            </view>
+            <view class="btnGroup">
+                <view class="cancel" bindtap="hideDel">否</view>
+                <view class="submit" bindtap="cancelmenu">是</view>
+            </view>
+        </view>
+    </view>
+    <!--取消订单-->
+    <view class="member" wx:if="{{delmenusta}}">
+        <view class="withdrawContent">
+            <view class="title">
+                <image src="../../images/a_29.png" class="a_29"></image>
+                提示
+            </view>
+            <view class="text">
+                确定要删除订单吗？
+            </view>
+            <view class="btnGroup">
+                <view class="cancel" bindtap="hidemenu">否</view>
+                <view class="submit" bindtap="delmenusure">是</view>
+            </view>
+        </view>
+    </view>
+    <!-- 分享 -->
+    <view class="shares" bindtap="shareSta" wx:if="{{isshare}}">
+        <view class="withdrawContent">
+            <ul class="ul">
+                <view class="li" bindtap="shareGroup">
+                    <image src="../../images/a_45.png" class="a_45"></image>
+                    <p>社群</p>
+                </view>
+                <view class="clearfix"></view>
+            </ul>
+        </view>
+    </view>
+<!-- 分享 -->
+    <!--确定收货-->
+    <view class="member" wx:if="{{showgoods}}">
+        <view class="withdrawContent">
+            <view class="title">
+                <image src="../../images/a_29.png" class="a_29"></image>
+                提示
+            </view>
+            <view class="text">
+                确定要收货吗？
+            </view>
+            <view class="btnGroup">
+                <view class="cancel" bindtap="hidegoods">否</view>
+                <view class="submit" bindtap="sure">是</view>
+            </view>
+        </view>
+    </view>
+</view>

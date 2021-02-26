@@ -1,0 +1,37 @@
+<view class="my-release comment-detail " wx:if="{{show}}">
+    <view class="ul">
+        <view class="order comment li" wx:for="{{list}}" wx:key="{{index}}" wx:for-item="item">
+            <view class="left">
+                <label class="contact">
+                    <image src="{{item.us_headimg}}" class="comment-tu"></image>
+                </label>
+            </view>
+            <view class="right index-right">
+                <label class="collectionc">
+                    {{item.us_nickname}}
+                </label>
+            </view>
+            <view class="star ul">
+                <view class="li" wx:for="{{star}}" wx:key="{{index_star}}" wx:for-item="item_star">
+                    <image src="../../images/a_106.png" class="a_106" wx:if="{{item_star <= item.gor_evaluation_star}}"></image>
+                    <image src="../../images/a_107.png" class="a_106" wx:else></image>
+                </view>
+                <view class="clearfix"></view>
+            </view>
+
+            <view class="clearfix"></view>
+            <view class='pingjia'>
+                {{item.gor_evaluation}}
+            </view>
+            <view class="eva_image">
+                <view wx:for="{{item.image}}" wx:key="{{index}}" wx:for-item="info" class="eva_li" bindtap="lookImage" data-item="{{info}}" data-src="{{item.image}}">
+                    <image src="{{info}}"></image>
+                </view>
+            </view>
+            <view class="comment-time">
+                {{item.time}}
+            </view>
+            <view class="clearfix"></view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,6 @@
+/* pages/news-detail/news-detail.wxss */
+/*消息详情*/
+.content-box .msgDetail {border-bottom: 1px solid rgb(252,252,252);position: relative;padding: 20px 0 30px;background: #fff}
+    .content-box .msgDetail p{max-height: 100px;line-height: 20px;padding: 0 5%;overflow: hidden;font-size: 14px;display: block}
+    .content-box .msgDetail span{position: absolute;color: #999;right: 5%;font-size: 14px;bottom: 10px;}
+/*消息详情*/

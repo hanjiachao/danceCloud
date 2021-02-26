@@ -1,0 +1,54 @@
+<!--pages/search/search.wxml-->
+<view class="bg"></view>
+		<view class="content-box">
+		<view class="search_view">
+			<view class="searchPage">
+				<image src="../../images/a_43.png" class='a_43'></image>
+				<view class="search_box cancel-box">
+					<view class="left"><image src="../../images/a_10.png"></image></view>
+					<view class="search cancel-search">
+						<view class="shu"></view>
+						<view class='button' bindtap="cancelSearch">取消</view>
+					</view>
+					<view class="center"><input type="text" placeholder="请输入课程名称..." bindchange="shoopinginput" value="{{info.skey}}"/></view>
+				</view>
+			</view>
+			<view class="Collage-menu ul">
+				<view class="{{'li ' + (typename == '课程'?'active':'')}}" bindtap="shoppingClick" data-name="课程">
+					课程
+					<view class="xian"></view>
+				</view>
+				<view class="{{'li ' + (typename == '拼团'?'active':'')}}" bindtap="shoppingClick" data-name="拼团">
+					拼团
+					<view class="xian"></view>
+				</view>
+			</view>
+		</view>
+			<view style="height: 108px;"></view>
+		<view wx:if="{{!livesta}}" class="nosta">
+	       暂无课程
+		</view>
+		<view wx:if="{{livesta}}">
+		<view class="Collage-box">
+		 <view class="Collage" wx:if="{{typename == '课程'}}" wx:for="{{list}}" wx:for-index="index" wx:for-item="item" bindtap="shoopdetail" data-id="{{item.dc_id}}" data-type="课程">
+			 <image src="{{item.dc_cover}}" class='b_10'></image>
+			 <view class="Collage-title">
+				 <p>{{item.dc_name}}</p>
+				 <view class="price price-box" wx:if="{{item.dc_now_price != 0}}">￥{{item.dc_now_price}}</view>
+				 <view class="price price-box" wx:else>免费</view>
+			 </view>
+		 </view>
+	 </view>
+	 <view class="Collage-box">
+		 <view class="Collage" wx:if="{{typename == '拼团'}}" wx:for="{{list}}" wx:for-index="index" wx:for-item="item" bindtap="shoopdetail" data-id="{{item.dg_id}}" data-order_no = "{{item.order_no}}" data-dg_status = "{{item.dg_status}}" data-type="拼团">
+			 <image src="{{item.dg_cover}}" class='b_10'></image>
+			 <view class="Collage-title">
+				 <p>{{item.dg_name}}</p>
+				 <p>拼团价格：<span>￥{{item.dg_price}}</span>还差 <span>{{item.dg_need_user}}</span> 人成团</p>
+				 <view class="enter button" data-id="{{item.dg_id}}" wx:if="{{item.dg_status == '已参团'}}">已参团</view>
+				 <view class="enter button" catchtap="collagedetail" data-id="{{item.dg_id}}" wx:else>立即参团</view>
+			 </view>
+		 </view>
+	 </view>
+		</view>
+	</view>

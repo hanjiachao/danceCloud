@@ -1,0 +1,55 @@
+/* pages/myMusic/myMusic.wxss */
+page{
+  background: #F0F0F0;
+}
+.cont .head{
+  height: 65rpx;
+  padding: 0 30rpx;
+  display: flex;
+  align-items: center;
+}
+.cont .head image{
+  width: 26rpx;
+  height: 26rpx;
+}
+.cont .head .tit{
+  margin-left: 20rpx;
+  font-size: 28rpx;
+  background: linear-gradient(to right, #4DCFF9, #6379FF);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.panel{
+  background: #FFFFFF;
+  height: 310rpx;
+  padding: 20rpx 30rpx;
+}
+.panel .list{
+  white-space: nowrap;
+}
+.panel .item{
+  display: inline-block;
+  width: 200rpx;
+  margin-right: 45rpx;
+}
+.panel .item:last-child{
+  margin-right: 0;
+}
+.panel .item .img{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+  overflow: hidden
+}
+.panel .item .img image{
+  width: 100%;
+  height: 100%;
+}
+.panel .item .text{
+  color: #181818;
+  font-size: 24rpx;
+  margin-top: 20rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

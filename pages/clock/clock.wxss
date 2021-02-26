@@ -1,0 +1,55 @@
+/* pages/clock/clock.wxss */
+/*打卡*/
+.bg{position: fixed;width: 100%;height: 100%;display: block;left: 0;top: 0;z-index: -1}
+.ul{padding: 20px 15px 0}
+.ul .li{background: #fff;float: left;margin: 10px 5px;color: rgb(40,213,209);}
+.ul .li .day{text-align: center;font-size: 16px;}
+.ul .li.clock{background: rgb(255,252,111) !important;color: rgb(40,213,209) !important;}
+.ul .li.today{background: rgb(255,80,145);color: #fff}
+
+.group p {
+    line-height: 20px;
+    text-align: center;
+    color: #29D5D0;
+    display: block
+}
+.closery{
+  position: absolute;
+  right: 0;
+  top: 10px;
+  width:30px;
+  z-index: 100;
+  text-align: center;
+  line-height: 20px;
+  font-size: 14px;
+}
+.member .withdraw {
+    width: 80%;
+    left: 10%;
+    top: calc(30% - 90px);
+    border-radius: 6px;
+    position: fixed;
+}
+.close {
+    padding: 0px 8px;
+    background-color: #29D5D0;
+    border-radius: 8px;
+    color: white;
+    margin-top: 6px;
+}
+.member .withdraw image {
+    width: 100%;
+    position: relative;
+    height: 196px;
+}
+.group {
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    left: 20% !important;
+    margin-left: 0 !important;
+    display: block;
+    width: 60%;
+    font-size: 14px;
+}
+/*打卡*/

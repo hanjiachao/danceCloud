@@ -1,0 +1,47 @@
+<!--pages/addressBook/addressBook.wxml-->
+<view class="bgb"></view>
+<view class="content-box" wx:if="{{isShow}}">
+    <view class="null" wx:if="{{list.length == 0}}">暂无地址</view>
+    <view class="list-adress ul" wx:for="{{list}}" wx:key="{{index}}" bindtap="address" data-item="{{item}}">
+        <view class="li">
+            <view class="p">{{item.ua_name}}
+                <view class="span">{{item.ua_mobile}}</view>
+            </view>
+            <view class="p">{{item.ua_province}}{{item.ua_city}}{{item.ua_county}}</view>
+            <view class="handless">
+                <view class="checkbox active" catchtap="changeDefault" data-id="{{item.ua_id}}" data-index="{{index}}">
+                    <image class="input"
+                           src="{{item.ua_default == '是'?'../../images/a_75_s.png':'../../images/a_75.png'}}"></image>
+                    <radio hidden="true"/>
+                    <label class="{{item.ua_default=='是'?'active':''}}">默认地址</label>
+                </view>
+                <view class="a" class="revise" catchtap="edit" data-id="{{item.ua_id}}" data-index="{{index}}">
+                    <image src="../../images/a_74.png" class="a_74"></image>
+                    编辑
+                </view>
+                <view class="a" class="del" catchtap="showDel" data-id="{{item.ua_id}}" data-index="{{index}}">
+                    <image src="../../images/a_73.png" class="a_73"></image>
+                    删除
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="confirm-box">
+        <view class="button" bindtap="addAddress">添加地址</view>
+    </view>
+    <view class="member" wx:if="{{showDel}}">
+        <view class="withdrawContent">
+            <view class="title">
+                <image src="../../images/a_29.png" class="a_29"></image>
+                提示
+            </view>
+            <view class="text">
+                确定删除吗？
+            </view>
+            <view class="btnGroup">
+                <view class="cancel" bindtap="hideDel">否</view>
+                <view class="submit" bindtap="del">是</view>
+            </view>
+        </view>
+    </view>
+</view>

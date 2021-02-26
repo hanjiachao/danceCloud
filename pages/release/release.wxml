@@ -1,0 +1,32 @@
+<!--pages/release/release.wxml-->
+<view class="content-box" wx:if="{{isShow}}">
+    <textarea type="text" placeholder="在这里编辑您发布的内容……" class="textarea" placeholder-class="phcolor" bindinput='inputChange' data-field="title" value="{{data.title}}"></textarea>
+    <view class="release-box">
+        <view class="release-tu community ul">
+            <view class="li" wx:for="{{imgList}}" wx:key="{{index}}">
+                <span wx:if="{{type == 'img'}}">
+                    <image src="{{item}}" mode="aspectFill" style='height:{{width}}px'></image>
+                    <image src="../../images/a_51.png" class="a_51" bindtap="del" data-index="{{index}}"></image>
+                </span>
+                <span wx:if="{{type == 'video'}}">
+                    <video src="{{item}}"></video>
+                </span>
+            </view>
+            <view class="li add" bindtap="choice" wx:if="{{imgList.length < 9 && type != 'video'}}">
+                <image src="../../images/a_49.png" style='height:{{width}}px'></image>
+            </view>
+            <view class="clearfix"></view>
+        </view>
+    </view>
+    <view class="confirm-box">
+        <view class="ul">
+            <view class="li" bindtap="clear">取消</view>
+            <view class="li" bindtap="uploadFile">发布</view>
+            <view class="clearfix"></view>
+        </view>
+    </view>
+    <view wx:if="{{showChoice}}" class="choice" bindtap="hideChoice">
+        <view catchtap="choiceImg">图片</view>
+        <view catchtap="choiceVideo">视频</view>
+    </view>
+</view>

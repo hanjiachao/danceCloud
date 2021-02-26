@@ -1,0 +1,18 @@
+<!--pages/aboutUs/aboutUs.wxml-->
+<view  class="course">
+    <view wx:for="{{list}}" wx:key="{{index}}" wx:for-item="item" class="course_lk" bindtap="videoLook" data-cc_id="{{item.cc_id}}" data-vid="{{item.vid}}" data-userid="{{item.userid}}" data-room_id="{{item.room_id}}">
+        <view class="course_ul">
+            <image src="{{item.image}}"></image>
+        </view>
+        <view class="course_title">
+            <view class="cell">
+                <view class="content">
+                    {{item.name}}
+                </view>
+            </view>
+        </view>
+        <view class="live">
+            {{item.type}}
+        </view>
+    </view>
+</view>

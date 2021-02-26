@@ -1,0 +1,84 @@
+/* pages/my-new/my-new.wxss */
+/*我的消息*/
+.content-box .nav .ul .li {
+	width: 33.3%;
+}
+
+.a_53 {
+	width: 15px;
+}
+
+.content-box .jyxx {
+	background: #fff;
+	position: relative;
+}
+
+.content-box .jyxx .li {
+	border-bottom: 6px solid #F0F0F0;
+    padding: 20px 0 50px;
+    height: 28px;
+}
+.jyxx-box .jyxx .li {
+    border-bottom: 1px solid #F0F0F0;
+    height: 48px;
+    line-height: 48px;
+    padding: 0px 0px;
+    position: relative;
+}
+.content-box .jyxx .li p {
+	height: 30px;
+	line-height: 15px;
+	padding: 0 5%;
+	overflow: hidden;
+	font-size: 14px;
+	display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;
+overflow: hidden;
+
+}
+.jyxx-box .jyxx .li p{
+	line-height: 48px;
+	height: 48px;
+	overflow: hidden;
+text-overflow:ellipsis;
+white-space: nowrap;
+}
+.content-box .jyxx .li span:nth-child(2) {
+	position: absolute;
+	color: #777;
+	left: 5%;
+	font-size: 14px;
+	bottom: 10px;
+}
+
+.content-box .jyxx .li span:nth-child(3) {
+	position: absolute;
+	color: #777;
+	right: 5%;
+	font-size: 14px;
+	bottom: 10px;
+}
+
+.content-box .jyxx .li .new {
+	position: absolute;
+	background: rgb(245, 38, 116);
+	width: 6px;
+	height: 6px;
+	border-radius: 3px;
+	top: 22px;
+	left: calc(3% - 3px)
+}
+.cancel-new {
+    height: 48px;
+    width: 80px;
+    background-color: #ff2c5e;
+    line-height: 48px;
+    text-align: center;
+    color: white;
+    float: right;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+/*我的消息*/

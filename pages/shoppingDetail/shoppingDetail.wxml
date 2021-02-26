@@ -1,0 +1,221 @@
+<!--pages/shoppingDetail/shoppingDetail.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+<view class="bgb"></view>
+<view class="content-box" wx:if="{{show}}">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height:200px;">
+        <block wx:for="{{list.image}}">
+            <swiper-item>
+                <image src="{{item}}" class="slide-image"/>
+            </swiper-item>
+        </block>
+    </swiper>
+  <view class="detail-box">
+    <p>{{list.go_name}}</p>
+    <p>
+      <span class="lan" wx:if="{{list.go_type == '拼团'}}">团购价格：<span class="price-lan">￥{{list.go_group_price}}</span></span>
+      <view wx:if="{{list.go_type == '商品'}}">
+          <span class="price-lan">￥{{list.go_price}}</span>
+      </view>
+      <image src="../../images/a_26.png" class="a_26" wx:if="{{list.collect == '未收藏' && list.go_type == '商品'}}" bindtap="getCollect" data-type="未收藏"></image>
+       <image src="../../images/a_26_s.png" class="a_26" wx:if="{{list.collect == '已收藏' && list.go_type == '商品'}}" bindtap="getCollect" data-type="已收藏"></image>
+      <image src="../../images/a_25.png" class="a_25" bindtap="share"></image>
+    </p>
+    <view class="huise" wx:if="{{list.go_type == '拼团'}}">成团人数
+      <span class="red">{{list.go_group_number}}</span> 人 还差
+      <span class="red">{{list.number}}</span> 人成团</view>
+    <view class="youhui one">
+      <image src="../../images/a_21.png" class="a_21"></image>可用代金券
+      <image src="../../images/a_22.png" class="a_21 quan"></image>会员优惠{{list.member_discount}}折</view>
+    <view class="youhui">
+      <image src="../../images/a_23.png" class="a_21"></image>可用积分{{list.go_use_integral}}抵现金{{list.go_integral_price}}元
+      <image src="../../images/a_24.png" class="a_21 quan"></image>满{{list.go_full}}减{{list.go_minus}}</view>
+  </view>
+  	<view class="setting-form">
+				<view class="ul">
+					<view class="first li" bindtap="joincart">
+						<view class="left">
+							<span>
+                       规格
+                    </span>
+                </view>
+                <view class="right1">
+                    {{specename}}<span><image src="../../images/a_06.png" class="a_06"></image></span>
+                </view>
+                <view class="clearfix"></view>
+            </view>
+            <view class="second li" wx:if="{{count_evaluation > 0}}">
+					<view class="left">
+						<span>
+                      <image src="../../images/a_59.png" class="a_37"></image>
+                    </span>
+                </view>
+                <view class="right1" bindtap="evaAll">
+                    全部评价 <span class="lan">{{count_evaluation}}</span><span><image src="../../images/a_06.png" class="a_06"></image></span>
+                </view>
+                <view class="clearfix"></view>
+            </view>
+        </view>
+    </view>
+    
+    <view class="my-release comment-detail ">
+			<view class="ul">
+				<view class="order comment li" wx:for="{{evaluation}}" wx:key="{{index}}" wx:for-item="item" wx:if="{{evaluation.length != 0}}">
+					<view class="left">
+						<label class="contact">
+                    	<image src="{{item.us_headimg}}" class="comment-tu"></image>
+                    </label>
+					</view>
+					<view class="right index-right">
+						<label class="collectionc">
+                       {{item.us_nickname}}
+                    </label>
+					</view>
+					<view class="star ul">
+                        <view class="li" wx:for="{{star}}" wx:key="{{index_star}}" wx:for-item="item_star">
+                            <image src="../../images/a_106.png" class="a_106" wx:if="{{item_star <= item.gor_evaluation_star}}"></image>
+                            <image src="../../images/a_107.png" class="a_106" wx:else></image>
+                        </view>
+                        <view class="clearfix"></view>
+                    </view>
+
+					<view class="clearfix"></view>
+					<view class='pingjia'>
+                        {{item.gor_evaluation}}
+                    </view>
+                    <view class="eva_image">
+                        <view wx:for="{{item.image}}" wx:key="{{index}}" wx:for-item="info" class="eva_li" bindtap="lookImage" data-item="{{info}}" data-src="{{item.image}}">
+                            <image src="{{info}}"></image>
+                        </view>
+                    </view>
+                    <view class="comment-time">
+                        {{item.time}}
+                    </view>
+                    <view class="clearfix"></view>
+				</view>
+			</view>
+  <view class="content-detail">
+    <image src="../../images/detail.png" class="a_12"></image>
+      <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+  </view>
+  <!--确定-->
+  <view class="confirm-box" wx:if="{{list.go_type == '拼团' && list.status == '未拼团'}}" bindtap="joincart">
+    <view class="button">立即参团</view>
+  </view>
+  <view class="confirm-box" wx:if="{{list.go_type == '拼团' && list.status == '已拼团'}}">
+    <view class="button">您已参加过该拼团</view>
+  </view>
+ <view class="confirm-box" wx:if="{{list.go_type == '商品'}}">
+    <view class="cart" bindtap="cart">
+        <image src="../../images/a_17.png"></image>
+        <view class="cartnum" wx:if="{{list.cart_count > 0}}">{{list.cart_count}}</view>
+        <view class="cartname">购物车</view>
+    </view>
+     <view class="cartlist">
+         <view class="btn_join" bindtap="joincart">
+             加入购物车
+         </view>
+         <view class="btn_liji" bindtap="purchase">
+             立即购买
+         </view>
+     </view>
+ </view>
+  <!--确定-->
+</view>
+<!-- 加入购物车 -->
+    <view class="fixed" wx:if="{{cartSta}}">
+        <view class="cart_b">
+            <view class="cart_m">
+                <view class="cart_image">
+                    <image src="{{list.go_logo}}"></image>
+                </view>
+                <view class="det_name" bindtap="cancelCart">
+                    <image src="../../images/a_63.png"></image>
+                </view>
+                <view class="cart_shoos">
+                    <view class="shoos_name">{{list.go_name}}</view>
+                    <view class="shoos_price">
+                        ￥{{common_price}}
+                    </view>
+                </view>
+            </view>
+            <view class="cart_color">
+                <view class="cart_c">{{list.go_specs_name}}</view>
+                <view class="cart_ul">
+                    <view class="{{'cart_li ' + (current_index == index ? 'active':'')}}" wx:for="{{list.list}}" wx:for-item="item" wx:for-index="index" bindtap="selectcolor" data-num="{{item.number}}" data-specs="{{item.specs}}" data-index="{{index}}">
+                        {{item.specs}}
+                    </view>
+                </view>
+
+            </view>
+            <view class="cart_color">
+                <view class="cart_right">
+                    <view class="add_title" bindtap="addnum" data-type="1">-</view>
+                    <view class="add_input"><input type="number" value="{{number}}" bindinput="addtitle" bindchange="numchange"/></view>
+                    <view class="add_title" bindtap="addnum" data-type="2">+</view>
+                </view>
+                <view class="cart_c">购买数量</view>              
+            </view>
+            <view class="cartlists" wx:if="{{list.go_type == '商品'}}">
+                <view class="btn_join btn_ma" bindtap="joinShop">
+                    加入购物车
+                </view>
+                <view class="btn_liji" bindtap="purchasebtn">
+                    立即购买
+                </view>
+            </view>
+            <view class="cartlists" wx:if="{{list.go_type == '拼团'}}">
+                <view class="btn_joins" bindtap="purchasebtn">
+                    立即拼团
+                </view>
+            </view>
+        </view>
+    </view>
+<!-- 加入购物车 -->
+<!-- 赠送会员 -->
+<view class="member" wx:if="{{ismembershow}}">
+  <view class="withdrawContent">
+    <p class="title">
+      <image src="../../images/a_29.png" class="a_29"></image>提示</p>
+    <p class="text">
+      购买会员可享受0.88折优惠 是否前去购买？
+    </p>
+    <view class="btnGroup">
+      <view class="cancel" bindtap='cancel'>否</view>
+      <view class="submit" bindtap='next_two'>是</view>
+    </view>
+  </view>
+</view>
+<!-- 赠送会员 -->
+<!-- 赠送会员 -->
+<view class="member" wx:if="{{isorder}}">
+    <view class="withdrawContent">
+        <p class="title">
+            <image src="../../images/a_29.png" class="a_29"></image>提示</p>
+        <p class="text">
+            该拼团您有未支付的订单，请先支付
+        </p>
+        <view class="btnGroup">
+            <view class="cancel" bindtap='paycancel'>否</view>
+            <view class="submit" bindtap='payorder'>是</view>
+        </view>
+    </view>
+</view>
+<!-- 赠送会员 -->
+<!-- 分享 -->
+<view class="share" wx:if="{{isshare}}" bindtap="shareSta">
+  <view class="withdrawContent">
+    <ul class="ul">
+      <!--<view class="li">-->
+        <!--<image src="../../images/a_44.png" class="a_44"></image>-->
+        <!--<p>微信</p>-->
+      <!--</view>-->
+      <view class="li" bindtap="shareGroup">
+        <image src="../../images/a_45.png" class="a_45"></image>
+        <p>社群</p>
+      </view>
+      <view class="clearfix"></view>
+    </ul>
+  </view>
+</view>
+</view>
+<!-- 分享 -->

@@ -1,0 +1,73 @@
+<!--pages/Community/Community.wxml-->
+<view class="content-box post-comment" wx:if="{{isShow}}">
+    <view class="member" wx:if="{{isdel}}">
+        <view class="withdrawContent">
+            <p class="title">
+                <image src="../../images/a_29.png" class="a_29"></image>提示</p>
+            <p class="text">
+               确定要删除吗？
+            </p>
+            <view class="btnGroup">
+                <view class="cancel" bindtap='canceldel'>否</view>
+                <view class="submit" bindtap='delAjax'>是</view>
+            </view>
+        </view>
+    </view>
+    <view class="daka" bindtap="clock">打卡</view>
+    <image src="../../images/add.png" class="release" bindtap="release"></image>
+    <view class="comment" wx:if="{{inputStatus}}" cursor-spacing='0'>
+        <input type="text" placeholder="请输入评论..." class="text" bindblur="hideInput" focus="{{true}}" bindinput ="inputChange" data-field="text"/>
+        <view class="commentBtn" bindtap="comment">评论</view>
+    </view>
+    <view class="progress">
+        <view class="level">等级{{info.grade}}</view>
+        <view class="bar">
+            <view class="percent" style='width:{{percent}}%'></view>
+        </view>
+        <view class="progressTitle"><text>{{info.us_score}}</text>/{{info.next_grade_score}}</view>
+        <view class="btn" bindtap="communityRule">社群规则</view>
+    </view>
+    <view class="comment-box" wx:for="{{list}}" wx:for-item="item" wx:key="{{index}}">
+        <view class="left">
+            <image src="{{item.us_headimg}}" class="tou"></image>
+        </view>
+        <view class="right">
+            <span class="name">{{item.us_name}}</span>
+            <span bindtap="groupshare" data-po_dcid="{{item.po_dcid}}" data-po_dgid="{{item.po_dgid}}" data-po_goid="{{item.po_goid}}" class="itemContent">{{item.po_title}}</span>
+            <view class="release-tu community">
+                <view class="li" wx:for="{{item.po_images}}" wx:for-item="img" wx:key="{{index}}" bindtap="seeImg" data-po_dcid="{{item.po_dcid}}" data-po_dgid="{{item.po_dgid}}" data-po_goid="{{item.po_goid}}" data-src="{{item.po_images}}" data-item="{{img}}" wx:if="{{item.po_images.length > 0}}">
+                    <image src="{{img}}" style='height:{{width}}px'></image>
+                </view>
+                <view wx:if="{{item.po_video}}" style="margin-bottom: 20px">
+                    <image src="{{item.imagevideo}}" wx:if="{{!videoStatus[index].status}}" bindtap="playVideo" data-i="{{index}}" data-id="{{item.po_id}}" style="width: 45%;" mode="widthFix"></image>
+                  <view  wx:if="{{videoStatus[index].status}}" class="play_video">
+                      <view class="callback" bindtap="pauseVideo" data-i="{{index}}">返回</view>
+                      <video src="{{item.po_video}}" bindpause="" bindended="endVideo" data-i="{{index}}" autoplay="{{true}}"></video>
+                  </view>
+                </view>
+                <view class="clearfix"></view>
+            </view>
+            <view class="share-box">
+                <image src="{{item.zan_status?'../../images/a_26_s.png':'../../images/a_26.png'}}" class="a_26c" catchtap="like" data-id="{{item.po_id}}" data-index="{{index}}"></image>
+                <image src="../../images/a_48.png" class="a_25c" catchtap="showInput" data-tid="{{item.po_id}}" data-index="{{index}}"></image>
+                <!--<image src="../../images/a_25.png" class="a_27c"></image>-->
+                <button open-type="share" class="shareBtn" data-id="{{item.po_id}}"></button>
+
+                <image src="../../images/c_38.png" class="a_27c" wx:if="{{item.del_show_status}}" catchtap="delcommuntiy" data-id="{{item.po_id}}" data-index="{{index}}"></image>
+            </view>
+            <view class="replay" wx:if="{{item.po_zan_num > 0 || item.comment_list.length > 0}}">
+                <view class="li" wx:if="{{item.po_zan_num > 0}}">
+                    <span>已有<span class="likeNum">{{item.po_zan_num}}</span>人点赞</span>
+                </view>
+                <view wx:if="{{item.comment_list.length > 0}}" class="li" wx:for="{{item.comment_list}}" wx:for-item="comment" wx:key="{{itemIndex}}" wx:for-index="{{itemIndex}}" bindtap="showInput" data-tid="{{item.po_id}}" data-rid="{{comment.co_id}}" data-index="{{index}}" data-name="{{comment.us_name}}">
+                    <span bindtap="showInput" data-tid="{{item.po_id}}" data-rid="{{comment.co_id}}" data-index="{{index}}" data-name="{{comment.us_name}}">
+                        <span bindtap="showInput" data-tid="{{item.po_id}}" data-rid="{{comment.co_id}}" data-index="{{index}}" data-name="{{comment.us_name}}" class="user">{{comment.us_name}}</span>
+                        <span bindtap="showInput" data-tid="{{item.po_id}}" data-rid="{{comment.co_id}}" data-index="{{index}}" data-name="{{comment.us_name}}" wx:if="{{comment.be_us_name}}">回复<span class="user" bindtap="showInput" data-tid="{{item.po_id}}" data-rid="{{comment.co_id}}" data-index="{{index}}" data-name="{{comment.us_name}}">{{comment.be_us_name}}</span></span>：{{comment.content}}
+                    </span>
+                    <view class="clearfix"></view>
+                </view>
+            </view>
+        </view>
+        <view class="clearfix"></view>
+    </view>
+</view>

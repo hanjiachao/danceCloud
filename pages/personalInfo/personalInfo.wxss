@@ -1,0 +1,77 @@
+/* pages/personalInfo/personalInfo.wxss */
+/*个人信息*/
+.content-box .headRow {
+    position: relative;
+    width: 100%;
+    height: 65px;
+    line-height: 65px;
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px;
+}
+.headRow{position: relative;width: 100%;height: 65px;line-height: 65px;background: #fff;}
+.headRow .title{text-indent: 5%;margin-left: 5%;}
+.headRow > image{position: absolute;width: 45px;height: 45px;right:3%;top: 10px;border: 2px solid #ddd;border-radius: 50%;box-sizing: border-box;}
+.row{position: relative;width: 100%;height: 45px;background: #fff}
+.row .title{height: 45px;line-height: 45px;margin-left: 5%;font-size:16px;
+}
+.row > .nicheng{position: absolute;right: calc(6% + 8px);height: 25px;line-height: 25px;top: 10px;color: #777}
+.row > i{background-size: 100% 100%;width: 8px;height: 15px;display: block;position: absolute;right: 3%;top: 15px;}
+
+.a_11 {
+    width: 7px;
+    height: 14px;
+
+}
+
+.content-box .headRow .info {
+    text-indent: 5%;
+    display: block
+}
+
+.content-box .headRow > img {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    right: 15px;
+    top: 10px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.content-box .rowa {
+    position: relative;
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px;
+}
+
+.content-box .rowa .info {
+    height: 45px;
+    line-height: 45px;
+    text-indent: 5%;
+    display: block
+}
+
+.content-box .rowa > span {
+    position: absolute;
+    right: calc(6% + 8px);
+    height: 25px;
+    line-height: 25px;
+    top: 10px;
+    color: #777
+}
+
+.content-box .rowa > i {
+    width: 7px;
+    height: 14px;
+    display: block;
+    position: absolute;
+    right: 3%;
+    top: 15px;
+}
+
+/*个人信息*/

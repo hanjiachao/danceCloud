@@ -1,0 +1,134 @@
+<!--pages/comment/comment.wxml-->
+<view class="bgb"></view>
+<view class="content-box">
+<view class="my-release comment-detail ">
+    <view class="ul">
+      <view class="order comment li">
+        <view class="left">
+          <label class="contact">
+            <image src="../../image/b_11.png" class="comment-tu"></image>
+          </label>
+        </view>
+        <view class="right index-right">
+          <label class="collectionc">
+            A**C
+          </label>
+
+        </view>
+        <view class="star ul">
+          <view class="li">
+            <image src="../../images/a_106.png" class="a_106"></image>
+          </view>
+          <view class="li">
+            <image src="../../images/a_106.png" class="a_106"></image>
+          </view>
+          <view class="li">
+            <image src="../../images/a_106.png" class="a_106"></image>
+          </view>
+          <view class="li">
+            <image src="../../images/a_106.png" class="a_106"></image>
+          </view>
+          <view class="li">
+            <image src="../../images/a_106.png" class="a_106"></image>
+          </view>
+          <view class="clearfix"></view>
+        </view>
+
+        <view class="clearfix"></view>
+        鞋子很不错，柔韧度很好，穿起来很舒服。
+        鞋子很不错，柔韧度很好，穿起来很舒服。
+        鞋子很不错，柔韧度很好，穿起来很舒服。
+        鞋子很不错，柔韧度很好，穿起来很舒服。
+        
+      </view>
+
+    </view>
+    <view class="release-box mycomment-box">
+      <view class="release-tu mycomment ul">
+        <view class="li">
+          <image src="../../image/b_11.png"></image>
+        </view>
+        <view class="li">
+          <image src="../../image/b_11.png"></image>
+        </view>
+        <view class="li">
+          <image src="../../image/b_11.png"></image>
+        </view>
+        <view class="li">
+          <image src="../../image/b_11.png"></image>
+        </view>
+        <view class="clearfix"></view>
+      </view>
+      <view class="comment-time">
+      2017-09-30 11:00
+    </view>
+    </view>
+    
+    <view class="clearfix"></view>
+  </view>
+  <view class="my-release comment-detail ">
+    <view class="ul">
+      <view class="order comment li">
+        <view class="left">
+          <label class="contact">
+            <image src="../../image/b_11.png" class="comment-tu"></image>
+          </label>
+        </view>
+        <view class="right index-right">
+          <label class="collectionc">
+            A**C
+          </label>
+
+        </view>
+        <view class="star ul">
+          <view class="li">
+            <image src="../../images/a_106.png" class="a_106"></image>
+          </view>
+          <view class="li">
+            <image src="../../images/a_106.png" class="a_106"></image>
+          </view>
+          <view class="li">
+            <image src="../../images/a_106.png" class="a_106"></image>
+          </view>
+          <view class="li">
+            <image src="../../images/a_106.png" class="a_106"></image>
+          </view>
+          <view class="li">
+            <image src="../../images/a_106.png" class="a_106"></image>
+          </view>
+          <view class="clearfix"></view>
+        </view>
+
+        <view class="clearfix"></view>
+        鞋子很不错，柔韧度很好，穿起来很舒服。
+        鞋子很不错，柔韧度很好，穿起来很舒服。
+        鞋子很不错，柔韧度很好，穿起来很舒服。
+        鞋子很不错，柔韧度很好，穿起来很舒服。
+
+      </view>
+
+    </view>
+    <view class="release-box mycomment-box">
+      <view class="release-tu mycomment ul">
+        <view class="li">
+          <image src="../../image/b_11.png"></image>
+        </view>
+        <view class="li">
+          <image src="../../image/b_11.png"></image>
+        </view>
+        <view class="li">
+          <image src="../../image/b_11.png"></image>
+        </view>
+        <view class="li">
+          <image src="../../image/b_11.png"></image>
+        </view>
+        <view class="clearfix"></view>
+      </view>
+      <view class="comment-time">
+      2017-09-30 11:00
+    </view>
+    </view>
+    
+    <view class="clearfix"></view>
+  </view>
+</view>

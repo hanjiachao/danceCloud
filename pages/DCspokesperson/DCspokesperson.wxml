@@ -1,0 +1,10 @@
+<!--pages/DCspokesperson/DCspokesperson.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+<view class="bgc"></view>
+<view class="content-box" style="padding-top: 30px;">
+    <view class="dc">
+        <p>DC代言人说明</p>
+        <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+        <!-- <view class="button" bindtap="DCpay">成为DC代言人</view> -->
+    </view>
+</view>

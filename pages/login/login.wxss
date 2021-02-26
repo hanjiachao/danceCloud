@@ -1,0 +1,370 @@
+/* pages/login/login.wxss */
+/*公共部分*/
+radio{display: none}
+.radio{}
+.radioImg{width: 16px;height: 16px;display: block;position: absolute;top: 2px;left: 0}
+
+html,
+body,
+header,
+section,
+footer,
+div,
+ul,
+ol,
+li,
+img,
+a,
+span,
+em,
+del,
+legend,
+center,
+strong,
+var,
+fieldset,
+form,
+label,
+dl,
+dt,
+dd,
+cite,
+input,
+hr,
+time,
+mark,
+code,
+figcaption,
+figure,
+textarea,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+	border: 0;
+	padding: 0;
+	font-style: normal;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+ul li {
+	list-style: none;
+}
+
+input,
+button,
+textarea {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+span {
+	display: inline-block;
+}
+
+a:active,
+a:hover {
+	outline: 0;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+}
+
+label,
+.wordWrap {
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+td,
+th {
+	padding: 0;
+}
+
+nav,
+article,
+aside,
+details,
+main,
+header,
+footer,
+section,
+fieldset,
+figcaption,
+figure {
+	display: block;
+}
+
+img,
+a,
+button,
+em,
+del,
+strong,
+var,
+label,
+cite,
+small,
+time,
+mark,
+code,
+textarea {
+	display: inline-block;
+}
+.clearfix{
+	clear: both;
+}
+/*公共部分*/
+/*登录页面*/
+
+input::-webkit-input-placeholder ,textarea::-webkit-input-placeholder{
+	color: #cacaca
+}
+
+input::-moz-placeholder,textarea::-moz-placeholder {
+	color: #cacaca
+}
+
+input:-moz-placeholder ,textarea::-moz-placeholder{
+	color: #cacaca
+}
+
+input:-ms-input-placeholder ,textarea::-ms-input-placeholder{
+	color: #cacaca
+}
+.content-box{
+  padding-top: 100px
+}
+.login-box .row>.a_06 {
+    width: 8px;
+    height: 13px;
+    display: block;
+    position: absolute;
+    top: 14px;
+    right: 2%;
+}
+ .row .yzmBtn {
+	position: absolute;
+	padding: 0 10px;
+	top: 10px;
+	right: 0;
+	height: 20px;
+	line-height: 20px;
+	color: #29d5d0;
+	border-left: 1px solid #eee;
+	 z-index:34343;
+}
+.bgc {
+	background: -webkit-linear-gradient(45deg, #29ded9, #4ef1c2); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(45deg,#29ded9, #4ef1c2); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(45deg, #29ded9, #4ef1c2); /* Firefox 3.6 - 15 */
+    background: linear-gradient(45deg, #29ded9, #4ef1c2); /* 标准的语法（必须放在最后） */
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: -1
+}
+.bgb{
+	background-color: #f0f0f0;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: -1
+}
+.radioGroup .radio .choose{
+  display: inline-block;
+  width: 16px;
+    height: 16px;
+    border:1px solid #29d5d0;
+    border-radius: 8px;
+    vertical-align:-3px;
+     margin-right:10px;
+
+}
+.radioGroup .active .choose{
+  width: 16px;
+    height: 16px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjI0OTQ1RjQzODMxNDExRThBQ0NCRkE0NDczM0Q4RkMzIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjI0OTQ1RjQ0ODMxNDExRThBQ0NCRkE0NDczM0Q4RkMzIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjQ5NDVGNDE4MzE0MTFFOEFDQ0JGQTQ0NzMzRDhGQzMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MjQ5NDVGNDI4MzE0MTFFOEFDQ0JGQTQ0NzMzRDhGQzMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz66qTqyAAACqElEQVR42rSXz2sTQRTHN2ntqdIU9OjFtkKCIKgRxJOgqWirHsR60D+ggtj0pLTH/rjZiqh/gBcr4qHRirHUkyitioKmalNvniqYWrwogp+vvMC6JLvTdvPgwybMm/ed2Z2Z9yaR/vDWc7At0A1HIQs7IWVtFfgCC/AUnpQye35HBUxECCv4APTDR3gEz6EM382nHTrhEJyANNyCSQZQ2YjwObimGcA4fK7lRPD//mdK77p4XIVjMEj7XVfhJrgBR+A8zIe9kqCwbwAHeEzBY7iE3x9/e7KG6D3ogH1RohEDUl+J71ZMBtIUJjwJ26AX1rxNGuIr9ua0Vq7XE+6DHjgDv7yYDHHFOq0dwaz7gsIpm60aVryYDXG9vQvSQDzlFx6wRTDvNcjsm8+Y1j/hFtunY17jTduyn1m3SDgHi3YouJgW3pwtvjWCzEGP46zLppWrCs84io7ANByGVkO/C4iPOMaQVreE98ILhw6a1VBI+xDivQ5xXkpTwrvqHYcBG3TwyTv4fIIuCbdZhomy/TH5KLm0JWNetQlXRwmv+nJrmL1y8Flw8FEaXZXwkn3nKJuIyUdaSxJ+DQcdOhRgNKR9lH1acIgjrTcSLsJxx08zDKfgGfw09PskosOOMaRVVCGgI/OrjaS83tVUrxCoUxx0Wum0I2kp8KaVK402adxWqmz2FQCLVjE0JEMx26y95rQ/LVYsXakw294A0a087uhkq1ae/gNkyg7w+5Yq4xJVrAcw6684gyfXZfhmW6c1BlHVb7Pww2LXLfZUgp6FZdvf2U1+U62X94oZLG+ba/SRw0Ur6KetJBq3E85FUAX9FVtI+fUU9MErTN4GUoKHtg+XA1eYDrvCKGdn7AozsdErTK1LW853aWv3pbnqpU2nYNFK2lD7K8AAMizMMy3FB+IAAAAASUVORK5CYII=);
+    background-size: 100% 100%;
+    
+}
+.bgs{
+	background-image: url(../images/a_94.png);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	background-size: 100% 100%;
+	background-color: #fbf7ef;
+}
+.bgsmy{
+	background-image: url(../images/a_115.png);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: 100% 100%;
+    background-color: #fbf7ef;
+    top: 0px;
+    left: 0px;
+}
+.bgsmyc{
+	background-image: url(../images/a_122.png);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: 100% 100%;
+    background-color: #fbf7ef;
+    top: 0px;
+    left: 0px;
+}
+.bgm{
+	background-image: url(../images/a_56.png);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	background-size: 100% 100%;
+}
+.content{
+	padding-top: 100px;
+}
+.login-box{
+	padding-top: 15px;
+	width: 84%;
+	margin: 0px auto;
+	background-color: white;
+	border-radius: 16px;
+	padding-bottom: 35px;
+}
+.login-box .row {
+	position: relative;
+	width: 80%;
+	margin: 5px auto;
+	border-bottom: 1px solid #ececec;
+}
+.login-box .row .left {
+	width: 18px;
+    height: 18px;
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: 0px;
+}
+.content .login-box .row>.a_06 {
+    width: 8px;
+    height: 13px;
+    display: block;
+    position: absolute;
+    top: 14px;
+    right: 2%;
+}
+.login-box .row>input {
+	width: calc(96% - 25px);
+	height: 40px;
+	line-height: 40px;
+	margin-left: calc(4% + 20px)
+}
+
+.login-box .row>input::-webkit-input-placeholder {
+	color: #cacaca;
+}
+
+.login-box .btn {
+	width: 71%;
+    height: 38px;
+    line-height: 38px;
+    border-radius: 21px;
+    background: -webkit-linear-gradient(90deg, #50f1c0, #29ddd9); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(90deg, #50f1c0, #29ddd9); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(90deg, #50f1c0, #29ddd9); /* Firefox 3.6 - 15 */
+    background: linear-gradient(90deg, #50f1c0, #29ddd9); /* 标准的语法（必须放在最后） */
+    color: #fff;
+    text-align: center;
+    margin: 40px auto 0;
+    font-size: 16px;
+    -webkit-box-shadow:1px 6px 20px #c6f6f5; 
+    box-shadow:1px 6px 20px #c6f6f5;
+}
+.content .row .detail {
+    width: calc(96% - 25px);
+    height: 40px;
+    line-height: 40px;
+    margin-left: 0px;
+    color: #222;
+}
+
+
+/*登录页面*/
+/*单选框*/
+.passadd{
+	margin:0px 30px;
+	clear:both;
+	height:40px;
+	line-height:40px;
+	color:#cacaca;
+	width:155px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+.placchecked{
+	color: #000!important;
+}
+.radioGroup{
+	position: relative;
+    width: 80%;
+    margin: 5px auto;
+    line-height: 40px;
+}
+.radio {
+	display: inline-block;
+	margin-right: 18px;
+	color: #181818;
+	position: relative;height: 20px;line-height: 20px;text-indent: 25px
+}
+
+.radioGroup .radio>input[type="radio"] {
+	vertical-align: -3px;
+	outline: none;
+	-webkit-appearance: none;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjI4RjI3QTlBODMxNDExRTg4RUQxRUYzREU4RTI3QTRGIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjI4RjI3QTlCODMxNDExRTg4RUQxRUYzREU4RTI3QTRGIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjhGMjdBOTg4MzE0MTFFODhFRDFFRjNERThFMjdBNEYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MjhGMjdBOTk4MzE0MTFFODhFRDFFRjNERThFMjdBNEYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7Fz21GAAACJklEQVR42sSXSyhEYRTHrzGsPEaxpTymPErRKAkbjxJlIWxs7ChhYcGGhShSJmHFxgbJAnkMW49GrESeKxaiDHY05X/0v3XJuDPmzufUr6n7OL/73e/Od84X5Xa7tSAiBlSDSuAC6cDBcz5wAw7BNtgC72YJbSbnJfkAuAU94I6/+SCB5H87d8d7HH8VN4NTkAZKQTkYAbvgHryRex4b4TUlIJX3NgdKbv/hWDSYABWgHni10OIStIIisADKQAfw/zZikS6CDFD4B6kxvJTnMWf0b+JxkAzqwKsWfjzwzcl8uwOJm0AtaODcWRVvnLJKOr6IHRxtE5/S6pC310KHwyjuAhthzmkwc75O16c4FrSBIS3yMUxXrIirwBm4UiC+oqtKF69r6kJc1SIuAPsKxQfiFLETXCgUn4MsESeywqiKJ3HatH8KET+blTCLI0mcNlYTp0KxuC5FfASKFYrFdSxiD6hRKBaXRxfngkwFUnFkS19mY9maBL0KxOKYFqfd0ACcsWOIVIVy8TVnG8uij+VqHqREQBoP5kC3vlgZF5AFLuBLLJVWheRaBjsc2I89Vyd4BKsgzgJpMoUvzB2w2ZMWtBFc8//tCnNO5Xs5YU6/WUMvF7SDfrACZqWahCCUa2d4bx9z+YNp6PWQ+djkB7HHncEadw3XrDL62pvBHYR0qTlgil+vL5SdhDF8HPkgN23SrYxx05ZkKHP6pm2UC5Jpe/whwABVFXucN+vNKQAAAABJRU5ErkJggg==);
+	width: 16px;
+	height: 16px;
+	background-size: 16px 16px;
+	margin-right: 5px;
+}
+
+.radioGroup .radio>input[type="radio"]:checked {
+	width: 16px;
+	height: 16px;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjI0OTQ1RjQzODMxNDExRThBQ0NCRkE0NDczM0Q4RkMzIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjI0OTQ1RjQ0ODMxNDExRThBQ0NCRkE0NDczM0Q4RkMzIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjQ5NDVGNDE4MzE0MTFFOEFDQ0JGQTQ0NzMzRDhGQzMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MjQ5NDVGNDI4MzE0MTFFOEFDQ0JGQTQ0NzMzRDhGQzMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz66qTqyAAACqElEQVR42rSXz2sTQRTHN2ntqdIU9OjFtkKCIKgRxJOgqWirHsR60D+ggtj0pLTH/rjZiqh/gBcr4qHRirHUkyitioKmalNvniqYWrwogp+vvMC6JLvTdvPgwybMm/ed2Z2Z9yaR/vDWc7At0A1HIQs7IWVtFfgCC/AUnpQye35HBUxECCv4APTDR3gEz6EM382nHTrhEJyANNyCSQZQ2YjwObimGcA4fK7lRPD//mdK77p4XIVjMEj7XVfhJrgBR+A8zIe9kqCwbwAHeEzBY7iE3x9/e7KG6D3ogH1RohEDUl+J71ZMBtIUJjwJ26AX1rxNGuIr9ua0Vq7XE+6DHjgDv7yYDHHFOq0dwaz7gsIpm60aVryYDXG9vQvSQDzlFx6wRTDvNcjsm8+Y1j/hFtunY17jTduyn1m3SDgHi3YouJgW3pwtvjWCzEGP46zLppWrCs84io7ANByGVkO/C4iPOMaQVreE98ILhw6a1VBI+xDivQ5xXkpTwrvqHYcBG3TwyTv4fIIuCbdZhomy/TH5KLm0JWNetQlXRwmv+nJrmL1y8Flw8FEaXZXwkn3nKJuIyUdaSxJ+DQcdOhRgNKR9lH1acIgjrTcSLsJxx08zDKfgGfw09PskosOOMaRVVCGgI/OrjaS83tVUrxCoUxx0Wum0I2kp8KaVK402adxWqmz2FQCLVjE0JEMx26y95rQ/LVYsXakw294A0a087uhkq1ae/gNkyg7w+5Yq4xJVrAcw6684gyfXZfhmW6c1BlHVb7Pww2LXLfZUgp6FZdvf2U1+U62X94oZLG+ba/SRw0Ur6KetJBq3E85FUAX9FVtI+fUU9MErTN4GUoKHtg+XA1eYDrvCKGdn7AozsdErTK1LW853aWv3pbnqpU2nYNFK2lD7K8AAMizMMy3FB+IAAAAASUVORK5CYII=);
+	background-size: 100% 100%;
+	border: 0;
+}
+
+
+/*单选框*/

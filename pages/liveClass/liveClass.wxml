@@ -1,0 +1,45 @@
+<view wx:if="{{show}}">
+	<view class="bg"></view>
+	<view class="content-box">
+		<view class="content_ul">
+			<ul class="reserva liveClass ul">
+				<li class="active li" bindtap="dancetype" data-name="舞种">
+					{{typename}}<image src="../../images/a_19.png" class="a_19"></image>
+				</li>
+				<li class="li" bindtap="dancetype" data-name="训练内容">
+					{{dancename}}<image src="../../images/a_19.png" class="a_19"></image>
+				</li>
+				<li class="li" bindtap="dancetype" data-name="教师">
+					{{teachername}}<image src="../../images/a_19.png" class="a_19"></image>
+				</li>
+			</ul>
+		</view>
+		<view class="menu" wx:if="{{dancetypeSta}}" bindtap="menuHiden">
+			<ul class="menu-box">
+				<li class="li" wx:for="{{dance_type_list}}" wx:for-index="index" wx:for-item="item" bindtap="danceClick" data-id="{{item.type_id}}" data-name="舞种" data-classname="{{item.type_name}}">{{item.type_name}}</li>
+			</ul>
+		</view>
+		<view class="menu" wx:if="{{trainingSta}}" bindtap="menuHiden">
+			<ul class="menu-box">
+				<li class="li" wx:for="{{training_content_list}}" wx:for-index="index" wx:for-item="item"  bindtap="danceClick" data-id="{{item.content_id}}" data-name="训练内容" data-classname="{{item.content_name}}">{{item.content_name}}</li>
+			</ul>
+		</view>
+		<view class="menu" wx:if="{{teacherSta}}" bindtap="menuHiden">
+			<ul class="menu-box">
+				<li class="li" wx:for="{{teacher_list}}" wx:for-index="index" wx:for-item="item" bindtap="danceClick" data-id="{{item.teacher_id}}" data-name="教师" data-classname="{{item.content_name}}">{{item.content_name}}</li>
+			</ul>
+		</view>
+		<view class="Collage-box" wx:if="{{nolivesta}}">
+			<view class="Collage" wx:for="{{dance_course_list}}" wx:for-index="index" wx:for-item="item" bindtap="courseDetail" data-id="{{item.dc_id}}">
+				<image src="{{item.dc_cover}}" class="b_10"></image>
+				<view class="Collage-title">
+					<p>{{item.dc_name}}</p>
+					<view class="pricec price-box">￥{{item.dc_now_price}}</view>
+				</view>
+			</view>
+		</view>
+		<view wx:if="{{!nolivesta}}" class="nosta">
+			暂无课程
+		</view>
+	</view>
+</view>

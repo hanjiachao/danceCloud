@@ -1,0 +1,68 @@
+<!--pages/shopping-search/shopping-search.wxml-->
+<!--<view class="bg"></view>-->
+		<view class="content-box">
+			<view class="searchPage">
+      <image src="../../images/a_43.png" class='a_43'></image>
+				<view class="search_box cancel-box">
+					<view class="left"><image src="../../images/a_10.png"></image></view>
+					<view class="search cancel-search">
+						<view class='button'>取消</view>
+					</view>
+					<view class="center"><input type="text" placeholder="芭蕾舞课程" disabled="disabled"/></view>
+				</view>
+			</view>
+			<view class="Collage-menu ul">
+			<view class="active li">
+				商品
+				<view class="xian"></view>
+			</view>
+			<view class="li">
+				拼团
+			</view>
+		</view>
+        <view class="my-release detail-current">
+			<view class="ul">
+				<view class="order li">
+					<view class="left">
+						<label class="contact">
+                    	<image src="../../image/b_11.png" class="order-tu"></image>
+                    </label>
+					</view>
+					<view class="right index-right">
+						<label>
+                        芭蕾舞鞋缎面足尖鞋
+                    </label>
+                   <label class="two">
+                       还差 <span>2</span>人成团
+                    </label>
+						<label  class="three">
+                        拼团价格：<span>￥200</span>   <view class="enter right">立即参团</view>
+                        <view class="clearfix"></view>
+                    </label>
+					</view>
+					<view class="clearfix"></view>
+				</view>
+			</view>
+		</view>
+		<view class="my-release detail-current">
+			<view class="ul">
+				<view class="order li">
+					<view class="left">
+						<label class="contact">
+                    	<image src="../../image/b_11.png" class="order-tu"></image>
+                    </label>
+					</view>
+					<view class="right index-right">
+						<label>
+                        21天芭蕾塑形马拉松跑步第二季
+                    </label>
+                   <view style="height:20px"></view>
+						<label class="jiage">
+                        ￥399
+                    </label>
+					</view>
+					<view class="clearfix"></view>
+				</view>
+			</view>
+		</view>				
+		</view>

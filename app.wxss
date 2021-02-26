@@ -1,0 +1,333 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+
+}
+.content-box{
+font-size: 14px
+}
+input::-webkit-input-placeholder ,textarea::-webkit-input-placeholder{
+	color: #cacaca
+}
+
+input::-moz-placeholder,textarea::-moz-placeholder {
+	color: #cacaca
+}
+
+input:-moz-placeholder ,textarea::-moz-placeholder{
+	color: #cacaca
+}
+
+input:-ms-input-placeholder ,textarea::-ms-input-placeholder{
+	color: #cacaca
+}
+
+.bgc {
+	background: -webkit-linear-gradient(45deg, #29ded9, #4ef1c2); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(45deg,#29ded9, #4ef1c2); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(45deg, #29ded9, #4ef1c2); /* Firefox 3.6 - 15 */
+    background: linear-gradient(45deg, #29ded9, #4ef1c2); /* 标准的语法（必须放在最后） */
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: -1
+}
+.bgb{
+	background-color: #f0f0f0;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: -1
+}
+.bgs{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	background-size: 100% 100%;
+	background-color: #fbf7ef;
+}
+.bgsmy{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: 100% 100%;
+    background-color: #fbf7ef;
+    top: 0px;
+    left: 0px;
+}
+.bgsmyc{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	background-size: 100% 100%;
+  background-repeat: no-repeat
+}
+.phcolor{
+    color: #cacaca;
+}
+.clearfix{
+  clear: both
+}
+radio[hidden] {
+display:none;
+
+}
+
+/*确定按键*/
+.confirm-box{
+	width: calc(100% - 30px);
+	background-color: white;
+	position: fixed;
+	bottom: 0px;
+	text-align: center;
+	padding: 10px 15px;
+    z-index:333333;
+}
+.confirm-box .button{
+	width: 100%;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+	margin: 0 auto;
+	color: white;
+	font-size: 16px;
+	background: -webkit-linear-gradient(90deg, #50f1c0, #29ddd9); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(90deg, #50f1c0, #29ddd9); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(90deg, #50f1c0, #29ddd9); /* Firefox 3.6 - 15 */
+    background: linear-gradient(90deg, #50f1c0, #29ddd9); /* 标准的语法（必须放在最后） */
+   border-radius: 21px;
+   box-shadow: 1px 6px 20px #c6f6f5;
+}
+/*确定按键*/
+
+ /* 应付金额 */
+.mar_bo {
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+.ordersure {
+    background: #fff;
+    padding: 11px 15px;
+    overflow: hidden;
+    font-size: 14px;
+    display:block;
+
+}
+.ordersure .lan {
+    color: #29D5D0;
+}
+.class_sp2 {
+    color: #ff0d0d;
+    margin-right: 10px;
+    float: right;
+}
+.class_sp1 {
+    display: block;
+    float: right;
+}
+/* 应付金额  */
+/*遮罩*/
+.member .withdrawContent {
+    width: 50%;
+    background: #fff;
+    left: 50%;
+    top: calc(50% - 90px);
+    border-radius: 6px;
+    position: fixed;
+    margin-left: -25%;
+}
+.withdrawContent .btnGroup {
+    width: 80%;
+    height: 60px;
+    position: relative;
+    margin: 0 auto;
+}
+.withdrawContent .btnGroup .submit {
+    right: 5%;
+    background: -webkit-linear-gradient(90deg, #50f1c0, #29ddd9); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(90deg, #50f1c0, #29ddd9); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(90deg, #50f1c0, #29ddd9); /* Firefox 3.6 - 15 */
+    background: linear-gradient(90deg, #50f1c0, #29ddd9); /* 标准的语法（必须放在最后） */
+    color: #fff;
+    padding: 3px 3px;
+    display: block;
+    position: absolute;
+    text-align: center;
+    box-sizing: border-box;
+    top: 15px;
+    font-size: 14px;
+    width: 40%;
+    border-radius: 12px;
+}
+.submit-success {
+    right: 22%;
+    background: -webkit-linear-gradient(90deg, #50f1c0, #29ddd9); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(90deg, #50f1c0, #29ddd9); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(90deg, #50f1c0, #29ddd9); /* Firefox 3.6 - 15 */
+    background: linear-gradient(90deg, #50f1c0, #29ddd9); /* 标准的语法（必须放在最后） */
+    color: #fff;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    position: absolute;
+    text-align: center;
+    border: 1px solid #29d5d0;
+    box-sizing: border-box;
+    bottom: 0px;
+    font-size: 14px;
+    width: 25%;
+    border-radius: 16px;
+}
+.withdrawContent .btnGroup .cancel {
+    left: 5%;
+    background: #fff;
+    color: #29d5d0;
+    width: 40%;
+    padding: 2px 2px;
+    display: block;
+    position: absolute;
+    text-align: center;
+    border: 1px solid #29d5d0;
+    box-sizing: border-box;
+    top: 15px;
+    font-size: 14px;
+    border-radius: 12px;
+}
+.huise{
+	    color: #999;
+    padding: 0px 15px 0px 15px;
+    border-bottom: 1px solid #f0f0f0;
+    line-height: 30px;
+    font-size: 12px;
+}
+.detail-box .one{
+	margin-top: 10px;
+}
+.huise span{
+	padding-left:5px;
+}
+.cancel-success {
+    left: 22%;
+    background: #fff;
+    color: #29d5d0;
+    width: 25%;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    position: absolute;
+    text-align: center;
+    border: 1px solid #29d5d0;
+    box-sizing: border-box;
+    bottom: 0px;
+    font-size: 14px;
+        border-radius: 16px;
+}
+.member .withdrawContent .title {
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    color: #29d5d0;
+    display: block;
+    font-size: 14px;
+    padding: 0px 0px;
+}
+.withdrawContent .text {
+    font-size: 14px;
+    text-align: center;
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+.member {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(50, 50, 50, 0.5);
+    z-index:333333333!important;
+}
+.nosta{
+    text-align:center;
+    color:#cacaca;
+    margin-top:20px;
+
+}
+.detail-box .di:nth-child(2) {
+    border-bottom: 1px solid #f0f0f0;
+}
+.group{
+	text-align: center;
+    position: absolute;
+        bottom: 21px;
+    left: 50%;
+    margin-left: -62px;
+}
+.a_29{
+	width: 15px;
+	height: 15px;
+	margin-right: 6px;
+	vertical-align: -3px;
+}
+.close{
+	padding: 0px 8px;
+	background-color: #29D5D0;
+	border-radius: 8px;
+	color: white;
+	margin-top: 6px;
+}
+.share {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(50, 50, 50, 0.5);
+}
+.share .withdrawC {
+    width: 30%;
+    background: #fff;
+    left: 50%;
+    top: calc(50% - 90px);
+    border-radius: 6px;
+    position: fixed;
+    margin-left: -15%;
+    padding: 20px 10px;
+    text-align: center;
+}
+.share .withdrawC image{
+	width: 40%;
+	margin-bottom: 20px;
+}
+.share .withdrawContent {
+    width: 50%;
+    background: #fff;
+    left: 50%;
+    top: calc(50% - 90px);
+    border-radius: 6px;
+    position: fixed;
+    margin-left: -25%;
+    padding: 20px 0px;
+}
+.share .withdrawContent .ul .li{
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+.share .withdrawContent .ul .li image{
+	width: 60%;
+}
+.share .withdrawContent .ul .li p{
+	color: #333;
+	margin-top: 6px;
+}
+/*遮罩*/

@@ -1,0 +1,11 @@
+  <!--pages/my-new/my-new.wxml-->
+<view class="bg"></view>
+<view class="content-box jyxx-box">
+    <view class="jyxx ul">
+       <view class="li">
+           <p>您发布的车辆信息已经通过了审核，快去查看吧…</p>
+           <view class="cancel-new">删除</view>
+           <i class="new"></i>
+       </view>
+    </view>
+</view>

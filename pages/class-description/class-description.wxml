@@ -1,0 +1,13 @@
+<!--pages/class-description/class-description.wxml-->
+		<view class="bgc"></view>
+		<view class="content-box" style="padding-top: 30px;">
+			<view class="dc">
+				<view>1.DC代言人等级分为三级；</view>
+				<view>2.一级须缴纳1000元押金，业绩要求为10000；
+   二级须缴纳5000元押金，业绩要求为5000元；
+   三级须缴纳10000元押金，业绩要求为100000</view>
+				<view>2.一级须缴纳1000元押金，业绩要求为10000；
+   二级须缴纳5000元押金，业绩要求为5000元；
+   三级须缴纳10000元押金，业绩要求为100000</view>
+			</view>
+  </view>

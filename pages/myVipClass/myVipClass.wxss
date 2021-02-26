@@ -1,0 +1,81 @@
+/* pages/myVipClass/myVipClass.wxss */
+.VIPname-content {
+    padding: 24% 15px 80px 15px !important;
+}
+.vip-content view {
+    text-align: center;
+}
+.VIPname {
+    width: 50%;
+    height: 100px;
+    border-radius: 20px;
+    background-color: rgba(255,255,255,0.5);
+    margin: 0 auto;
+    margin-bottom: 74px;
+}
+.a_123 {
+    width: 85%;
+    margin-top: 20px;
+    height: 32px;
+}
+.VIPname p {
+    color: #ff365b;
+}
+.vip-content p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: block;
+    margin-top: 10px;
+}
+.vip-jindu {
+    text-align: center;
+    color: #29D5D0;
+}
+.vip-jdt {
+    width: 60%;
+    height: 10px;
+    background: #ffecb2;
+    border: 1px solid #ffda6b;
+    border-radius: 12px;
+    position: relative;
+    display: block;
+    margin: 6px auto 0px auto;
+}
+.vip-jdtI {
+    width: 20%;
+    height: 10px;
+    background: #ff6884;
+    border-radius: 12px 0px 0px 12px;
+    margin-top: 16px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.a_116 {
+    width: 14px;
+    height: 17px;
+    margin-right: 6px;
+    vertical-align: -4px;
+}
+table, td, th {
+    border: 1px solid #f0f0f0;
+    text-align: center;
+    padding: 10px 0px;
+    font-size: 14px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+.a_117 {
+    width: 17px;
+    height: 17px;
+    margin-right: 6px;
+    vertical-align: -2px;
+}
+.vip-content .shuoming {
+    text-align: left;
+}
+.vip {
+    border-top: 6px solid #f0f0f0;
+}

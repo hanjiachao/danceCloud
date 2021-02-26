@@ -1,0 +1,22 @@
+<!--pages/coupon/coupon.wxml-->
+<view class="bgb"></view>
+<view class="content-box">
+    <view class="coupon">
+        <view class="null" wx:if="{{isShow && list.length == 0}}">暂无代金券</view>
+        <view class="ul">
+            <view class="li" wx:for="{{list}}" wx:key="{{index}}" wx:if="{{isShow}}" bindtap="couponClick" data-id="{{item.uc_id}}" data-name="{{item.uc_discount_price}}">
+                <view class="coupon-price">
+                    <p>￥<span>{{item.uc_discount_price}}</span></p>
+                </view>
+                <image src="../../images/a_37_1.png"></image>
+                <view class="coupon-class">
+                    <p>满{{item.uc_pay_price}}元使用</p>
+                </view>
+            </view>
+            <view class="clearfix"></view>
+        </view>
+    </view>
+</view>
+<!--<view class="confirm-box">-->
+    <!--<view class="button">不使用代金券</view>-->
+<!--</view>-->

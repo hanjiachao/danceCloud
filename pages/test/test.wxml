@@ -1,0 +1,3 @@
+<view class="video-box">
+   <live-player id="polyvLiveVideo" class="vp-v" src="{{src}}" controls binderror="error" autoplay></live-player>
+</view>

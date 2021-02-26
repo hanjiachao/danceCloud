@@ -1,0 +1,40 @@
+/* pages/DCspokesperson/DCspokesperson.wxss */
+/*dc代言人*/
+.dc{
+	margin: 0px 15px 0px 15px;
+	padding: 10px 10px;
+	background-color: white;
+	border-radius: 6px;
+	
+}
+.dc p {
+	line-height: 50px;
+	color: #29D5D0;
+	text-align: center;
+  display:block;
+
+}
+.dc view{
+	margin: 10px 0px;
+	color: #333;
+	line-height: 22px;
+}
+.dc .button{
+	width: 80%;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    margin: 30px auto 30px auto;
+    color: white;
+    font-size: 16px;
+    background: -webkit-linear-gradient(90deg, #50f1c0, #29ddd9);
+    background: -o-linear-gradient(90deg, #50f1c0, #29ddd9);
+    background: -moz-linear-gradient(90deg, #50f1c0, #29ddd9);
+    background: linear-gradient(90deg, #50f1c0, #29ddd9);
+    border-radius: 21px;
+    box-shadow: 1px 6px 20px #c6f6f5;
+}
+.red{
+	color: #ff3e50;
+}
+/*dc代言人*/

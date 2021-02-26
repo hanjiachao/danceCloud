@@ -1,0 +1,141 @@
+/* pages/comment/comment.wxss */
+/* 评价 */
+.order-comment {
+    background-color: white;
+    padding-top: 10px;
+    margin-bottom: 63px;
+}
+.order-comment p {
+    color: #29D5D0;
+    font-size: 16px
+}
+.a_110 {
+    width: 16px;
+    height: 17px;
+    margin-right: 10px;
+    margin-left: 15px;
+    vertical-align: -3px;
+    
+}
+.content-box {
+background-color: white
+
+}
+
+.pingjia{
+  display: block
+}
+.my-release .order {
+    border-bottom: 1px solid #f0f0f0;
+}
+.order-comment .li {
+    padding: 10px 15px 30px 15px;
+}
+.comment-detail .li {
+    margin-bottom: 0px;
+}
+.comment-detail .ul .li .left {
+    float: left;
+    margin-right: 15px;
+}
+.my-release .ul .li .left label, .my-release .ul .li .right label {
+    display: block;
+    line-height: 25px;
+}
+.my-release .left label {
+    color: #222222;
+}
+.comment-tu {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 7px;
+}
+.comment-detail .ul .order .right label {
+    line-height: 50px;
+    height: 50px;
+}
+.star {
+    float: right;
+    height: 50px;
+    line-height: 50px;
+    color: #919191;
+    font-size: 14px;
+    width: 80px
+}
+.comment-detail .ul .li .index-right {
+    float: left;
+    line-height: 40px;
+    width: 40%;
+}
+.pingjia{
+  font-size: 14px;
+}
+/* 评价 */
+
+/* 方框 */
+.mycomment-box {
+    padding: 10px 15px 0px 15px;
+    
+}
+.comment-time {
+    color: #a2a2a2;
+    float: right;
+    margin-top: 10px;
+    font-size: 12px;
+    margin-bottom:15px;
+
+}
+.star .li image{
+    float: left;
+    background-image: url(../images/a_106.png);
+    background-size: 12px 12px;
+    width: 12px;
+    height: 12px;
+    background-repeat: no-repeat;
+    padding: 0px;
+    margin-right: 2px;
+    margin-top: 18px;
+}
+.comment-detail{
+  border-bottom: 1px solid #f0f0f0
+}
+.mycomment {
+    margin-bottom: 0px;
+    padding: 0px;
+}
+.my-release .mycomment .li {
+    padding: 0px;
+    position: relative;
+    margin-bottom: 10px;
+}
+.release-tu .li:nth-child(1), .release-tu .li:nth-child(4), .release-tu .li:nth-child(7) {
+    text-align: left;
+}
+.release-tu .li image {
+    width: 90%;
+    height: 90px;
+}
+.release-tu .li {
+    width: 33%;
+    text-align: center;
+    float: left;
+    position: relative;
+    margin-bottom: 8px;
+}
+.comment-detail .li {
+    margin-bottom: 0px;
+}
+.form li, .my-release .li {
+    background-color: white;
+    font-size: 14px;
+}
+.my-release .li {
+    /* padding: 10px 15px; */
+    position: relative;
+}
+/* 方框 */
+.my-release .order {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 10px 15px
+}

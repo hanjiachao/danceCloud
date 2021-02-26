@@ -1,0 +1,88 @@
+/* pages/Logistics/Logistics.wxss */
+/*物流*/
+.my-release .order {
+    border-bottom: 1px solid #f0f0f0;
+    background-color: white;
+    margin-bottom: 6px;
+    font-size: 14px;
+    padding: 10px 15px;
+    position: relative;
+    
+}
+.detail-current .ul .li .left {
+    float: left;
+    width: 80px;
+}
+.order-tu {
+    width: 70px;
+    height: 70px;
+    margin-right: 15px;
+}
+.my-release .ul .li .index-right {
+    float: left;
+    line-height: 31px;
+    width: calc(100% - 80px);
+    font-size: 14px
+}
+.my-release .ul .order .right label {
+    line-height: 25px;
+    height: 25px;
+}
+.my-release .ul .li .index-right label {
+    color: #333;
+}
+.my-release .ul .order .right .jiage {
+    color: #29D5D0;
+}
+.my-release .ul .order .right label {
+    line-height: 25px;
+    height: 25px;
+}
+.logistics {
+    background-color: white;
+    padding: 15px 15px 30px 15px;
+}
+.logistics .ul {
+    position: relative;
+}
+.a_c {
+    position:absolute;
+    left:-23px;
+    top:39px;
+    width:55px;
+    height:1px;
+    transform:rotate(90deg);
+    display:inline-block;
+    z-index:1;
+
+
+}
+.logistics .ul .li:nth-child(2) {
+    width: 7%;
+    float: left;
+    position: absolute;
+    z-index:22;
+}
+.a_103 {
+    width: 10px;
+    height: 10px;
+}
+.a_104{
+    width:12px;
+    height:12px;
+}
+.logistics .ul .li:nth-child(3) {
+    width: 90%;
+    float: left;
+    line-height: 26px;
+    color: #666666;
+    font-size: 12px;
+    margin-left:10%;
+}
+.lan {
+    color: #29D5D0;
+}
+span {
+    display: inline-block;
+}
+/*物流*/

@@ -1,0 +1,41 @@
+<!--pages/login/login.wxml-->
+<view class="bgc"></view>
+<view class="content-box">
+	<view class="login-box">
+    <view class="radioGroup">
+        <radio-group class="radio-group" bindchange="inputChange" data-field="type">
+            <label class="radio" wx:for="{{items}}">
+                <image class="radioImg" src="{{item.value == info.type?'../../images/a_01.png':'../../images/a_02.png'}}"></image>
+                <radio id="label1" value="{{item.value}}" checked="{{item.checked}}"/>{{item.value}}
+            </label>
+        </radio-group>
+    </view>
+    <view wx:if="{{info.type == '国内'}}">
+        <view class="row" bindtap="selectCity">
+            <image src="../../images/a_03.png" class="left"></image>
+            <!--<input type="number" placeholder="请选择所在地区" placeholder-class="phcolor"/>-->
+            <view class="{{'passadd ' + (phoname == '请选择所在地区'? '' : 'placchecked')}}">{{phoname}}</view>
+            <image src="../../images/a_06.png" class="a_06"></image>
+        </view>
+        <view class="row">
+            <input type="text" placeholder="请输入详细地址......" class="detail" placeholder-class="phcolor" bindinput='inputChange' data-field="address"/>
+        </view>
+    </view>
+    <view wx:if="{{info.type == '海外'}}">
+        <view class="row">
+            <image src="../../images/a_03.png" class="left"></image>
+            <input type="text" placeholder="请输入详细地址......" placeholder-class="phcolor" bindinput='inputChange' data-field="address"/>
+        </view>
+    </view>
+    <view class="row">
+        <image src="../../images/a_04.png" class="left"></image>
+        <input type="number" placeholder="请输入手机号" placeholder-class="phcolor" bindinput='inputChange' data-field="mobile"/>
+    </view>
+    <view class="row"  wx:if="{{info.type == '国内'}}">
+        <image src="../../images/a_05.png" class="left"></image>
+        <input  type="number" placeholder="请输入验证码" placeholder-class="phcolor" bindinput='inputChange' data-field="code" style="width:100px"/>
+        <span class="yzmBtn" bindtap='send_code'>{{time==0 ?'获取验证码' : time+'s后重试'}}</span>
+    </view>
+    <view class="btn" bindtap="login">绑定</view>
+</view>
+</view>

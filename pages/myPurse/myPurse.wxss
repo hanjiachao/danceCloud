@@ -1,0 +1,143 @@
+/* pages/myPurse/myPurse.wxss */
+/*我的钱包*/
+.null{color: #999;height: 60px;line-height: 60px;text-align: center}
+
+.tixian{
+	padding: 0px 14px;
+	border-radius: 12px;
+	background-color: #fff;
+	position: absolute;
+	top: 20px;
+	right: 15px;
+	color: #29D5D0;
+	font-size: 15px;
+}
+.withdrawContent .text input{
+	border: 1px solid #29D5D0;
+	border-radius: 16px;
+	width: 90%;
+	height: 32px;
+	line-height: 32px;
+	margin: 5px 5%;
+}
+.content-box .money {
+	background: -webkit-linear-gradient(90deg, #27dcda, #50f2c0);
+    background: -webkit-linear-gradient(90deg, #27dcda, #50f2c0);
+    background: -webkit-linear-gradient(90deg, #27dcda, #50f2c0);
+    background: -webkit-linear-gradient(90deg, #27dcda, #50f2c0);
+	height: 120px;
+	position: relative;
+	background-size: 100% 100%;
+}
+
+.content-box .money .title {
+	position: absolute;
+	color: #eee;
+	top: 20px;
+	left: 15px;
+	padding: 0px 0px;
+	font-size: 16px;
+	color: #fff;
+}
+
+.content-box .money .num {
+	text-align: center;
+	color: #fff;
+	font-size: 39px;
+	position: absolute;
+	width: 100%;
+	bottom: 30px;
+}
+
+.content-box .money .num span {
+	font-size: 18px;
+	margin-right: 3px;
+}
+
+.content-box .purse {
+	background: #fff
+}
+
+.content-box .purse>h4 {
+	height: 45px;
+	line-height: 45px;
+	position: relative;
+	text-indent: calc(6% + 21px);
+	font-size: 16px;
+	border-bottom: 1px solid rgb(252, 252, 252)
+}
+
+.content-box .purse>h4 i {
+	background: url("../image/money.png");
+	background-size: 100% 100%;
+	display: inline-block;
+	width: 21px;
+	height: 21px;
+	position: absolute;
+	top: 11px;
+	left: 3%;
+}
+
+.content-box .purse>ul {}
+
+.content-box .purse .ul .li {
+	position: relative;
+	padding: 10px 3%;
+	border-bottom: 1px solid #f0f0f0
+}
+
+.content-box .purse .ul .li .title {
+	font-size: 14px;
+	padding: 0px 0px;
+}
+
+.content-box .purse .ul .li p {
+	height: 25px;
+	line-height: 25px;
+  display: block
+}
+
+.content-box .forward .ul .li .time-purse {
+	margin-top: 3px;
+}
+.content-box .purse .ul .li .time-purse {
+    color: #aaa;
+    font-size: 14px;
+}
+.content-box .purse .ul .li .change {
+	position: absolute;
+	font-size: 16px;
+	height: 20px;
+	line-height: 20px;
+	right: 3%;
+	top: 25px;
+}
+
+.content-box .purse .ul .li .add {
+	color: #ff2c5e
+}
+
+.purse-menu .li {
+	float: left;
+}
+
+.purse-menu .li span {
+	display: block;
+	position: relative;
+}
+
+.content-box .forward .ul .li .change {
+    position: absolute;
+    font-size: 16px;
+    height: 20px;
+    line-height: 20px;
+    right: 3%;
+    top: 10px;
+}
+.content-box .forward .ul .li .time-purse span{
+	float: right;
+}
+.purse-menu{
+	border-bottom: 1px solid #f0f0f0;
+}
+/*我的钱包*/

@@ -1,0 +1,137 @@
+/* pages/change-phone-end/change-phone-end.wxss */
+/*更改手机号*/
+.revirse-btn{
+	margin-top: 40px;
+	padding: 0px 15px;
+	width: calc(100% - 30px);
+}
+.change .right1 .send-btn {
+    color: #29d5d0;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: transparent;
+}
+.change .right1 .button {
+    padding: 0px 0px 0px 25px;
+    border-left: 1px solid #dddddd;
+}
+.revirse-btn .btn {
+    width: 100%;
+    height: 38px;
+    line-height: 38px;
+    border-radius: 21px;
+    background: -webkit-linear-gradient(90deg, #50f1c0, #29ddd9);
+    background: -o-linear-gradient(90deg, #50f1c0, #29ddd9);
+    background: -moz-linear-gradient(90deg, #50f1c0, #29ddd9);
+    background: linear-gradient(90deg, #50f1c0, #29ddd9);
+    color: #fff;
+    text-align: center;
+    margin: 40px auto 0;
+    font-size: 16px;
+    -webkit-box-shadow: 1px 6px 20px #c6f6f5;
+    box-shadow: 1px 6px 20px #c6f6f5;
+}
+.change .li {
+	border-bottom: 1px solid #f9f9f9;
+	margin-bottom: 0px;
+	padding: 0 20px;
+}
+.change-box{
+	background-color: white;
+	font-size: 14px;
+}
+.change-box .left {
+	float: left;
+	line-height: 40px;
+}
+
+.change .left label {
+     width: 80px; 
+}
+
+.change-box .left label image {
+	width: 100%;
+	vertical-align: -3px;
+}
+
+.change .right {
+	margin-left: 70px;
+	padding: 0 10px;
+}
+.change-box .right input::-webkit-input-placeholder{
+	color: #cacaca;
+}
+.change-box .right input ,.change .right div{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	background-color: transparent;
+	color: #cacaca;
+}
+
+.change-box .login-btn {
+	border-bottom: none;
+	padding-top: 20px;
+}
+.change .right div{
+	color: #222;
+}
+.change-box .login-btn button {
+	border-radius: 40px;
+	background: #f52674;
+	color: #fff;
+	line-height: 40px;
+	box-shadow: 2px 2px 8px #f52674;
+	width: 100%;
+}
+
+.change-box .forget-pass {
+	text-align: right;
+	color: #f52674;
+	border-bottom: none;
+}
+.change-box .right1 {
+	float: right;
+	line-height: 40px;
+}
+
+.change .right1 button {
+	padding: 0px 0px 0px 25px;
+	border-left: 1px solid #dddddd;
+}
+
+.change .right1 .send-btn {
+	color: #29d5d0;
+	font-size: 14px;
+	cursor: pointer;
+	background-color: transparent;
+  display: inline
+}
+
+.change .center {
+	margin: 0 100px 0 70px;
+	padding: 0 10px;
+}
+
+.forget-form {
+	padding: 45px 45px 0;
+}
+
+.change-box .center input {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	background-color: transparent;
+	color: #cacaca;
+}
+.change-box .center input::-webkit-input-placeholder{
+	color: #cacaca;
+}
+.confirm-change {
+     position: inherit; 
+     /*width: 100%;*/
+     margin-top: 40px;
+}
+/*更改手机号*/

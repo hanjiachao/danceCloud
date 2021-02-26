@@ -1,0 +1,168 @@
+<!--pages/ordersure/ordersure.wxml-->
+<view class="bgb"></view>
+<view class="sure content-box" wx:if="{{show}}">
+<view class="my-release detail-current">
+			<view class="ul">
+				<view class="order li">
+					<view class="left">
+						<label class="contact">
+                    	<image src="{{dance_detail.dg_cover}}" class="order-tu"></image>
+                    </label>
+					</view>
+					<view class="right index-right">
+						<label>
+                       {{dance_detail.dg_name}}
+                    </label>
+                   <!--<view style="height:20px"></view>-->
+					<view>
+                       <span class="price-lan">团购价格：￥{{dance_detail.dg_price}}</span>
+                    </view>
+					</view>
+					<view class="clearfix"></view>
+				</view>
+			</view>
+		</view>
+<view class="order_ki">
+	<p class="ordersure border_b">
+    <span class="order_sp1">
+       <image src="../../images/a_33.png" class="a_37"></image>
+    </span>
+    </p>
+    <view class="setting-form">
+			<view class="ul">
+				<view class="li" bindtap="voucher">
+					<view class="left">
+						<span>
+                           <image src="../../images/a_21.png" class="a_21"></image>可用代金券
+                        </span>
+                </view>
+                <view class="right1" wx:if="{{!coupon_status}}">
+                    暂无
+                </view>
+                <view class="right1" wx:if="{{coupon_status}}">
+                    <span wx:if="{{plusmoney != ''}}">-￥{{plusmoney}}</span><span><image src="../../images/a_06.png" class="a_06"></image></span>
+                </view>
+                <view class="clearfix"></view>
+            </view>
+            <view class="li" wx:if="{{proportionprice > 0}}">
+                <view class="left">
+                    <view>
+                        <image src="../../images/a_23.png" class="a_21" bindtap=""></image>
+                        可用{{can_use_integral}}积分抵现金{{proportionprice}}元
+                    </view>
+                </view>
+                <view class="right1">
+                    <span><image src="../../images/a_34.png" class="a_35" wx:if="{{!integral}}" bindtap="openintergral"></image></span>
+                    <span><image src="../../images/a_35.png" class="a_35" wx:if="{{integral}}" bindtap="closeintegral"></image></span>
+                </view>
+                <view class="clearfix"></view>
+            </view>
+            <view class="li">
+                <view class="left">
+                    <span>
+                         <image src="../../images/a_22.png" class="a_21"></image>会员优惠{{member_discount}}折
+                    </span>
+                </view>
+                <view class="right1">
+                    <span><image src="../../images/a_34.png" class="a_35" wx:if="{{!member}}" bindtap="openser"></image></span>
+                    <span><image src="../../images/a_35.png" class="a_35" wx:if="{{member}}" bindtap="closeuser"></image></span>
+                </view>
+                <view class="clearfix"></view>
+            </view>
+        </view>
+    </view>
+    <view class="ordersure mar_bo">
+    	  <span class="order_sp1">
+        应付：
+    </span>
+    	   <span class="order_sp2">
+        ¥{{money}}
+    </span>
+</view>
+<view class="ordersure mar_bo">
+    	  <span class="order_sp1">
+        备注
+    </span>
+       <input type="text" placeholder="请在此处填写商品备注..." bindinput="remark"/>
+  
+</view>
+    <view class="ordersure mar_bo">
+      <span class="order_sp1">
+    收货人
+</span>
+        <input type="text" placeholder="请输入收货人姓名..." bindinput="username"/>
+
+    </view>
+    <view class="ordersure mar_bo">
+      <span class="order_sp1">
+    联系方式
+</span>
+        <input type="text" placeholder="请输入联系方式..." bindinput="usermobile"/>
+
+    </view>
+    <view class="ordersure mar_bo">
+      <span class="order_sp1">
+    收货地址
+</span>
+        <input type="text" placeholder="请输入收货地址..." bindinput="useraddress"/>
+
+    </view>
+    <view wx:if="{{money != 0}}">
+        <p class="ordersure border_b">
+    <span class="order_sp1">
+       <image src="../../images/a_37.png" class="a_37"></image>
+    </span>
+        </p>
+        <view class="order_ul ul">
+            <view class="li">
+                <view class="cancel_span1 fl_right">
+                    <image src="../../images/a_01.png"></image>
+                </view>
+                <p class="ordersure">
+                <span class="order_sp3">
+                    <image src="../../images/a_36.png" alt=""></image>
+                </span>
+                    <span class="order_sp4">
+                    微信支付
+                </span>
+                </p>
+            </view>
+        </view>
+    </view>
+</view>
+</view>
+ <!--确认支付-->
+			<view class="confirm-box" bindtap="confirm">
+				<view class="button">确认支付</view>
+			</view>
+		<!--确认支付-->
+<!-- 赠送会员 -->
+<view class="member" wx:if="{{membershow}}">
+    <view class="withdrawContent">
+        <p class="title">
+            <image src="../../images/a_29.png" class="a_29"></image>提示</p>
+        <p class="text">
+            购买会员可享受{{member_discount}}折优惠 是否前去购买？
+        </p>
+        <view class="btnGroup">
+            <view class="cancel" bindtap='cancelmember'>否</view>
+            <view class="submit" bindtap='next_two'>是</view>
+        </view>
+    </view>
+</view>
+<!-- 赠送会员 -->
+<!-- 确认支付 -->
+<view class="member" wx:if="{{confirmshow}}">
+    <view class="withdrawContent">
+        <p class="title">
+            <image src="../../images/a_29.png" class="a_29"></image>提示</p>
+        <p class="text">
+            确定要购买吗？
+        </p>
+        <view class="btnGroup">
+            <view class="cancel" bindtap='cancelpay'>否</view>
+            <view class="submit" bindtap='surepay'>是</view>
+        </view>
+    </view>
+</view>
+<!-- 确认支付 -->

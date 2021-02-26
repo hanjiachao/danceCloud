@@ -1,0 +1,19 @@
+<!--pages/myMusic/myMusic.wxml-->
+<view class="cont">
+  <view class="wrap" wx:for="{{classifyList}}" wx:key="index" data-cl_id="{{item.cl_id}}">
+    <view class="head">
+      <image src="../../images/icon01.png"></image>
+      <view class="tit">{{item.cl_name}}</view>
+    </view>
+    <view class="panel">
+      <scroll-view class="list" scroll-left='0' scroll-x="true" scroll-with-animation="true">
+        <view class="item" wx:for="{{item.album_list}}" wx:for-item="info" wx:key="index" data-al_id="{{info.al_id}}" bindtap="goMusicList">
+          <view class="img">
+            <image src="{{info.al_cover}}"></image>
+          </view>
+          <view class="text">{{info.al_name}}</view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

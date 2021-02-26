@@ -1,0 +1,49 @@
+/* pages/coupon/coupon.wxss */
+/*代金券*/
+.null{color: #555;height: 60px;line-height: 60px;text-align: center}
+
+.coupon{
+	padding: 15px 8%;
+}
+.coupon .ul .li{
+	width: 50%;
+	float: left;
+	text-align: center;
+	margin-bottom: 20px;
+	position: relative;
+}
+.coupon .ul .li image{
+	width: 80%;
+  height: 108px
+}
+.coupon-price{
+	width: 100px;
+	position: absolute;
+	top: 10%;
+	color: #29d5d0;
+	left: 50%;
+	margin-left: -50px;
+	text-align: center;
+}
+.coupon-price p{
+	text-align: center;
+	font-size: 12px;
+}
+.coupon-price p span{
+	font-size: 20px;
+}
+.coupon-class p{
+	text-align: center;
+	font-size: 12px;
+	color: white;
+}
+.coupon-class{
+	width: 100px;
+	position: absolute;
+	bottom: 10%;
+	color: #29d5d0;
+	left: 50%;
+	margin-left: -50px;
+	text-align: center;
+}
+/*代金券*/

@@ -1,0 +1,141 @@
+<!--pages/collage-detail/collage-detail.wxml-->
+<view class="bgb"></view>
+<view class="order_ki">
+    <view class="setting-form">
+			<view class="ul">
+				<view class="li">
+					<view class="left">
+						<span>
+                                       订单编号：145623581653
+                    </span>
+                </view>
+                <view class="right1">
+                </view>
+                <view class="clearfix"></view>
+            </view>
+            <view class="li">
+                <view class="left">
+                    <span>
+                                      订单状态：<span class="lan">待付款</span>
+                    </span>
+                </view>
+                <view class="right1">
+                </view>
+                <view class="clearfix"></view>
+            </view>
+            <view class="li">
+                <view class="left">
+                    <span>
+                                     订单日期：2017-10-15 12:45
+                    </span>
+                </view>
+                <view class="right1">
+                </view>
+                <view class="clearfix"></view>
+            </view>
+            <view class="li">
+                <view class="left">
+                    <span>
+                                     成团情况：成团人数 <span class="red">5</span> 人   还差 <span class="red">2</span> 人成团
+                    </span>
+                </view>
+                <view class="right1">
+                </view>
+                <view class="clearfix"></view>
+            </view>
+        </view>
+        
+    </view>
+    <view class="my-release detail-current class-detail">
+			<view class="ul">
+				<view class="order li">
+					<view class="left">
+						<label class="contact">
+                    	<image src="../../image/b_11.png" class="order-tu"></image>
+                    </label>
+					</view>
+					<view class="right index-right">
+						<label>
+                        21天芭蕾塑形马拉松跑步第二季
+                    </label>
+                   <view style="height:20px"></view>
+						<label>
+                       <span class="price-lan">￥399</span> 
+                    </label>
+					</view>
+					<view class="clearfix"></view>
+				</view>
+			</view>
+		</view>
+    <p class="ordersure mar_bo">
+    	   <span class="class_sp2 lan">
+        ¥1258
+    </span>
+  <span class="class_sp1">
+        合计：
+    </span>
+    <view class="clearfix"></view>
+</p>
+</view>
+ <view class="my-release comment-detail order-comment">
+	<p><image src="../../images/a_110.png" class="a_110"></image>评价详情</p>
+			<view class="ul">
+				<view class="order li">
+					<view class="left">
+						<label class="contact">
+                    	<image src="../../image/b_11.png" class="comment-tu"></image>
+                    </label>
+					</view>
+					<view class="right index-right">
+						<label class="collectionc">
+                       A**C
+                    </label>
+						
+					</view>
+					<view class="star">
+							匿名评价
+						</view>
+					
+					<view class="clearfix"></view>
+					<view  class='pingjia'>
+                        鞋子很不错，柔韧度很好，穿起来很舒服。
+                    </view>
+                    <!--<view class="comment-time">
+                        2017-09-30  11:00
+                    </view>-->
+                    <view class="clearfix"></view>
+				</view>
+			</view>
+			<view class="ul">
+				<view class="order li">
+					<view class="left">
+						<label class="contact">
+                    	<image src="../../image/b_11.png" class="comment-tu"></image>
+                    </label>
+					</view>
+					<view class="right index-right">
+						<label class="collectionc">
+                       A**C
+                    </label>
+						
+					</view>
+					<view class="star">
+							匿名评价
+						</view>
+					
+					<view class="clearfix"></view>
+					<view class='pingjia'>
+                        鞋子很不错，柔韧度很好，穿起来很舒服。
+                    </view>
+                    <!--<view class="comment-time">
+                        2017-09-30  11:00
+                    </view>-->
+                    <view class="clearfix"></view>
+				</view>
+			</view>
+		</view>
+    <!--确定发布-->
+			<view class="confirm-box">
+				<view class="button">分享</view>
+			</view>
+		<!--确定发布-->

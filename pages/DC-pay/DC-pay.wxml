@@ -1,0 +1,20 @@
+<!--pages/DC-pay/DC-pay.wxml-->
+<view class="bgb"></view>
+<view class="order_ul ul">
+    <view class="li" wx:for="{{list}}" wx:key="{{index}}" bindtap="choice" data-i="{{index}}">
+        <view class="cancel_span1 fl_right">
+            <image class='choose' src="{{choice == index?'../../images/a_01.png':'../../images/a_02.png'}}"></image>
+        </view>
+        <p class="ordersure dc-box">
+      <span class="order_sp4">
+        {{item.ds_name}}（押金
+        <span class="red">￥{{item.ds_deposit}}</span>）
+      </span>
+        </p>
+    </view>
+</view>
+<!--确认支付-->
+<view class="confirm-box">
+    <view class="button" bindtap="pay">确认支付</view>
+</view>
+<!--确认支付-->

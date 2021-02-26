@@ -1,0 +1,75 @@
+<!--pages/my-collection/my-collection.wxml-->
+<view class="Collage-menu ul">
+    <view class="li {{navIndex==index?'active':''}}" wx:for="{{navList}}" wx:key="{{index}}" bindtap="changeNav"
+          data-i="{{index}}">{{item}}
+        <view class="line"></view>
+    </view>
+</view>
+<view wx:if="{{isShow}}">
+    <view class="null" wx:if="{{courseList.length == 0 && navIndex == 0 || goodsList.length == 0 && navIndex == 1}}">
+        暂无收藏
+    </view>
+    <view class="Collage-box" wx:if="{{navIndex == 0}}">
+        <view class="Collage" wx:for="{{courseList}}" wx:key="{{index}}" bindtap="courseDetail" data-id="{{item.dc_id}}">
+            <span class="cancel-collection" catchtap="showDel" data-id="{{item.dc_id}}">取消收藏</span>
+            <image src="{{item.dc_cover}}" class='b_10'></image>
+            <view class="Collage-title">
+                <p>{{item.dc_name}}</p>
+                <view class="price price-box">￥{{item.dc_now_price}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="my-release detail-current" wx:if="{{navIndex == 1}}">
+        <view class="ul">
+            <view class="order li" wx:for="{{goodsList}}" wx:key="{{index}}" bindtap="goodsDetail" data-id="{{item.go_id}}">
+                <view class="left">
+                    <label class="contact">
+                        <image src="{{item.go_logo}}" class="order-tu"></image>
+                    </label>
+                </view>
+                <view class="right index-right">
+                    <label>{{item.go_name}}</label>
+                    <view style="height:20px"></view>
+                    <label class="jiage">
+                        ￥{{item.go_price}}<span class="cancel-good" catchtap="showDel" data-id="{{item.go_id}}">取消收藏</span>
+                    </label>
+                </view>
+                <view class="clearfix"></view>
+            </view>
+        </view>
+    </view>
+    <view class="my-release detail-current" wx:if="{{navIndex == 2}}">
+        <view class="ul">
+            <view class="order li" wx:for="{{goodsList}}" wx:key="{{index}}" bindtap="goodsDetail" data-id="{{item.go_id}}">
+                <view class="left">
+                    <label class="contact">
+                        <image src="{{item.go_logo}}" class="order-tu"></image>
+                    </label>
+                </view>
+                <view class="right index-right">
+                    <label>{{item.go_name}}</label>
+                    <view style="height:20px"></view>
+                    <label class="jiage">
+                        ￥{{item.go_price}}<span class="cancel-good" catchtap="showDel" data-id="{{item.go_id}}">取消收藏</span>
+                    </label>
+                </view>
+                <view class="clearfix"></view>
+            </view>
+        </view>
+    </view>
+    <view class="member" wx:if="{{showDel}}">
+        <view class="withdrawContent">
+            <view class="title">
+                <image src="../../images/a_29.png" class="a_29"></image>
+                提示
+            </view>
+            <view class="text">
+                确定取消收藏？
+            </view>
+            <view class="btnGroup">
+                <view class="cancel" bindtap="hideDel">否</view>
+                <view class="submit" bindtap="cancelCollection">是</view>
+            </view>
+        </view>
+    </view>
+</view>

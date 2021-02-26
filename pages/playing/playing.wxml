@@ -1,0 +1,48 @@
+<!--pages/playing/playing.wxml-->
+<view class="conts">
+  <view class="bg">
+    <image src="../../images/bg01.png"></image>
+  </view>
+  <view class="main">
+    <view class="top">
+      <image class="cd" src="../../images/bg02.png"></image>
+      <view class="img">
+        <image class="{{(playStatus || value >= max-1) ? '' : 'pause'}}" src="{{musicList[index].mu_cover}}"></image>
+      </view>
+      <image class="content" src="../../images/CD02.png"></image>
+    </view>
+    <view class="btm">
+      <view class="msg">
+        <view class="text">{{musicList[index].mu_name}}</view>
+        <view class="operate">
+          <view class="speed" bindtap="speed">{{rate == '' ? '倍速' : 'X' + rate}}</view>
+          <image src="../../images/a_26.png" bindtap="collect"></image>
+          <button open-type="share" class="shareBtn">
+            <image src="{{collectStatus ? '../../images/a_26_s.png' : '../../images/a_25.png'}}"></image>
+          </button>
+          <view wx:if='{{speed}}' class="speedList">
+            <view bindtap="backRate" data-num="0.5">X0.5</view>
+            <view bindtap="backRate" data-num="0.8">X0.8</view>
+            <view bindtap="backRate" data-num="1.0">X1.0</view>
+            <view bindtap="backRate" data-num="1.25">X1.25</view>
+            <view bindtap="backRate" data-num="1.5">X1.5</view>
+            <view bindtap="backRate" data-num="2.0">X2.0</view>
+          </view>
+        </view>
+      </view>
+      <view class="slider">
+        <slider block-size="18" activeColor="#29D5D0" step="1" min="{{min}}" max="{{max}}" value="{{value}}" bindchange='seek' bindchanging='seeking' block-color="#29D5D0"/>
+        <view class="info">
+          <text>{{now}}</text>
+          <text>{{long}}</text>
+        </view>
+      </view>
+      <view class="btn">
+        <image src="../../images/icon08.png" class="change" bindtap="playPrev"></image>
+        <image src="{{(playStatus || value>=max) ? '../../images/icon11.png' : '../../images/icon10.png'}}" class="play" bindtap="bindPlaySong"></image>
+        <image src="../../images/icon09.png" class="change" bindtap="playNext"></image>
+      </view>
+    </view>
+  </view>
+  <video id="myVideo" style="position:absolute;left:-1000px;top:-1000px;" src="{{musicList[index].mu_mp4}}" bindtimeupdate="timeupdate" bindended="videoEnd"></video>
+</view>

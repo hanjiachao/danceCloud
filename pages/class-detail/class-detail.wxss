@@ -1,0 +1,115 @@
+/* pages/class-detail/class-detail.wxss */
+/*课程详情*/
+.bottomBtn{width: 100% !important;background: -webkit-linear-gradient(90deg, #50f1c0, #29ddd9);background: -o-linear-gradient(90deg, #50f1c0, #29ddd9);background: -moz-linear-gradient(90deg, #50f1c0, #29ddd9);background: linear-gradient(90deg, #50f1c0, #29ddd9);height: 35px;line-height: 35px;color: #fff !important;border-radius: 17px;font-size: 16px;}
+
+.setting-form {
+    padding: 0px 0px;
+}
+.lan {
+    color: #29D5D0;
+}
+.setting-form .li {
+    padding: 0px 15px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 0px;
+    background-color: white;
+}
+.setting-form .left {
+    float: left;
+    line-height: 45px;
+    color: #666;
+}
+.setting-form .left span {
+    font-size: 14px;
+}
+.setting-form .right1 {
+    float: right;
+    line-height: 45px;
+    color: #999;
+}
+.order-tu {
+    width: 70px;
+    height: 70px;
+    margin-right: 15px;
+}
+.class-detail {
+    border-top: 6px solid #f0f0f0;
+}
+.class-detail .order {
+    margin-bottom: 0px;
+}
+.my-release .order {
+    border-bottom: 1px solid #f0f0f0;
+}
+.my-release ul .li .left {
+    float: left;
+    /* width: 80px; */
+}
+.detail-current .ul .li .left {
+    float: left;
+    width: 80px;
+}
+.my-release .ul .li .index-right {
+    float: left;
+    width: calc(100% - 80px);
+}
+.right {
+    /* float: right; */
+    bottom: 17px;
+}
+.my-release .ul .order .right label {
+    line-height: 25px;
+    height: 25px;
+}
+.my-release .ul .li .index-right .label {
+    width: 100%;
+    color: #333;
+    font-size: 14px;
+    line-height: 25px;
+    height: 25px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap
+}
+.price-lan {
+    color: #29D5D0;
+    font-size: 16px;
+    margin-right: 6px;
+}
+.my-release .li {
+    padding: 10px 15px;
+    position: relative;
+    background-color: white;
+}
+span {
+    display: inline-block;
+}
+.confirm-box .ul {
+    padding: 0px 15px;
+}
+.confirm-box .ul .li:nth-child(1) {
+    color: #29d5d0;
+    border: 1px solid #29d5d0;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 21px;
+    font-size: 16px;
+}
+.confirm-box .ul .li:nth-child(2) {
+    float: right;
+    background: -webkit-linear-gradient(90deg, #50f1c0, #29ddd9);
+    background: -o-linear-gradient(90deg, #50f1c0, #29ddd9);
+    background: -moz-linear-gradient(90deg, #50f1c0, #29ddd9);
+    background: linear-gradient(90deg, #50f1c0, #29ddd9);
+    height: 35px;
+    line-height: 35px;
+    color: white;
+    border-radius: 21px;
+    font-size: 16px;
+}
+.confirm-box .ul .li {
+    float: left;
+    width: 45%;
+}
+
+/*课程详情*/

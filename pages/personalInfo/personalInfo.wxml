@@ -1,0 +1,34 @@
+<!--pages/personalInfo/personalInfo.wxml-->
+<view class="bg"></view>
+<view class="content-box">
+    <view class="headRow" bindtap='setPhoto'>
+        <p class="title">头像</p>
+        <image  class="userinfo-avatar" src="{{imgUrl}}" background-size="cover"></image>
+    </view>
+    <view class="rowa" bindtap="name">
+        <p class="info">昵称</p>
+        <i>
+            <image src="../../images/a_11.png" class="a_11"></image>
+        </i>
+    </view>
+    <view class="rowa" bindtap="myAddress">
+        <p class="info">我的地址</p>
+        <i>
+            <image src="../../images/a_11.png" class="a_11"></image>
+        </i>
+    </view>
+
+    <view class="rowa" bindtap="changeMobile" wx:if="{{mobile != ''}}">
+        <p class="info">已绑定手机号码</p>
+        <span>{{showMobile}}</span>
+        <i>
+            <image src="../../images/a_11.png" class="a_11"></image>
+        </i>
+    </view>
+    <view class="rowa" bindtap="bindmobile" wx:else>
+        <p class="info">绑定手机号</p>
+        <i>
+            <image src="../../images/a_11.png" class="a_11"></image>
+        </i>
+    </view>
+</view>

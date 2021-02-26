@@ -1,0 +1,42 @@
+<!--pages/change-phone-number/change-phone-number.wxml-->
+<view class="bgb"></view>
+		<view class="change-box change">
+			<view class="ul">
+				<view class="li">
+					<view class="left">
+						<label>
+                        原手机号
+                    </label>
+					</view>
+					<view class="right">
+						<view>
+							{{showMobile}}
+						</view>
+					</view>
+					<view class="clearfix"></view>
+				</view>
+				<view class="li" wx:if="{{type == '国内'}}">
+					<view class="left">
+						<label>
+                        验证码
+                    </label>
+					</view>
+					<view class="right1" bindtap="sendCode">
+						<view class="send-btn button">{{time==0 ?'获取验证码' : time+'s后重试'}}</view>
+					</view>
+					<view class="center">
+						<view>
+							<input type="number" name="" placeholder="请输入验证码" placeholder-class="phcolor" bindinput ="inputChange" data-field="code"/>
+						</view>
+					</view>
+					<view class="clearfix"></view>
+				</view>
+			</view>
+		</view>
+		<!--下一步-->
+		<view class="content-box">
+			<view class="revirse-btn">
+				<view class="btn" bindtap="submit">下一步</view>
+			</view>
+		</view>
+		<!--下一步-->

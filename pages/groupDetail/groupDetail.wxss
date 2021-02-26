@@ -1,0 +1,379 @@
+/* pages/liveDetail/liveDetail.wxss */
+@import "../../wxParse/wxParse.wxss";
+/*直播详情*/
+.price-lan{
+	color: #29D5D0;
+	font-size: 16px;
+	margin-right: 6px;
+}
+page{
+    background: #fff;
+}
+.wxParse-span{
+    background: #fff !important;
+}
+.wxParse-p{
+    background: #fff;
+}
+.b_08{
+	width: 100%;
+	height: 200px;
+}
+.quan{
+  margin-left: 10px
+}
+.a_12 {
+    width: 51%;
+    height: 48px;
+    margin: 0px auto 20px auto;
+    display: block;
+}
+.detail-box{
+	padding: 10px 0px 10px 0px;
+	border-bottom: 1px solid #f0f0f0;
+	background-color: white;
+}
+.huise {
+    color: #999;
+    padding: 0px 15px 0px 15px;
+    border-bottom: 1px solid #f0f0f0;
+    line-height: 30px;
+    font-size: 12px;
+}
+.huise span {
+    padding-left: 5px;
+}
+.red {
+    color: #ff3e50;
+}
+.detail-box p{
+	line-height: 30px;
+	color: #222222;
+	padding: 0px 15px;
+  display:block;
+
+}
+.detail-box .youhui{
+	line-height: 25px;
+	font-size: 12px;
+}
+.detail-box p:nth-child(2){
+	position: relative;
+}
+.detail-box p:nth-child(2) .a_25{
+	position: absolute;
+	right: 15px;
+	top: 7px;
+	width: 18px;
+	height: 18px;
+}
+.a_25c{
+	position: absolute;
+	right: 0px;
+	top: -14px;
+	width: 18px;
+	height: 18px;
+}
+.detail-box p:nth-child(2) .a_26{
+	position: absolute;
+	right:55px;
+	top: 7px;
+	width: 18px;
+	height: 18px;
+}
+.hui{
+	color: #999;
+	position: relative;
+}
+.a_26c{
+	position: absolute;
+	right:30px;
+	top: -14px;
+	width: 18px;
+	height: 18px;
+}
+.a_27c{
+	position: absolute;
+	right:60px;
+	top: -14px;
+	width: 18px;
+	height: 18px;
+}
+.a_c{
+	position: absolute;
+    left: -44px;
+    top: 63px;
+    width: 100px;
+    height: 100px;
+    height: auto;
+    transform: rotate(90deg);
+}
+.a_21{
+	width: 15px;
+    height: 15px;
+    vertical-align: -2px;
+    margin-right: 5px;
+}
+.content-detail{
+	padding: 15px 15px;
+	background-color: white;
+    margin-bottom:54px;
+}
+.content-detail p{
+	color: #666;
+	line-height: 22px;
+	    text-indent: 2em;
+}
+.a_67{
+	position: absolute;
+    transform: rotate(-9deg);
+    -ms-transform: rotate(-9deg);
+    -moz-transform: rotate(-9deg);
+    -webkit-transform: rotate(-9deg);
+    -o-transform: rotate(-9deg);
+    top:9px;
+    left:7px;
+    height: 2px;
+    width: 40px;
+}
+/*确定按键*/
+.confirm-box{
+	width: calc(100% - 30px);
+	background-color: white;
+	position: fixed;
+	bottom: 0px;
+	text-align: center;
+	padding: 10px 15px;
+}
+.confirm-box .button{
+	width: 100%;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+	margin: 0 auto;
+	color: white;
+	font-size: 16px;
+	background: -webkit-linear-gradient(90deg, #50f1c0, #29ddd9); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(90deg, #50f1c0, #29ddd9); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(90deg, #50f1c0, #29ddd9); /* Firefox 3.6 - 15 */
+    background: linear-gradient(90deg, #50f1c0, #29ddd9); /* 标准的语法（必须放在最后） */
+   border-radius: 21px;
+   box-shadow: 1px 6px 20px #c6f6f5;
+}
+/*确定按键*/
+/*直播详情*/
+/*遮罩*/
+.member .withdrawContent {
+    width: 50%;
+    background: #fff;
+    left: 50%;
+    top: calc(50% - 90px);
+    border-radius: 6px;
+    position: fixed;
+    margin-left: -25%;
+}
+.withdrawContent .btnGroup {
+    width: 80%;
+    height: 60px;
+    position: relative;
+    margin: 0 auto;
+}
+.withdrawContent .btnGroup .submit {
+    right: 5%;
+    background: -webkit-linear-gradient(90deg, #50f1c0, #29ddd9); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(90deg, #50f1c0, #29ddd9); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(90deg, #50f1c0, #29ddd9); /* Firefox 3.6 - 15 */
+    background: linear-gradient(90deg, #50f1c0, #29ddd9); /* 标准的语法（必须放在最后） */
+    color: #fff;
+    padding: 3px 3px;
+    display: block;
+    position: absolute;
+    text-align: center;
+    box-sizing: border-box;
+    top: 15px;
+    font-size: 14px;
+    width: 40%;
+    border-radius: 12px;
+}
+.submit-success {
+    right: 22%;
+    background: -webkit-linear-gradient(90deg, #50f1c0, #29ddd9); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(90deg, #50f1c0, #29ddd9); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(90deg, #50f1c0, #29ddd9); /* Firefox 3.6 - 15 */
+    background: linear-gradient(90deg, #50f1c0, #29ddd9); /* 标准的语法（必须放在最后） */
+    color: #fff;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    position: absolute;
+    text-align: center;
+    border: 1px solid #29d5d0;
+    box-sizing: border-box;
+    bottom: 0px;
+    font-size: 14px;
+    width: 25%;
+    border-radius: 16px;
+}
+.withdrawContent .btnGroup .cancel {
+    left: 5%;
+    background: #fff;
+    color: #29d5d0;
+    width: 40%;
+    padding: 2px 2px;
+    display: block;
+    position: absolute;
+    text-align: center;
+    border: 1px solid #29d5d0;
+    box-sizing: border-box;
+    top: 15px;
+    font-size: 14px;
+    border-radius: 12px;
+}
+.huise{
+	    color: #999;
+    padding: 0px 15px 0px 15px;
+    border-bottom: 1px solid #f0f0f0;
+    line-height: 30px;
+    font-size: 12px;
+}
+.detail-box .one{
+	margin-top: 10px;
+}
+.huise span{
+	padding-left:5px;
+}
+.cancel-success {
+    left: 22%;
+    background: #fff;
+    color: #29d5d0;
+    width: 25%;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    position: absolute;
+    text-align: center;
+    border: 1px solid #29d5d0;
+    box-sizing: border-box;
+    bottom: 0px;
+    font-size: 14px;
+        border-radius: 16px;
+}
+.member .withdrawContent .title {
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    color: #29d5d0;
+    display: block;
+    font-size: 14px;
+    padding: 0px 0px;
+}
+.withdrawContent .text {
+    font-size: 14px;
+    text-align: center;
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+.member {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(50, 50, 50, 0.5);
+}
+.detail-box .di:nth-child(2) {
+    border-bottom: 1px solid #f0f0f0;
+}
+.group{
+	text-align: center;
+    position: absolute;
+        bottom: 21px;
+    left: 50%;
+    margin-left: -62px;
+}
+.slide-image{
+    width:100%;
+    height:200px;
+}
+.a_29{
+	width: 15px;
+	height: 15px;
+	margin-right: 6px;
+	vertical-align: -3px;
+}
+.close{
+	padding: 0px 8px;
+	background-color: #29D5D0;
+	border-radius: 8px;
+	color: white;
+	margin-top: 6px;
+}
+.share {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(50, 50, 50, 0.5);
+}
+.share .withdrawC {
+    width: 30%;
+    background: #fff;
+    left: 50%;
+    top: calc(50% - 90px);
+    border-radius: 6px;
+    position: fixed;
+    margin-left: -15%;
+    padding: 20px 10px;
+    text-align: center;
+}
+.share_p{
+    margin-top:70px!important;
+}
+.shareBtn{
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFsAAABbCAYAAAAcNvmZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjUxNTMyNkQ0ODMyMjExRThBM0ZERjU4RDNBRUZGN0JEIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjUxNTMyNkQ1ODMyMjExRThBM0ZERjU4RDNBRUZGN0JEIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTE1MzI2RDI4MzIyMTFFOEEzRkRGNThEM0FFRkY3QkQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTE1MzI2RDM4MzIyMTFFOEEzRkRGNThEM0FFRkY3QkQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6BlTcYAAALtklEQVR42uxd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");
+    width:60px;
+    height:60px;
+    border: none !important;
+    outline: none !important;
+    background-size: 100% 100%;
+    position: absolute;
+    margin-bottom:11px;
+    left:50px;
+    display: block;
+    margin-left:-30px;
+}
+.shareBtn:after{
+    display: none;
+}
+.share .withdrawC image{
+	width: 40%;
+	margin-bottom: 20px;
+}
+.share .withdrawContent {
+    width: 50%;
+    background: #fff;
+    left: 50%;
+    top: calc(50% - 90px);
+    border-radius: 6px;
+    position: fixed;
+    margin-left: -25%;
+    padding: 20px 0px;
+}
+.share .withdrawContent .ul .li{
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+.share .withdrawContent .ul .li image{
+	width: 60px;
+  height: 60px
+}
+.share .withdrawContent .ul .li p{
+	color: #333;
+  display: block;
+	margin-top: 6px;
+  font-size: 14px
+}
+/*遮罩*/

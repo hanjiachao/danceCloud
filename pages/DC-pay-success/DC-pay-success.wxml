@@ -1,0 +1,97 @@
+<!--pages/DC-pay-success/DC-pay-success.wxml-->
+<view class="bgc"></view>
+<view class="content-dc" wx:if="isShow">
+    <view class="dc-success ul">
+        <view class="share-dc">
+            <view class="shares" bindtap="share" data-is= '1'></view>
+            <!--<button open-type="share" class="shareBtn"></button>-->
+        </view>
+        <view class="li">
+            <view class="left">
+                <image src="{{info.headimg}}" class="dc-tu"></image>
+            </view>
+            <view class="right index-right">
+                <label class="dengji">
+                    {{info.nickname}}
+                </label>
+                <label class="dengji">
+                    押金：<span>{{info.deposit}}元</span>
+                    <span class="Explain" bindtap="DCforward" wx:if="{{withdraw_status}}">提现</span>
+                </label>
+                <label class="dengji">
+                    等级：<span>{{info.dc_grade}}</span>
+                    <span class="Explain" bindtap="DClevel">等级说明</span>
+                </label>
+            </view>
+            <view class="clearfix"></view>
+        </view>
+    </view>
+    <view class="jindu">
+        业务进度：
+        <span class="jdt">
+            <view class="jdtI" style="width:{{info.now_achievement / info.need_achievement * 100}}%"></view>
+        </span>
+        <span class="molecule">{{info.now_achievement}}</span>/{{info.need_achievement}}
+    </view>
+    <view class="tream">
+        <p>团队成员<span>{{info.team_num}}</span>人，共为我贡献<span>{{info.total_price}}</span>元</p>
+        <view class="my-release dc-detail">
+            <view class='ul'>
+                <view class="order li" wx:for="{{list}}" wx:key="{{index}}">
+                    <view class="left">
+                        <image src="{{item.headimg}}" class="comment-tu"></image>
+                    </view>
+                    <view class="right index-right">
+                        <label class="collectionc">
+                            {{item.nickname}}
+                            <span class="gong">为我贡献：{{item.price}}元</span>
+                        </label>
+                    </view>
+                    <view class="clearfix"></view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 提现 -->
+    <view class="member" wx:if="{{isForward}}">
+        <view class="withdrawContent">
+            <view class="title">
+                <image src="../../images/a_29.png" class="a_29"></image>
+                提示
+            </view>
+            <view class="text">
+                确定要提现吗？
+            </view>
+            <view class="btnGroup">
+                <view class="cancel" bindtap="hideWithdraw">取消</view>
+                <view class="submit" bindtap="submit">确定</view>
+            </view>
+        </view>
+    </view>
+    <!-- 提现 -->
+    <!-- 分享朋友圈 -->
+    <view class="member" wx:if="{{isfriend}}">
+        <view class="withdrawContent">
+            <view class="title">
+                <image src="../../images/a_29.png" class="a_29"></image>
+                提示
+            </view>
+            <view class="text">
+                图片已保存，请在相册中查看分享至朋友圈
+            </view>
+            <view class="btnGroup">
+                <view class="submit" bindtap="sure" style="right:30%;">确定</view>
+            </view>
+        </view>
+    </view>
+    <!-- 分享朋友圈 -->
+    <view class="pos" wx:if="{{isshare}}" bindtap="hiddenshare">
+        <view class="pos_ml">
+            <view catchtap="sharefriends">分享到朋友圈</view>
+            <view>
+                <button open-type="share" class="shareBtn"></button>
+                分享给好友
+            </view>
+        </view>
+    </view>
+</view>

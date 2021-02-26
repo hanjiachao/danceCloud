@@ -1,0 +1,81 @@
+<view>
+    <view class="bgb"></view>
+    <view class="Collage-menu">
+        <view class="li {{navIndex == index ? 'active' : ''}}" wx:for="{{navList}}" wx:key="{{index}}" bindtap="changeNav"
+              data-index="{{index}}">
+            {{item}}
+            <view class="xian"></view>
+        </view>
+    </view>
+    <view class="my-release order-release detail-current" wx:if="{{isShow}}">
+        <view class="null" wx:if="{{list.length == 0}}">暂无课程</view>
+        <view class="ul" wx:for="{{list}}" wx:key="{{index}}" bindtap="detail" data-order="{{item.order_no}}">
+            <view class="order-number">
+                订单号：{{item.order_no}}
+                <view class="station">{{item.status}}</view>
+                <view class="clearfix"></view>
+            </view>
+            <view class="order li">
+                <view class="left">
+                    <label class="contact">
+                        <image src="{{item.dance_cover}}" class="order-tu"></image>
+                    </label>
+                </view>
+                <view class="right index-right">
+                    <label class="collectionc">
+                        {{item.dance_name}}
+                    </label>
+                    <view class="view" style="height: 20px;"></view>
+                    <label class="collectionc">
+                        <p class="price-lan">￥{{item.price}}</p>
+                    </label>
+                </view>
+                <view class="clearfix"></view>
+            </view>
+            <view class="time order-number">
+                实付：<span>￥{{item.pay_price}}</span>
+                <view class="opera ul">
+                    <view class="li clearBorder" wx:if="{{item.status != '待付款'}}"></view>
+                    <view class="li" wx:if="{{item.status == '待付款'}}" catchtap="showCancel" data-order="{{item.order_no}}" data-index="{{index}}">取消</view>
+                    <view class="li" wx:if="{{item.status == '待付款'}}" catchtap="pay" data-order="{{item.order_no}}">付款</view>
+                    <view class="li" wx:if="{{item.status == '已付款'}}" catchtap="lessonVideo" data-id="{{item.vid}}"  data-order="{{item.order_no}}">观看课程</view>
+                    <view class="li" wx:if="{{item.status == '已取消'}}" catchtap="showDel" data-order="{{item.order_no}}" data-index="{{index}}">删除</view>
+                    <view class="clearfix"></view>
+                </view>
+            </view>
+        </view>
+
+        <view class="member" wx:if="{{showCancel}}">
+            <view class="withdrawContent">
+                <view class="title">
+                    <image src="../../images/a_29.png" class="a_29"></image>
+                    提示
+                </view>
+                <view class="text">
+                    确定要取消订单吗？
+                </view>
+                <view class="btnGroup">
+                    <view class="cancel" bindtap="hideCancel">否</view>
+                    <view class="submit" bindtap="cancel">是</view>
+                </view>
+            </view>
+        </view>
+
+        <view class="member" wx:if="{{showDel}}">
+            <view class="withdrawContent">
+                <view class="title">
+                    <image src="../../images/a_29.png" class="a_29"></image>
+                    提示
+                </view>
+                <view class="text">
+                    确定要删除订单吗？
+                </view>
+                <view class="btnGroup">
+                    <view class="cancel" bindtap="hideDel">否</view>
+                    <view class="submit" bindtap="del">是</view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+</view>

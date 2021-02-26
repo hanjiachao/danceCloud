@@ -1,0 +1,51 @@
+<!--pages/setting/setting.wxml-->
+<view class="bg"></view>
+<view class="setting-form">
+    <view class="ul">
+        <view class="li" bindtap="feedback">
+            <view class="left">
+						<span>
+                                        意见反馈
+                    </span>
+            </view>
+            <view class="right1">
+                <span><image src="../../images/a_11.png"></image></span>
+            </view>
+            <view class="clearfix"></view>
+        </view>
+        <view class="li" bindtap="clear">
+            <view class="left">
+                    <span>
+                                      清除缓存
+                    </span>
+            </view>
+            <view class="right1">
+                <span><image src="../../images/a_11.png"></image></span>
+            </view>
+            <view class="clearfix"></view>
+        </view>
+        <view class="li" bindtap="aboutUs">
+            <view class="left">
+                    <span>
+                                      关于我们
+                    </span>
+            </view>
+            <view class="right1">
+                <span><image src="../../images/a_11.png"></image></span>
+            </view>
+            <view class="clearfix"></view>
+        </view>
+        <view class="li">
+            <view class="left">
+                    <span>
+                                      版本信息
+                    </span>
+            </view>
+            <view class="right1">
+                <span>{{version}}</span>
+            </view>
+            <view class="clearfix"></view>
+        </view>
+    </view>
+</view>
+

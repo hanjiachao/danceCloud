@@ -1,0 +1,6 @@
+<view wx:if="{{isShow}}">
+    <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" data-id="{{item.ne_id}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{list}}" wx:key="{{index}}" bindtap="detail">
+        <view class="content"><view class="{{item.ne_status == '0' ? 'new' : 'blank'}}"></view>{{item.ne_title}}</view>
+        <view class="del" catchtap="del" data-index="{{index}}" data-id="{{item.ne_id}}">删除</view>
+    </view>
+</view>

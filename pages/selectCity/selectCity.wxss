@@ -1,0 +1,35 @@
+/* pages/aboutUs/aboutUs.wxss */
+/*关于我们*/
+
+.about-us {
+	padding: 0px 40px;
+}
+
+.about-us p {
+	color: #333333;
+	font-size: 14px;
+	line-height: 25px;
+	text-align: justify
+}
+.login-logo {
+    text-align: center;
+}
+.login-logo view image{
+	width:8px;
+	height:13px;
+	display:block;
+	position:absolute;
+	top:14px;
+	right:15px;
+
+}
+.login-logo view{
+	line-height: 40px;
+	font-size:14px;
+	text-align: left;
+	padding:0px 15px;
+	color: #000;
+	border-bottom: 1px solid #efefef;
+	position: relative;
+}
+/*关于我们*/

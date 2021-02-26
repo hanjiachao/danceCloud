@@ -1,0 +1,74 @@
+<view wx:if="{{show}}">
+	<!--<view class="bg"></view>-->
+	<view class="content-box">
+		<view class="chaxun">
+			<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height:200px;">
+				<block wx:for="{{banner_list}}">
+					<swiper-item>
+						<image src="{{item}}" class="slide-image"/>
+					</swiper-item>
+				</block>
+			</swiper>
+			<view class="search_box" bindtap="searchShoop">
+				<view class="left"><image src="../../images/a_10.png"></image></view>
+				<view class="search">
+					<view class="shu"></view>
+					<view class='button'>搜索</view>
+				</view>
+				<view class="center"><input type="text" placeholder="请输入商品名称……" placeholder-class="phcolor" disabled="disabled"/></view>
+			</view>
+		</view>
+		<view class="Collage-menu ul">
+			<view class="{{'li ' + (typename == '商品'?'active':'')}}" bindtap="shoppingClick" data-name="商品">
+				商品
+				<view class="xian"></view>
+			</view>
+			<view class="{{'li ' + (typename == '拼团'?'active':'')}}" bindtap="shoppingClick" data-name="拼团">
+				<view class="xian"></view>
+				拼团
+			</view>
+		</view>
+		<view class="my-release detail-current">
+			<view class="ul">
+				<view class="order li" wx:if="{{typename == '商品'}}" wx:for="{{list}}" wx:for-index="index" wx:for-item="item" bindtap="shoopdetail" data-id="{{item.go_id}}">
+					<view class="left">
+						<label class="contact">
+							<image src="{{item.go_logo}}" class="order-tu"></image>
+						</label>
+					</view>
+					<view class="right index-right">
+						<label>
+							{{item.go_name}}
+						</label>
+						<view style="height:20px"></view>
+						<label class="jiage">
+							￥{{item.go_price}}
+						</label>
+					</view>
+					<view class="clearfix"></view>
+				</view>
+				<view class="order li" wx:if="{{typename == '拼团'}}" wx:for="{{list}}" wx:for-index="index" wx:for-item="item" bindtap="shoopdetail" data-id="{{item.go_id}}">
+					<view class="left">
+						<label class="contact">
+							<image src="{{item.go_logo}}" class="order-tu"></image>
+						</label>
+					</view>
+					<view class="right index-right">
+						<label>
+							{{item.go_name}}
+						</label>
+						<label class="two">
+							还差 <span>{{item.number}}</span>人成团
+						</label>
+						<label  class="three">
+							拼团价格：<span>￥{{item.go_group_price}}</span>   <view class="enter right">立即参团</view>
+							<view class="clearfix"></view>
+						</label>
+					</view>
+					<view class="clearfix"></view>
+				</view>
+			</view>
+		</view>
+	</view>
+
+</view>

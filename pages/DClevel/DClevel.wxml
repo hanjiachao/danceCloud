@@ -1,0 +1,8 @@
+<!--pages/DCspokesperson/DCspokesperson.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+<view class="bgc"></view>
+<view class="content-box" style="padding-top: 30px;">
+    <view class="dc">
+        <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+    </view>
+</view>

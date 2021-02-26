@@ -1,0 +1,7 @@
+.touch-item {font-size: 14px;display: flex;justify-content: space-between;border-bottom:1px solid #ccc;width: 100%;overflow: hidden}
+.content {width: 100%;padding: 10px;height: 30px;line-height: 30px;margin-right:0;-webkit-transition: all 0.4s;transition: all 0.4s;-webkit-transform: translateX(90px);transform: translateX(90px);margin-left: -90px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-indent: 15px;position: relative}
+.new{position: absolute;width: 6px;height: 6px;background: rgb(255,45,94);border-radius: 50%;top: 22px;left: 11px}
+.del {background-color: rgb(255,49,94);width: 90px;display: flex;flex-direction: column;align-items: center;justify-content: center;color: #fff;-webkit-transform: translateX(90px);transform: translateX(90px);-webkit-transition: all 0.4s;transition: all 0.4s;}
+.touch-move-active .content,
+.touch-move-active .del {-webkit-transform: translateX(0);transform: translateX(0);}
+.blank{position:absolute;width:6px;height:6px;border-radius:50%;top:22px;left:11px;}

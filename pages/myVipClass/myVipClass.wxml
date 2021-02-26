@@ -1,0 +1,50 @@
+<!--pages/myVipClass/myVipClass.wxml-->
+<view class="bgsmyc"></view>
+		<view class="content-box">
+			<view class="vip-content VIPname-content ">
+				<view class="VIPname">
+					<image src="../../images/a_123.png" class="a_123"></image>
+					<p>有效期至2018.09.03</p>
+				</view>
+				<view class="vip-jindu">
+					成长进度值(455/1000)
+				<span class="vip-jdt">
+									<i class="vip-jdtI"></i>
+								</span>
+								<span class="molecule"></span>
+			</view>
+				<p style="margin-top: 0px;"><image src="../../images/a_116.png" class="a_116"></image>会员等级</p>
+				<table>
+				  <tr>
+				    <th>等级</th>
+				    <th>成长值(积分）</th>
+				  </tr>
+				  <tr>
+				    <td>群舞小草</td>
+				    <td>0</td>
+				  </tr>
+				  <tr>
+				    <td>领舞绿叶</td>
+				    <td>100</td>
+				  </tr>
+				  <tr>
+				    <td>群舞小草</td>
+				    <td>0</td>
+				  </tr>
+				  <tr>
+				    <td>领舞绿叶</td>
+				    <td>100</td>
+				  </tr>
+				</table>
+			<p><image src="../../images/a_117.png" class="a_117"></image>会员等级</p>
+			<view class="shuoming">1.会员年卡<span>￥500</span>；</view>
+			<view class="shuoming">1.会员年卡<span>￥500</span>；</view>
+			<view class="shuoming">1.会员年卡<span>￥500</span>；</view>
+			<view class="shuoming">1.会员年卡<span>￥500</span>；</view>
+			</view>
+			<!--确定-->
+			<view class="confirm-box vip">
+				<view class="button">开通</view>
+			</view>
+			<!--确定-->
+		</view>

@@ -1,0 +1,214 @@
+/* pages/evaluate/evaluate.wxss */
+/*评价*/
+.evaluate-btn .ul {
+}
+.evaluate-btn .ul .li {
+    float: left;
+        width: 45%;
+}
+.right1{
+	float: right;
+    font-size: 13px;
+}
+.evaluate-btn .ul .li:nth-child(1){
+	text-align: left;
+	line-height: 35px;
+	position: relative;
+}
+.my-release-menu span{
+	width: 6px;
+	height: 6px;
+	border-radius: 3px;
+	background-color: #f4ff76;
+	position: absolute;
+	top: 0px;
+	right: 35%
+}
+.evaluate-btn .ul .li:nth-child(1) label{
+	margin-left: 25px;
+	color: #29D5D0;
+}
+.evaluate-btn input[type="checkbox"]:checked {
+    background: url(../images/a_75_s.png) no-repeat center center;
+    width: 16px;
+    height: 16px;
+    background-size: 16px 16px;
+    border: 0;
+}
+.evaluate-btn input[type="checkbox"] {
+    position: absolute;
+    left: 0;
+    top: 9px;
+    outline: none;
+    -webkit-appearance: none;
+    border: 1px solid #29d5d0;
+    border-radius: 3px;
+    height: 16px;
+    width: 16px;
+    margin-right: 5px;
+}
+.evaluate-btn .ul .li:nth-child(2) {
+    float: right;
+    background: -webkit-linear-gradient(90deg, #50f1c0, #29ddd9);
+    background: -o-linear-gradient(90deg, #50f1c0, #29ddd9);
+    background: -moz-linear-gradient(90deg, #50f1c0, #29ddd9);
+    background: linear-gradient(90deg, #50f1c0, #29ddd9);
+    height: 35px;
+    line-height: 35px;
+    color: white;
+    border-radius: 21px;
+    font-size: 16px;
+}
+.evaluate-btn {
+    width: calc(100% - 30px);
+    background-color: white;
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+    padding: 10px 15px;
+}
+.evaluate-box{
+	padding: 10px 15px ;
+	
+}
+.evaluate-textarea::-webkit-input-placeholder{
+	color: #a2a2a2;
+}
+.niming{
+    position:absolute;
+    left:0;
+    top:1px;
+    margin-right:5px;
+
+}
+.a_105{
+	width: 15px;
+	margin-right: 6px;
+	vertical-align: -3px;
+	float: left;
+    height: 15px;
+    margin-top:3px;
+}
+.evaluate-one{
+	padding: 10px 10px;
+	background-color: white;
+	border-radius: 10px;
+    position: relative;
+    margin-bottom:10px;
+}
+.evaluate-two{
+	padding: 10px 10px;
+	background-color: white;
+	border-radius: 10px;
+	color: #a2a2a2;
+	margin-top: 10px;
+}
+.evaluate-two span{
+	float: left;
+}
+.evaluate-one .li:nth-child(1){
+	float: left;
+	width: 60px;
+	margin-right: 15px;
+}
+.evaluate-one .li:nth-child(1) image{
+	width: 60px;
+	height: 60px;
+}
+.evaluate-one .li:nth-child(2){
+    position:absolute;
+    top:50%;
+    transform:translate(0, -50%);
+    left:85px;
+    width:calc(100% - 92px);
+}
+.a_106{
+	width: 18px;
+	height: 18px;
+}
+.release-tu .li .add1 {
+    width: 90%;
+    height: 99px;
+}
+.evaluate-star .li{
+	float: left;
+	margin-right: 7px;
+}
+.evaluate-star{
+	display: inline-block;
+	float: left;
+	margin-left: 20px;
+}
+.evaluate-btn .active .niming{
+    width: 16px;
+    height: 16px;
+}
+.niming image{
+    width: 16px;
+    height: 16px;
+}
+.evaluate-textarea{
+	height: 100px;
+	width:100%;
+	resize: none;
+}
+.evaluate-btn .ul .li:nth-child(1) {
+    text-align: left;
+    line-height: 35px;
+    position: relative;
+    font-size: 14px;
+}
+.evaluate-btn .ul .li {
+    float: left;
+    width: 45%;
+}
+.evaluate-btn input[type="checkbox"] {
+    position: absolute;
+    left: 0;
+    top: 9px;
+    outline: none;
+    -webkit-appearance: none;
+    border: 1px solid #29d5d0;
+    border-radius: 3px;
+    height: 16px;
+    width: 16px;
+    margin-right: 5px;
+}
+.release-tu .li:nth-child(1), .release-tu .li:nth-child(4), .release-tu .li:nth-child(7) {
+    text-align: left;
+}
+.release-tu .li {
+    width: 33%;
+    text-align: center;
+    float: left;
+    position: relative;
+    margin-bottom: 8px;
+}
+.deleteimage{
+    position: absolute;
+    width:15px;
+    height:15px;
+    right:5px;
+    top:3px;
+}
+.deleteimage image{
+    width:15px;
+    height:15px;
+}
+.release-tu {
+    padding: 15px 0px 0px 0px;
+     margin-bottom: 60px;
+}
+.evaluate-btn .ul .li:nth-child(2) {
+    float: right;
+    background: -webkit-linear-gradient(90deg, #50f1c0, #29ddd9);
+    background: -o-linear-gradient(90deg, #50f1c0, #29ddd9);
+    background: -moz-linear-gradient(90deg, #50f1c0, #29ddd9);
+    background: linear-gradient(90deg, #50f1c0, #29ddd9);
+    height: 35px;
+    line-height: 35px;
+    color: white;
+    border-radius: 21px;
+    font-size: 16px;
+}
+/*评价*/

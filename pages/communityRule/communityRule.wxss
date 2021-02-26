@@ -1,0 +1,3 @@
+/* pages/communityRule/communityRule.wxss */
+page{width: calc(100% - 30px);padding: 0 15px}
+image{width: 100%}

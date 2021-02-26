@@ -1,0 +1,9 @@
+<!--pages/name/name.wxml-->
+<view class="header">
+    <view class='span' bindtap='submit'>保存</view>
+</view>
+<p class="content">
+    <p class="row">
+        <input id="name" type="text" placeholder="请输入昵称..." bindinput="nickname" value="{{information_nickname}}" />
+    </p>
+</p>

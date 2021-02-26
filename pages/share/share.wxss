@@ -1,0 +1,131 @@
+/* pages/share/share.wxss */
+/*分享*/
+.myvip-content{
+	    padding: 70% 15px 80px 15px !important;
+}
+.share-img {
+    width:52%;
+    height:52%;
+    margin:0 auto;
+    text-align:center;
+    margin-top:12px;
+}
+.share-content{
+	text-align: center;
+}
+.tou{
+	width: 60px;
+	height: 60px;
+	border-radius: 30px;
+	margin: 0 auto;
+	border: 3px solid #fff;
+}
+.tou image{
+	width: 100%;
+	height: 100%;
+    border-radius:50%;
+}
+.share-content p{
+	line-height: 50px;
+	color: #ff353f;
+	text-align: center;
+	font-size: 16px;
+}
+.share-title {
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+.share-title {
+    padding: 10px 15px 10px 15px;
+    font-size: 14px;
+    color: #ff4444;
+}
+.share-title image {
+    width:55%;
+    margin:0 auto;
+    height:13px;
+}
+.share-title span {
+    width: 98px;
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    color: #cacaca;
+    font-size: 14px;
+}
+.share-title image.left {
+    left: 5%;
+}
+.share-title image.right {
+    right: 5%;
+}
+.share_vip{
+    width:32px;
+    height:16px;
+    vertical-align:3px;
+    margin-right:10px;
+    margin-top:30px;
+}
+.shareBtn {
+    position: absolute;
+    right: 11px;
+    top: 9px;
+    width: 28px;
+    height: 28px;
+    display: block;
+    margin: 0 !important;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAlCAYAAADFniADAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QkQyOTJBOEY5RjYyMTFFODkyMkVFMjVGMTIwNDY0MkMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QkQyOTJBOTA5RjYyMTFFODkyMkVFMjVGMTIwNDY0MkMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpCRDI5MkE4RDlGNjIxMUU4OTIyRUUyNUYxMjA0NjQyQyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpCRDI5MkE4RTlGNjIxMUU4OTIyRUUyNUYxMjA0NjQyQyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PjbiyGwAAAImSURBVHja7NjPSxRhHMfx3VUzF8I6bSBUsLh0tcBjF3Nhae0fsPAQhEFeBRE0sYugBy9LdCsyiAg6LIJEaRREHTp0aDMqIRKMDopriduP6f3AF1mH+T3P2AT7wItld2ae+czzPPPsM5M0DCMRt5JshPqfQyVUKBtFPMaWYV+uOhyvNGEGF3HQZd9ddi11HaP4jDK+2VzTPVQcrrkVb5DDOm7jJt76bak+aYVbaPV6dQ5SyOMBfkrdzzCAtNUxVpWoAz7hgIZAZscwizUJV0PJvF+zReN1o4SapmF7Av0oSN0tddtaTN9tu0+Vaxpa5RQe1t0UrzGNS3ghv4177b6wodpxA39QxRQ6ZZsaQ0/kHFfs6tAdqgsfJZAaK0dMYZ+6BdIdqldaRg3iHtO2Q3iJ37jgVpeuUGewjYrcYebt5/EL/V7q0xEqiw18QMZhv7TXOlMhb3c1pdxFE87hq8O+P/xUGqYMydwzgOUo/5C9dt9h6bZF3TN/mO4bRDtGQtShZvMOXS2VlIH9PGSrDOO7rpY6jawsRcKUtNhTgoY6K5/zUSw8g4ZSd9wKvsQpVM519fgPQmWwGrdQanBWowoVdEa/jFdxCzUX5WOfVffVZKbej5KxGgZWz31LOI6T2IkwUBve4x16vT733dH03GelDfflPHmvT8gTGJPJseyyTvJbjqIof8TqHJN+3iUU8Aibht6iljsLsqb39S6h8SqoESpo+SvAAIkPQJ15WSxhAAAAAElFTkSuQmCC");
+    background-size: 100% 100%;
+    border: none !important;
+    outline: none !important;
+    padding:10px;
+    border-radius: 50%;
+}
+button::after {
+    border: none;
+}
+.erweima{
+    background-color:#fff;
+    border:2px solid #b7ece5;
+    width:100px;
+    height:100px;
+    margin:0 auto;
+
+}
+.a_121{
+    width:112px;
+    margin-top:30px;
+    height:23px;
+}
+.erweima-tu {
+    width: 92%;
+    vertical-align: middle;
+    margin-top: 5px;
+    height: 92%
+}
+.daka{
+    background: -webkit-linear-gradient(90deg, #50f1c0, #29ddd9);
+    background: -o-linear-gradient(90deg, #50f1c0, #29ddd9);
+    background: -moz-linear-gradient(90deg, #50f1c0, #29ddd9);
+    background: linear-gradient(90deg, #50f1c0, #29ddd9);
+    position: absolute;
+    z-index:222;
+    width:48px;
+    height:48px;
+    border-radius: 50%;
+    text-align: center;
+    margin:0 auto;
+    top:10px;
+    right:15px;
+}
+.bg_share{
+    width:100%;
+    height:250px;
+    overflow: hidden;
+}
+.bg_share image{
+    width:100%;
+    height:250px;
+}
+/*分享*/

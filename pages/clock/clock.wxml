@@ -1,0 +1,22 @@
+<!--pages/clock/clock.wxml-->
+<image class="bg" src="{{background}}"></image>
+<view class="content" wx:if="{{isShow}}">
+    <view class="ul">
+        <view class="li {{item.today?'today':''}} {{item.status?'clock':''}}" bindtap="clock" data-today="{{item.today}}" data-status="{{item.status}}" data-i="{{index}}" style='width:{{width}}px;height:{{width}}px;line-height:{{width}}px;border-radius:{{width / 3}}px' wx:for="{{list}}" wx:key="{{index}}">
+            <view class="day">{{ item.status ? item.name : item.today ? '打卡' : item.name }}</view>
+        </view>
+    </view>
+    <view class="member" wx:if="{{success}}">
+        <view class="withdraw">
+            <view class="close closery" bindtap='close'>关闭</view>
+            <image style='height:280px;' src="../../images/a_57.png"></image>
+            <view class="group">
+                <view style='color:#29D5D0'>恭喜您获取成长值+{{score}}！</view>
+                <!-- <span class="close" bindtap="close">关闭</span> -->
+                 <view style='color:#29D5D0;padding-top: 10px;'>快去分享到朋友圈吧</view>
+                <image bindtap='getImg' style='width:40px; height:40px;padding-top:10px;' src="../../images/share_pyq.png"></image>
+                <view style='text-algin: center;'>朋友圈</view>
+            </view>
+        </view>
+    </view>
+</view>

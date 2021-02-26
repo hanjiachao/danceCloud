@@ -1,0 +1,67 @@
+<!--pages/ShoppingCart/ShoppingCart.wxml-->
+<view class="{{list.length == 0?'null':''}}"></view>
+<view class="content-box" wx:if="{{list.length > 0 && isShow}}">
+    <view class="my-release detail-current shoppingcart">
+        <view class="daka" bindtap="edit">{{editBtn}}</view>
+        <view class="ul">
+            <view class="order li" wx:for="{{list}}" wx:key="{{index}}">
+                <view class="checkbox">
+                    <image wx:if="{{item.ca_choose && item.ca_choose != '否'}}" src="../../images/a_78_s.png" class="checkImg" bindtap="choice" data-i="{{index}}" data-choice="{{true}}"></image>
+                    <image wx:if="{{!item.ca_choose || item.ca_choose == '否'}}" src="../../images/a_78.png" class="checkImg" bindtap="choice" data-i="{{index}}" data-choice="{{false}}"></image>
+                </view>
+                <view class="left">
+                    <label class="contact">
+                        <image src="{{item.go_logo}}" class="order-tu"></image>
+                    </label>
+                </view>
+                <view class="right index-right">
+                    <label>{{item.go_name}}</label>
+                    <label class="two">已选：{{item.ca_specs}}</label>
+                    <label class="three">
+                        <span>￥{{item.go_price}}</span>
+                        <view class=" right number" wx:if="{{editStatus}}">
+                            <span class="reduce {{item.ca_number == 1?'min':''}}" bindtap="changeNum" data-i="{{index}}" data-type="del" data-max="{{item.count}}" data-id="{{item.ca_id}}">-</span>
+                            <input class="num" type="number" bindinput="inputChange" value="{{item.ca_number}}" data-max="{{item.count}}" data-id="{{item.ca_id}}" data-i="{{index}}"/>
+                            <span class="add" bindtap="changeNum" data-i="{{index}}" data-type="add" data-max="{{item.count}}" data-id="{{item.ca_id}}">+</span>
+                        </view>
+                        <view class="right number" wx:if="{{!editStatus}}">数量：×{{item.ca_number}}</view>
+                        <view class="clearfix"></view>
+                    </label>
+                </view>
+                <view class="clearfix"></view>
+            </view>
+        </view>
+    </view>
+    <view class="Check-out">
+        <view class="ul">
+            <view class="li" bindtap="choiceAll">
+                <image src="{{allStatus?'../../images/a_78_s.png':'../../images/a_78.png'}}" class="choiceAll"></image>
+                全选
+            </view>
+            <view class="li" wx:if="{{!editStatus}}" bindtap="pay">结算(<span>{{count}}</span>)</view>
+            <view class="li" wx:if="{{editStatus}}" bindtap="showDel">删除</view>
+            <view class="li" wx:if="{{!editStatus}}">合计<span>￥{{total}}</span></view>
+            <view class="clearfix"></view>
+        </view>
+    </view>
+</view>
+<view class="member" wx:if="{{showDel}}">
+    <view class="withdrawContent">
+        <view class="title">
+            <image src="../../images/a_29.png" class="a_29"></image>
+            提示
+        </view>
+        <view class="text">
+            确定删除吗？
+        </view>
+        <view class="btnGroup">
+            <view class="cancel" bindtap="hideDel">否</view>
+            <view class="submit" bindtap="remove">是</view>
+        </view>
+    </view>
+</view>
+<view class="null" wx:if="{{list.length == 0 && isShow}}">
+    <image src="../../images/cart.png"></image>
+    <view class="nullText">您的购物车还没有商品，快去挑选吧！</view>
+    <view class="nullBtn" bindtap="shop">去挑选好货</view>
+</view>

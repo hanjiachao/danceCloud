@@ -1,0 +1,38 @@
+<!--pages/myPurse/myPurse.wxml-->
+<view class="content-box">
+    <view class="money">
+        <span class="tixian" bindtap="showWithdraw">提现</span>
+        <p class="title">余额账户(元)</p>
+        <p class="num"><span>¥</span>{{total}}</p>
+    </view>
+    <view class="purse">
+        <view class="purse-menu ul">
+            <view class="active li">
+                <span>资金明细</span>
+            </view>
+            <view class="clearfix"></view>
+        </view>
+        <view class="null" wx:if="{{isShow && list.length == 0}}">暂无明细</view>
+        <view class="ul" wx:if="{{isShow}}">
+            <view class="li" wx:for="{{list}}" wx:key="{{index}}">
+                <p class="title">{{item.remark}}</p>
+                <p class="time-purse">{{item.date}}</p>
+                <span class="change {{item.price >= 0 ? 'add' : ''}}">{{item.show_price}}</span>
+            </view>
+        </view>
+    </view>
+</view>
+<!-- 提现 -->
+<view class="member" wx:if="{{showWithdraw}}">
+    <view class="withdrawContent">
+        <p class="title">提现</p>
+        <p class="text">
+            <input type="number" placeholder="请输入提现金额..." bindinput="inputChange" data-field="price"/>
+        </p>
+        <view class="btnGroup">
+            <view class="cancel" bindtap='hideWithdraw'>取消</view>
+            <view class="submit" bindtap='submit'>确定</view>
+        </view>
+    </view>
+</view>
+<!-- 提现 -->

@@ -1,0 +1,86 @@
+<!--pages/live/live.wxml-->
+<view class="container-main" wx:if="{{isShow}}">
+    <view class="video-wrap">
+        <view class="video-box">
+            <view wx:if="{{barrageOrComment}}" id="send-barrage">
+                <view bindtap='sendBarrage' id="send">
+                    发送
+                </view>
+                <view id="ipt-box1">
+                    <input id="ipt1" type="text" placeholder="发送弹幕一起交流" bindinput='changeBarrage' value='{{sendBarrageContent}}'/>
+                </view>
+            </view>
+            <live-player id="polyvLiveVideo" class="vp-v" src="{{video.src}}" bindpause="pause" bindplay="play" controls autoplay>
+                <cover-view class="danmu-list"  wx:for="{{danmulist}}" wx:key="{{index}}" style="color:{{item.color}};top:{{30*item.top + 40}}px;transform: translateX({{item.left}}px);position:fixed;">
+                    <cover-view class="left play">
+                        <cover-image class="danmu-img" src="{{item.us_headimg}}" />
+                    </cover-view>
+                    <cover-view class="left danmu-text">
+                        {{item.us_nickname}}:{{item.content}}{{marqueeDistance[index]}}
+                    </cover-view>
+                </cover-view>
+                <cover-view bindtap='isSendBarrage' id='is-barrage'>
+                    <cover-image wx:if="{{isBarrage}}" class="img" src="../../images/doommOpen.png"/>
+                    <cover-image wx:else class="img" src="../../images/doommClose.png"/>
+                </cover-view>
+                <cover-view bindtap='sendBarrageIpt' wx:if="{{isBarrage}}" id="send-icon">
+                    <cover-image class="img" src="../../images/sendDoomm.png"/>
+                </cover-view>
+                <cover-view bindtap='sendBarrageIpt' wx:if="{{isBarrage}}" id="send-icon">
+                    <cover-image class="img" src="../../images/sendDoomm.png"/>
+                </cover-view>
+            </live-player>
+        </view>
+    </view>
+     <!--<view class="secction-wrap"> -->
+        <!--<view class='section section0'>-->
+            <!--<view class='info_wrap'>-->
+                <!--&lt;!&ndash;<view class="info info_logo">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<image class="logo_img" src="{{logo}}" mode="aspectFit"></image>&ndash;&gt;-->
+                <!--&lt;!&ndash;</view>&ndash;&gt;-->
+                <!--<view class="info info_text">-->
+                    <!--<view>{{video.title}}</view>-->
+                    <!--<view class="info_num"></view>-->
+                <!--</view>-->
+            <!--</view>-->
+            <!--&lt;!&ndash;<view class="text">{{content}}</view>&ndash;&gt;-->
+        <!--</view>-->
+    <!--</view>-->
+    <view id="comment-list" class="{{!barrageOrComment?'comment-s': ''}}">
+        <view id="title">
+            评论
+        </view>
+        <scroll-view scroll-y bindscrolltolower="onReachBottom" class="scroll-view">
+            <view wx:for="{{commentList}}"  class="comment-box">
+                <view class="img-box">
+                    <image class="img" src="{{item.us_headimg}}"/>
+                </view>
+                <view class="content-box">
+                    <view class="name">
+                        {{item.us_nickname}}
+                    </view>
+                    <view class="content">
+                        {{item.content}}
+                    </view>
+                    <view class="time">
+                        {{item.add_time}}
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+    <view  wx:if="{{!barrageOrComment}}" class='is-comment-box'>
+        <view id="send-comment">
+            <view bindtap='sendComment' id="i-say">
+                提交
+            </view>
+            <view id="ipt-box2">
+                <input id="ipt2" type="text" placeholder="我来说一说" bindinput='changeComment' value="{{sendCommentContent}}"/>
+            </view>
+        </view>
+    </view>
+</view>
+<view wx:if="{{noLive}}" class="noLive">
+    <image src="../../images/noLive.png"></image>
+    <view>当前无人直播，请稍后再来......</view>
+</view>

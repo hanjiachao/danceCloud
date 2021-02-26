@@ -1,0 +1,6 @@
+<view class="bac" wx:if="{{show}}">
+ <view class="guan_img">
+     <image src="../../images/a_128.png" alt=""></image>
+ </view>
+ <view class="guang_k"><button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">{{content}}</button></view>
+</view>

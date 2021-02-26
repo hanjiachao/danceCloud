@@ -1,0 +1,22 @@
+/* pages/myVip/myVip.wxss */
+.banner{position: relative}
+.banner > image{width: 100%;display: block}
+.banner .normal{width: 150px;height: 15px;display: block;position: absolute;bottom: 10px;left: calc(50% - 75px)}
+.banner .levelInfo{position: absolute;width: 130px;height: 60px;background: rgba(255,255,255,0.7);top: 70px;left: calc(50% - 75px);padding: 10px;border-radius: 10px}
+.banner .levelInfo > image{width: 130px;height: 30px;display: block}
+.banner .levelInfo .vipTime{font-size: 12px;color: rgb(254,104,233);height: 20px;line-height: 20px;margin-top: 10px;text-align: center}
+.banner .progress{position: absolute;bottom: 0;width: 100%}
+.banner .progressTitle{color: rgb(40,213,209);text-align: center;height: 30px;line-height: 30px;font-size: 14px}
+.banner .bar{width: 60%;height: 10px;background: rgb(255,236,178);border-radius: 5px;margin-left: 20%}
+.banner .percent{background: rgb(254,104,133);height: 10px;border-radius: 5px;max-width: 100%}
+
+.vipContent{padding: 0 15px 64px}
+.title{height: 40px;position: relative}
+.title image{width: 18px;height: 18px;position: absolute;top: 11px;left: 0}
+.title .text{font-size: 16px;height: 40px;line-height: 40px;text-indent: 25px}
+
+.table{text-align: center;font-size: 14px}
+.tr{border-bottom: 1px solid #eee}
+.tr:first-child{border-top: 1px solid #eee}
+.th,.td{width: 50%;display: inline-block;height: 35px;line-height: 35px;border-left: 1px solid #eee;box-sizing: border-box;color: #555}
+.th:last-child,.td:last-child{border-right: 1px solid #eee}

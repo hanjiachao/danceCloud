@@ -1,0 +1,124 @@
+<!--pages/class-detail/class-detail.wxml-->
+<view wx:if="{{show}}">
+    <view class="bgb"></view>
+    <view class="order_ki">
+        <view class="setting-form">
+            <view class="ul">
+                <view class="li">
+                    <view class="left">
+                        <span>订单编号：{{detail.order_no}}</span>
+                    </view>
+                    <view class="right1">
+                    </view>
+                    <view class="clearfix"></view>
+                </view>
+                <view class="li">
+                    <view class="left">
+                        <span>订单状态：<span class="lan">{{detail.status}}</span></span>
+                    </view>
+                    <view class="right1">
+                    </view>
+                    <view class="clearfix"></view>
+                </view>
+                <view class="li">
+                    <view class="left">
+                        <span>快递公司：<span class="lan">{{detail.courier_company}}</span></span>
+                    </view>
+                    <view class="right1">
+                    </view>
+                    <view class="clearfix"></view>
+                </view>
+                <view class="li">
+                    <view class="left">
+                        <span>快递编号：<span class="lan">{{detail.courier_number}}</span></span>
+                    </view>
+                    <view class="right1">
+                    </view>
+                    <view class="clearfix"></view>
+                </view>
+                <view class="li">
+                    <view class="left">
+                        <span>订单日期：{{detail.add_time}}</span>
+                    </view>
+                    <view class="right1">
+                    </view>
+                    <view class="clearfix"></view>
+                </view>
+            </view>
+
+        </view>
+        <view class="my-release detail-current class-detail">
+            <view class="ul">
+                <view class="order li">
+                    <view class="left">
+                        <label class="contact">
+                            <image src="{{detail.dance_cover}}" class="order-tu"></image>
+                        </label>
+                    </view>
+                    <view class="right index-right">
+                        <view class="label">{{detail.dance_name}}</view>
+                        <view style="height:20px"></view>
+                        <label>
+                            <span class="price-lan">团购价格:￥{{detail.price}}</span>
+                        </label>
+                    </view>
+                    <view class="clearfix"></view>
+                </view>
+            </view>
+        </view>
+        <p class="ordersure mar_bo">
+    	   <span class="class_sp2 lan">
+        ¥{{detail.pay_price}}
+    </span>
+            <span class="class_sp1">
+       实付：
+    </span>
+            <view class="clearfix"></view>
+        </p>
+    </view>
+    <view class="confirm-box" wx:if="{{detail.status != '已取消'}}">
+        <view class="ul">
+            <view class="li" wx:if="{{detail.status == '待付款'}}" bindtap="showDel">{{detail.btn_name[1]}}</view>
+            <view class="li" wx:if="{{detail.status == '待付款'}}" bindtap="pay" data-id="{{detail.order_no}}">{{detail.btn_name[0]}}</view>
+            <view class="li {{detail.status != '待付款' ? 'bottomBtn' : ''}}" wx:if="{{detail.status == '已付款'}}">{{detail.btn_name[0]}}</view>
+            <view class="li bottomBtn" wx:if="{{detail.status == '待成团'}}" catchtap="shareCourse">{{detail.btn_name[0]}}</view>
+            <view class="li bottomBtn" wx:if="{{detail.status == '已成团'}}" bindtap="lessonVideo" data-id="{{detail.order_no}}">{{detail.btn_name[0]}}</view>
+            <view class="li bottomBtn" wx:if="{{detail.status == '未成团'}}" bindtap="showDel">删除</view>
+            <view class="clearfix"></view>
+        </view>
+    </view>
+
+    <view class="member" wx:if="{{showDel}}">
+        <view class="withdrawContent">
+            <view class="title">
+                <image src="../../images/a_29.png" class="a_29"></image>
+                提示
+            </view>
+            <view class="text">
+                确定要删除订单吗？
+            </view>
+            <view class="btnGroup">
+                <view class="cancel" bindtap="hideDel">否</view>
+                <view class="submit" bindtap="del">是</view>
+            </view>
+        </view>
+    </view>
+    <!-- 分享团购直播课 -->
+    <view class="share" wx:if="{{sharebtn}}" bindtap="shareSta">
+        <view class="withdrawContent">
+            <ul class="ul">
+                <view class="li">
+                    <button open-type="share" class="shareBtn"></button>
+                    <!--<image src="../../images/a_44.png" class="a_44"></image>-->
+                    <p class="share_p">微信</p>
+                </view>
+                <view class="li" catchtap="shareGroup">
+                    <image src="../../images/a_45.png" class="a_45"></image>
+                    <p>社群</p>
+                </view>
+                <view class="clearfix"></view>
+            </ul>
+        </view>
+    </view>
+    <!-- 分享 -->
+</view>

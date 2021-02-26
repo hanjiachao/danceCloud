@@ -1,0 +1,29 @@
+<!--pages/ordersuccess/ordersuccess.wxml-->
+<view wx:if="{{show}}">
+	<view class="bg"></view>
+	<view class="content-box">
+		<view class="ordersuccess">
+			<image src="../../images/a_38.png" class="a_38"></image>
+			<p class="order-success">支付成功</p>
+		</view>
+		<view class="success">
+			<image src="../../images/a_39.png" class="a_39"></image>
+			<view class="success-title" wx:if="{{type=='直播'}}">您的直播课已经支付成功！
+				{{integral}}赶快去学习
+				吧……</view>
+			<view class="success-title" wx:if="{{type=='拼团'}}">恭喜您已参团成功，
+				{{integral}}您可到我的拼团中查看成团情况</view>
+			<view class="success-title" wx:if="{{type=='商品'}}">您的商品已经支付成功！
+				{{integral}}</view>
+			<view class="success-title" wx:if="{{type=='商品拼团'}}">恭喜您参团成功,
+				{{integral}}您可以到我的拼团中查看成团情况</view>
+			<view class="btnGroup">
+				<view class="cancel-success" bindtap="backindex">返回首页</view>
+				<view class="submit-success" bindtap="backmenu" wx:if="{{type=='商品'}}">查看订单</view>
+				<view class="submit-success" bindtap="backmenu" wx:if="{{type=='商品拼团'}}">立即查看</view>
+				<view class="submit-success" bindtap="canvideo" wx:if="{{type=='直播'}}">立即观看</view>
+				<view class="submit-success" bindtap="backmenu" wx:if="{{type=='拼团'}}">我的拼团</view>
+			</view>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,59 @@
+/* pages/DC-pay/DC-pay.wxss */
+.order_ul {
+    background: #fff;
+    overflow: hidden;
+}
+
+.order_ul .li {
+    overflow: hidden;
+    border-bottom: 1px solid #f9f9f9;
+}
+
+.choose {
+    width: 17px;
+    height: 17px;
+    display: block;
+}
+
+.cancel_span1 {
+    display: block;
+    width: 17px;
+    height: 17px;
+    margin: 13px 15px 0px 0px;
+    float: right;
+}
+
+.order_ul .active .choose {
+    width: 17px;
+    height: 17px;
+}
+
+.cancel_span1 radio, .cancel_span2 radio {
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    width: 17px;
+    height: 17px;
+    background: #fff;
+    border-radius: 50%;
+    border: 1px solid #29d5d0;
+}
+
+.ordersure {
+    background: #fff;
+    padding: 11px 15px;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+.order_sp4 {
+    margin-left: 10px;
+}
+
+span {
+    display: inline-block;
+}
+
+.red {
+    color: #ff3e50;
+}

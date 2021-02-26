@@ -1,0 +1,8 @@
+<!--pages/news-detail/news-detail.wxml-->
+<view class="bgb"></view>
+<view class="content-box">
+    <view class="msgDetail">
+        <p>{{detail.ne_content}}</p>
+        <span>{{detail.ne_add_time}}</span>
+    </view>
+</view>

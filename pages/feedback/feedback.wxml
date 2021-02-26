@@ -1,0 +1,19 @@
+<!--pages/feekback/feekback.wxml-->
+ <view class="bgb"></view>
+	<view class="feekback-form">
+        <view class="ul">
+            <view class="textarea-box li">
+            	<textarea placeholder="请输入您的反馈意见，感谢您帮助我们改进产品……" class="c4c4c4" placeholder-class="phcolor" bindinput ="inputChange" data-field="content"></textarea>
+            </view>
+            <view class="input li">
+            	<input type="text" placeholder="请留下您的QQ，邮箱或手机号……"  class="c4c4c4" placeholder-class="phcolor" bindinput ="inputChange" data-field="contact"/>
+            </view>
+        </view>
+    </view>
+    <!--下一步-->
+		<view class="content-box">
+			<view class="revirse-btn" bindtap="submit">
+				<view class="btn">提交</view>
+			</view>
+		</view>
+		<!--下一步-->

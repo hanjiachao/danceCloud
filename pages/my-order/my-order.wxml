@@ -1,0 +1,109 @@
+<view wx:if="{{show}}">
+    <!--<view class="bgb"></view>-->
+    <view class="menu">
+        <view class="Collage-menu ul">
+            <view class="li {{navIndex==index?'active':''}}" wx:for="{{navList}}" wx:key="{{index}}" bindtap="changeNav"
+                  data-i="{{index}}">{{item}}
+                <view class="line"></view>
+            </view>
+        </view>
+    </view>
+    <view class="my-release order-release detail-current ">
+        <view class="null" wx:if="{{!isShow}}">暂无订单</view>
+        <view class="ul" wx:if="{{isShow}}">
+            <view wx:for="{{list}}" wx:key="{{index}}" class="itemContent" bindtap="menudetail" data-id="{{item.gor_order_no}}" data-status="{{item.gor_status}}" data-index="{{index}}">
+                <view class="order-number">
+                    订单号：{{item.gor_order_no}}
+                    <view class="station">{{item.gor_status}}</view>
+                    <view class="clearfix"></view>
+                </view>
+                <view class="order li" wx:for="{{item.detail}}" wx:for-item="info" wx:key="{{index_info}}">
+                    <view class="left">
+                        <label class="contact">
+                            <image src="{{info.go_logo}}" class="order-tu"></image>
+                        </label>
+                    </view>
+                    <view class="right index-right">
+                        <label>
+                            {{info.go_name}}
+                        </label>
+                        <label class="two">
+                            已选：{{info.go_name}}
+                            <!--<view class=" right1">还差 <span class="red">2</span> 人成团</view>-->
+                            <view class="clearfix"></view>
+                        </label>
+                        <label class="three">
+                            <span class="lan"><span class="price-lan">￥{{info.god_price}}</span></span>
+                            <view class=" right number">数量：×{{info.god_number}}</view>
+                            <view class="clearfix"></view>
+                        </label>
+                    </view>
+                    <view class="clearfix"></view>
+                </view>
+                <view class="time order-number">
+                    实付：<span>￥{{item.gor_read_price}}</span>
+                    <view class="operac ul">
+                        <view class="li" wx:if="{{item.gor_status == '待付款'}}" catchtap="cancelmoney" data-id="{{item.gor_order_no}}" data-index="{{index}}">取消</view>
+                        <view class="li" wx:if="{{item.gor_status == '待付款'}}" catchtap="paymoney" data-id="{{item.gor_order_no}}">付款</view>
+                        <view class="li" wx:if="{{item.gor_status == '待收货'}}" catchtap="logistics" data-id="{{item.gor_order_no}}">查看物流</view>
+                        <view class="li bg_btn" wx:if="{{item.gor_status == '已支付'}}" catchtap="" data-id="{{item.gor_order_no}}" data-index="{{index}}" data-info="{{item}}">分享</view>
+                        <view class="li bg_btn" wx:if="{{item.gor_status == '已取消'}}" catchtap="delMenu" data-id="{{item.gor_order_no}}" data-index="{{index}}" data-info="{{item}}">删除</view>
+                        <view class="li bg_btn" wx:if="{{item.gor_status == '待评价'}}" catchtap="eva" data-id="{{item.gor_order_no}}" data-index="{{index}}" data-info="{{item}}">评价</view>
+                        <view class="li" wx:if="{{item.gor_status == '待收货'}}" catchtap="suregoods" data-id="{{item.gor_order_no}}" data-index="{{index}}">确认收货</view>
+                        <view class="clearfix"></view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <!--取消订单-->
+        <view class="member" wx:if="{{showDel}}">
+            <view class="withdrawContent">
+                <view class="title">
+                    <image src="../../images/a_29.png" class="a_29"></image>
+                    提示
+                </view>
+                <view class="text">
+                    确定要取消订单吗？
+                </view>
+                <view class="btnGroup">
+                    <view class="cancel" bindtap="hideDel">否</view>
+                    <view class="submit" bindtap="cancelmenu">是</view>
+                </view>
+            </view>
+        </view>
+        <!--取消订单-->
+        <view class="member" wx:if="{{delSta}}">
+            <view class="withdrawContent">
+                <view class="title">
+                    <image src="../../images/a_29.png" class="a_29"></image>
+                    提示
+                </view>
+                <view class="text">
+                    确定要删除订单吗？
+                </view>
+                <view class="btnGroup">
+                    <view class="cancel" bindtap="delcancel">否</view>
+                    <view class="submit" bindtap="delmenusure">是</view>
+                </view>
+            </view>
+        </view>
+        <!--确认收货-->
+        <view class="member" wx:if="{{showgoods}}">
+            <view class="withdrawContent">
+                <view class="title">
+                    <image src="../../images/a_29.png" class="a_29"></image>
+                    提示
+                </view>
+                <view class="text">
+                    确定要收货吗？
+                </view>
+                <view class="btnGroup">
+                    <view class="cancel" bindtap="hidegoods">否</view>
+                    <view class="submit" bindtap="sure">是</view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+
+</view>
