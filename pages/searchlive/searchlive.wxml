@@ -13,7 +13,7 @@
 					<view class="center"><input type="text" placeholder="请输入课程名称..." bindchange="shoopinginput" value="{{info.skey}}"/></view>
 				</view>
 			</view>
-			<view class="Collage-menu ul">
+			<!-- <view class="Collage-menu ul">
 				<view class="{{'li ' + (typename == '课程'?'active':'')}}" bindtap="shoppingClick" data-name="课程">
 					课程
 					<view class="xian"></view>
@@ -22,9 +22,9 @@
 					拼团
 					<view class="xian"></view>
 				</view>
-			</view>
+			</view> -->
 		</view>
-			<view style="height: 108px;"></view>
+			<view style="height: 60px;"></view>
 		<view wx:if="{{!livesta}}" class="nosta">
 	       暂无课程
 		</view>
@@ -34,8 +34,8 @@
 			 <image src="{{item.dc_cover}}" class='b_10'></image>
 			 <view class="Collage-title">
 				 <p>{{item.dc_name}}</p>
-				 <view class="price price-box" wx:if="{{item.dc_now_price != 0}}">￥{{item.dc_now_price}}</view>
-				 <view class="price price-box" wx:else>免费</view>
+				 <!-- <view class="price price-box" wx:if="{{item.dc_now_price != 0}}">￥{{item.dc_now_price}}</view>
+				 <view class="price price-box" wx:else>免费</view> -->
 			 </view>
 		 </view>
 	 </view>

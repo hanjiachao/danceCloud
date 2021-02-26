@@ -221,8 +221,8 @@ function success(msg, callback) {
 
 
 function send_ajax(param){
-  // var app_url = "https://bbtschool.cn/index.php/Home/";
-  var app_url = "http://wuyun.hanyu.weyoui.cn/index.php/Home/";
+  var app_url = "https://bbtschool.cn/index.php/Home/";
+  // var app_url = "http://wuyun.hanyu.weyoui.cn/index.php/Home/";
   if(!param.url){
     info('缺少地址')
   }

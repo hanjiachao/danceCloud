@@ -10,7 +10,7 @@
             <p class="userName">{{name}}<i></i></p>
             <i class="stars"></i>
         </view>
-        <view class="handles">
+        <!-- <view class="handles">
             <view class="ul">
                 <view class="li" bindtap="myCourse">
                     <i><image src="../../images/a_81.png"class="a_81"></image></i>
@@ -27,30 +27,33 @@
                     我的拼团
                 </view>
             </view>
-        </view>
+        </view> -->
         <view class="list">
             <view class="ul">
+				<view class="li" bindtap="myCourse">
+				    <i class="icon-left"><image src="../../images/a_81.png"class="a_84"></image></i>我的课程<image class="icon-right" src="../../images/a_06.png"></image>
+				</view>
                 <view class="li" bindtap="myMessage">
                     <i class="icon-left"><image src="../../images/a_84.png"class="a_84"></image></i>我的消息<image class="icon-right" src="../../images/a_06.png"></image>
                 </view>
                 <view class="li" bindtap="myStep">
                     <i class="icon-left"><image src="../../images/wu.png"class="a_84"></image></i>起舞足迹<image class="icon-right" src="../../images/a_06.png"></image>
                 </view>
-                <view class="li" bindtap="myVip">
+                <!-- <view class="li" bindtap="myVip">
                     <i class="icon-left"><image src="../../images/a_87.png"class="a_84"></image></i>我的会员<image class="icon-right" src="../../images/a_06.png"></image>
                 </view>
                 <view class="li" bindtap="myPurse">
                     <i class="icon-left"><image src="../../images/a_88.png"class="a_84"></image></i>我的钱包<image class="icon-right" src="../../images/a_06.png"></image>
-                </view>
+                </view> -->
                 <view class="li" bindtap="myCollect">
                     <i class="icon-left"><image src="../../images/a_89.png"class="a_84"></image></i>我的收藏<image class="icon-right" src="../../images/a_06.png"></image>
                 </view>
-                <view class="li" bindtap="myCoupon">
+                <!-- <view class="li" bindtap="myCoupon">
                     <i class="icon-left"><image src="../../images/a_86.png"class="a_84"></image></i>我的代金券<image class="icon-right" src="../../images/a_06.png"></image>
                 </view>
                 <view class="li" bindtap="DC">
                     <i class="icon-left"><image src="../../images/a_90.png"class="a_84"></image></i>DC代言人<image class="icon-right" src="../../images/a_06.png"></image>
-                </view>
+                </view> -->
                 <view class="li" bindtap="share" wx:if="{{isshare}}">
                     <i class="icon-left"><image src="../../images/a_86.png"class="a_84"></image></i>分享有奖<image class="icon-right" src="../../images/a_06.png"></image>
                 </view>

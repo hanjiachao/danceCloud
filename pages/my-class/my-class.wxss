@@ -68,7 +68,7 @@
     color: #29d5d0;
 }
 .my-release{
-    padding-top: 44px;
+    /* padding-top: 44px; */
 }
 .my-release .order {
     border-bottom: 1px solid #f0f0f0;

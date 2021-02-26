@@ -34,7 +34,7 @@
 				<image src="{{item.dc_cover}}" class="b_10"></image>
 				<view class="Collage-title">
 					<p>{{item.dc_name}}</p>
-					<view class="pricec price-box">￥{{item.dc_now_price}}</view>
+					<!-- <view class="pricec price-box">￥{{item.dc_now_price}}</view> -->
 				</view>
 			</view>
 		</view>

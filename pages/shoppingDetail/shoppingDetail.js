@@ -275,27 +275,27 @@ Page({
                       })
                   }
 
-                  if (res.result.member == 1) {
-                    that.setData({
-                        ismembershow:false
-                    })
-                  } else {
-                      that.setData({
-                          ismembershow:true
-                      })
-                  }
-                  if (sta == 'no') {
-                      that.setData({
-                          ismembershow:false
-                      })
-                  }
+                  // if (res.result.member == 1) {
+                  //   that.setData({
+                  //       ismembershow:false
+                  //   })
+                  // } else {
+                  //     that.setData({
+                  //         ismembershow:true
+                  //     })
+                  // }
+                  // if (sta == 'no') {
+                  //     that.setData({
+                  //         ismembershow:false
+                  //     })
+                  // }
                   that.setData({
                       order_no:res.result.order_no,
                       count_evaluation:res.result.count_evaluation,
                       evaluation:res.result.evaluation,
                       list: res.result.list,
-                      num:res.result.list.list[0].number,
-                      specs: res.result.list.list[0].specs
+                      num: res.result.list.list.length ? res.result.list.list[0].number : '',
+                      specs: res.result.list.list.length ? res.result.list.list[0].specs : ''
                   })
                   WxParse.wxParse('article', 'html', that.data.list.go_detail, that,5);
               }
@@ -333,8 +333,8 @@ Page({
             cartSta: false,
             current_index: 0,
             number: 1,
-            num:this.data.list.list[0].number,
-            specs: this.data.list.list[0].specs,
+            num: this.data.list.list.length ? this.data.list.list[0].number : '',
+            specs: this.data.list.list.length ? this.data.list.list[0].specs : '',
             common_price:price
         })
     },

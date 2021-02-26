@@ -33,13 +33,13 @@
 			    	<li class='li' wx:for="{{dance_course_list}}" wx:for-index="index" wx:for-item="item" bindtap="courseDetail" data-id="{{item.dc_id}}" data-type="课程">
 			    		<image src="{{item.dc_cover}}" ></image>
 			    		<view class="live-title">{{item.dc_name}}</view>
-						<view class="price" wx:if="{{item.dc_now_price != 0}}">￥{{item.dc_now_price}}</view>
-						<view class="price" wx:else>免费</view>
+						<!-- <view class="price" wx:if="{{item.dc_now_price != 0}}">￥{{item.dc_now_price}}</view> -->
+						<!-- <view class="price" wx:else>免费</view> -->
 			    	</li>
 			    	<view class="clearfix"></view>
 			    </ul>
 			</view>
-			<view class="Collage-box">
+			<!-- <view class="Collage-box">
 				<image src="../../images/e_02.png" class="a_121"></image>
 				<view class="Collage" wx:for="{{dance_group_list}}" wx:for-item="item" wx:for-index="index" bindtap="courseDetail" data-order_no = "{{item.order_no}}" data-dg_status = "{{item.dg_status}}" data-id="{{item.dg_id}}" data-type="团购">
                     <image src="{{item.dg_cover}}" class="b_10"></image>
@@ -50,5 +50,5 @@
 						<view class="enter" data-id="{{item.dg_id}}" wx:if="{{item.dg_status == '已参团'}}">已参团</view>
 					</view>
 				</view>
-			</view>
+			</view> -->
 		</view>

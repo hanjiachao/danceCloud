@@ -6,7 +6,8 @@ Page({
      * 页面的初始数据
      */
     data: {
-        navList: ['全部','待付款','已付款','已取消'],
+        // navList: ['全部','待付款','已付款','已取消'],
+		navList: ['已付款'],
         navIndex: 0,
         start: 0,
         limit: 6,

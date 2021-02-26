@@ -43,6 +43,11 @@ Page({
             url:'../myVip/myVip'
         })
     },
+	goLink: function(){
+		wx.showModal({
+			content: '客服微信：xingliangzhushou'
+		})
+	},
     shareSta: function () {
         this.setData({
             sharebtn:false

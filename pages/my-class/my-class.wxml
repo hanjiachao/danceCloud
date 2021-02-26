@@ -1,12 +1,12 @@
 <view>
     <view class="bgb"></view>
-    <view class="Collage-menu">
+    <!-- <view class="Collage-menu">
         <view class="li {{navIndex == index ? 'active' : ''}}" wx:for="{{navList}}" wx:key="{{index}}" bindtap="changeNav"
               data-index="{{index}}">
             {{item}}
             <view class="xian"></view>
         </view>
-    </view>
+    </view> -->
     <view class="my-release order-release detail-current" wx:if="{{isShow}}">
         <view class="null" wx:if="{{list.length == 0}}">暂无课程</view>
         <view class="ul" wx:for="{{list}}" wx:key="{{index}}" bindtap="detail" data-order="{{item.order_no}}">

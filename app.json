@@ -1,5 +1,6 @@
 {
   "pages": [
+	"pages/index/index",
     "pages/Shopping/Shopping",
     "pages/loading/loading",
     "pages/login/login",
@@ -8,7 +9,6 @@
     "pages/myMusic/myMusic",
     "pages/classdetail/classdetail",
     "pages/coll-detail/coll-detail",
-    "pages/index/index",
     "pages/my-collection/my-collection",
     "pages/Logistics/Logistics",
     "pages/search/search",

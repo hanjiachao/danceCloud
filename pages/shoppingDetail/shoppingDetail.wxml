@@ -23,12 +23,12 @@
     <view class="huise" wx:if="{{list.go_type == '拼团'}}">成团人数
       <span class="red">{{list.go_group_number}}</span> 人 还差
       <span class="red">{{list.number}}</span> 人成团</view>
-    <view class="youhui one">
+    <!-- <view class="youhui one">
       <image src="../../images/a_21.png" class="a_21"></image>可用代金券
       <image src="../../images/a_22.png" class="a_21 quan"></image>会员优惠{{list.member_discount}}折</view>
     <view class="youhui">
       <image src="../../images/a_23.png" class="a_21"></image>可用积分{{list.go_use_integral}}抵现金{{list.go_integral_price}}元
-      <image src="../../images/a_24.png" class="a_21 quan"></image>满{{list.go_full}}减{{list.go_minus}}</view>
+      <image src="../../images/a_24.png" class="a_21 quan"></image>满{{list.go_full}}减{{list.go_minus}}</view> -->
   </view>
   	<view class="setting-form">
 				<view class="ul">
@@ -106,7 +106,7 @@
   </view>
  <view class="confirm-box" wx:if="{{list.go_type == '商品'}}">
     <view class="cart" bindtap="cart">
-        <image src="../../images/a_17.png"></image>
+        <image src="../../images/a_105.png"></image>
         <view class="cartnum" wx:if="{{list.cart_count > 0}}">{{list.cart_count}}</view>
         <view class="cartname">购物车</view>
     </view>

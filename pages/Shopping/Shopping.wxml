@@ -18,7 +18,7 @@
 				<view class="center"><input type="text" placeholder="请输入商品名称……" placeholder-class="phcolor" disabled="disabled"/></view>
 			</view>
 		</view>
-		<view class="Collage-menu ul">
+		<!-- <view class="Collage-menu ul">
 			<view class="{{'li ' + (typename == '商品'?'active':'')}}" bindtap="shoppingClick" data-name="商品">
 				商品
 				<view class="xian"></view>
@@ -27,7 +27,7 @@
 				<view class="xian"></view>
 				拼团
 			</view>
-		</view>
+		</view> -->
 		<view class="my-release detail-current">
 			<view class="ul">
 				<view class="order li" wx:if="{{typename == '商品'}}" wx:for="{{list}}" wx:for-index="index" wx:for-item="item" bindtap="shoopdetail" data-id="{{item.go_id}}">
