@@ -99,12 +99,6 @@
         "selectedIconPath": "images/a_16_s.png"
       },
       {
-        "pagePath": "pages/myMusic/myMusic",
-        "text": "音乐",
-        "iconPath": "images/a_17.png",
-        "selectedIconPath": "images/a_17_s.png"
-      },
-      {
         "pagePath": "pages/personalCenter/personalCenter",
         "text": "我的",
         "iconPath": "images/a_18.png",

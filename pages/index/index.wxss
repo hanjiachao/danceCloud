@@ -396,4 +396,10 @@ height:15px;
 	bottom: 13px;
 	right: 15px;
 }
+.musicBanner{
+	width: 690rpx;
+	height: 150rpx;
+	margin: 20rpx auto 5rpx;
+	display: block;
+}
 /*首页*/

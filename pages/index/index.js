@@ -22,7 +22,8 @@ Page({
         animationData: {},
         musicStatus: false,
         rotate: 0,
-        ajaxshoping:true
+        ajaxshoping:true,
+		versionStatus: false
     },
 
     /**
@@ -86,6 +87,13 @@ Page({
             this.startMusic()
         }
     },
+	goMusic:function () {
+		if(this.data.versionStatus){
+			wx.navigateTo({
+			    url:'../myMusic/myMusic'
+			})
+		}
+	},
     searchlive:function () {
         wx.navigateTo({
             url:'../searchlive/searchlive'
@@ -170,12 +178,30 @@ Page({
             }
         })
     },
+	getVersion: function(){
+		let that = this
+		common.ajax({
+		    url: 'Index/getNowEdition',
+			type: 'get',
+		    data: {
+		        edition_code: '4.0.2'
+		    },
+		    success: function (res) {
+		        if (res.status == 'SUCCESS') {
+					that.setData({
+						versionStatus: res.result.flag
+					})
+		        }
+		    }
+		})
+	},
     onLoad: function (options) {
         var that = this
         wx.setNavigationBarTitle({
             title: '首页'
         });
         that.groupdance('加载中...');
+		that.getVersion()
     },
     loadmore: function () {
         wx.navigateTo({
