@@ -26,9 +26,12 @@
                 <cover-view bindtap='sendBarrageIpt' wx:if="{{isBarrage}}" id="send-icon">
                     <cover-image class="img" src="../../images/sendDoomm.png"/>
                 </cover-view>
-                <cover-view bindtap='sendBarrageIpt' wx:if="{{isBarrage}}" id="send-icon">
-                    <cover-image class="img" src="../../images/sendDoomm.png"/>
+                <cover-view bindtap='fullScreen' wx:if="{{!isFullScreen}}" id="fullScreen">
+                    <cover-image class="img" src="../../images/fullScreen.png"/>
                 </cover-view>
+				<cover-view bindtap='goBack' wx:if="{{isFullScreen}}" id="goBack">
+				    <cover-image class="img" src="../../images/back.png"/>
+				</cover-view>
             </live-player>
         </view>
     </view>

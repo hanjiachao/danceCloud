@@ -1,6 +1,6 @@
 /* pages/musicList/musicList.wxss */
 .conts .head{
-  height: 284rpx;
+  height: 330rpx;
   position: relative;
 }
 .conts .head>image{
@@ -13,7 +13,7 @@
   width: 345rpx;
   height: 257rpx;
   position: absolute;
-  top: 72rpx;
+  top: 38rpx;
   left: 236rpx;
 }
 .conts .head .top>image{
@@ -70,6 +70,7 @@
 }
 .conts .list .item .msg{
   margin-left: 30rpx;
+  width: calc(100% - 170rpx);
 }
 .conts .item .msg .name{
   color: #222222;

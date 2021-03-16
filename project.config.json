@@ -64,6 +64,19 @@
         {
           "name": "pages/myMusic/myMusic",
           "pathName": "pages/myMusic/myMusic",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/live/live",
+          "pathName": "pages/live/live",
+          "query": "uid=517d5a3804&vid=421256",
+          "scene": null
+        },
+        {
+          "name": "pages/coursesList/coursesList",
+          "pathName": "pages/coursesList/coursesList",
+          "query": "order=true&nowprice=0.00&dc_id=1",
           "scene": null
         }
       ]

@@ -210,7 +210,7 @@ page{
     position: absolute;
     width: 32px;
     height: 30px;
-    right:10px;
+    right: 12px;
     top: 100px;
 }
 .is-comment-box{
@@ -324,4 +324,24 @@ white-space:nowrap;/* 防止向下换行*/
 }
 .comment-s{
   top: 235px !important;
+}
+#fullScreen{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	padding: 15px;
+}
+#fullScreen .img{
+    width: 20px;
+    height: 20px;
+}
+#goBack{
+	position: absolute;
+	left: 0;
+	top: 5px;
+	padding: 15px;
+}
+#goBack .img{
+    width: 22px;
+    height: 25px;
 }

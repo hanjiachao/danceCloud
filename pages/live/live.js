@@ -38,8 +38,30 @@ Page({
         barrageLastId: 0,
         sendBarrageContent: '',
         autoplay: true,
-        interval: [20,30,40,50,20,10,40] // 时间间
+        interval: [20,30,40,50,20,10,40], // 时间间
+		isFullScreen: false
     },
+	fullScreen: function(){
+		let player = wx.createLivePlayerContext('polyvLiveVideo')
+		player.requestFullScreen({
+			direction: 90,
+			success: res => {
+				this.setData({
+					isFullScreen: true
+				})
+			}
+		})
+	},
+	goBack: function(){
+		let player = wx.createLivePlayerContext('polyvLiveVideo')
+		player.exitFullScreen({
+			success: res => {
+				this.setData({
+					isFullScreen: false
+				})
+			}
+		})
+	},
     // 是否开启弹幕
     isSendBarrage: function () {
         var that = this
