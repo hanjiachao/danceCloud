@@ -6,7 +6,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-        navList: ['课程', '商品','音乐'],
+        navList: [],
         navIndex: 0,
         limit: 5,
         lastId: '',
@@ -18,7 +18,8 @@ Page({
         isShow: false,
         showDel: false,
         id: 0,
-        ajaxshoping:true
+        ajaxshoping: true,
+		versionStatus: false
     },
 
     courseDetail: function (e) {
@@ -84,6 +85,29 @@ Page({
         })
         this.onLoad()
     },
+	getVersion: function(){
+		let that = this
+		common.ajax({
+		    url: 'Index/getNowEdition',
+			type: 'get',
+		    data: {
+		        edition_code: '4.0.2'
+		    },
+		    success: function (res) {
+		        if (res.status == 'SUCCESS') {
+					let status = res.result.flag
+					let navList = ['课程', '商品']
+					if(status){
+						navList.push('音乐')
+					}
+					that.setData({
+						versionStatus: status,
+						navList: navList
+					})
+		        }
+		    }
+		})
+	},
     /**
      * 生命周期函数--监听页面加载
      */
@@ -98,6 +122,7 @@ Page({
         that.setData({
             ajaxshoping:false
         })
+		that.getVersion()
         common.ajax({
             url: 'User/getMyCollect',
             data: {

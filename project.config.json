@@ -78,6 +78,17 @@
           "pathName": "pages/coursesList/coursesList",
           "query": "order=true&nowprice=0.00&dc_id=1",
           "scene": null
+        },
+        {
+          "name": "pages/myMusic/myMusic",
+          "pathName": "pages/myMusic/myMusic",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my-collection/my-collection",
+          "pathName": "pages/my-collection/my-collection",
+          "scene": null
         }
       ]
     }
