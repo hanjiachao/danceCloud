@@ -23,7 +23,7 @@
 					</view>
 				</view>
 			</view>
-			<image class="musicBanner" bindtap="goMusic" src="../../images/musicBanner.png"></image>
+			<image class="musicBanner" bindtap="goMusic" src="../../images/musicBanner.png" wx:if="{{versionStatus}}"></image>
 			<view class="Live-class">
 				<ul class="live">
 					<li class='li'><image src="../../images/e_01.png"></image></li>

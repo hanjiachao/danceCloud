@@ -1,5 +1,5 @@
 <!--pages/playing/playing.wxml-->
-<view class="conts">
+<view class="conts" wx:if="{{showPage}}">
   <view class="bg">
     <image src="../../images/bg01.png"></image>
   </view>

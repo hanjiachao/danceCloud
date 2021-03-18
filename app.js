@@ -183,7 +183,7 @@ App({
         playIndex: 0, //当前播放列表的index
         currentTime: 0, //当前播放时间
         duration: 0, //总时长
-        version: '1.0.0',
+        version: '4.0.2',
         token: '4b25fba236bce46d796925426a6992f8',
         url: 'https://wyxt.chenchaoweb.cn/index.php/Home/'
   }

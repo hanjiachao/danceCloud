@@ -88,6 +88,12 @@
         {
           "name": "pages/my-collection/my-collection",
           "pathName": "pages/my-collection/my-collection",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/playing/playing",
+          "pathName": "pages/playing/playing",
           "scene": null
         }
       ]

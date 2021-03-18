@@ -1,5 +1,5 @@
 <!--pages/myMusic/myMusic.wxml-->
-<view class="cont">
+<view class="cont" wx:if="{{showPage}}">
   <view class="wrap" wx:for="{{classifyList}}" wx:key="index" data-cl_id="{{item.cl_id}}">
     <view class="head">
       <image src="../../images/icon01.png"></image>

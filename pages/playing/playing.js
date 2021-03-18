@@ -17,7 +17,8 @@ Page({
     long: '00:00', //音频总时长
     speed: false,
     rate: '',
-    collectStatus: false
+    collectStatus: false,
+	showPage: false
   },
 
   //获取视频时间
@@ -210,21 +211,50 @@ Page({
       }
     })
   },
+  getVersion: function(){
+  	let that = this
+  	common.ajax({
+  	    url: 'Index/getNowEdition',
+  		type: 'get',
+  	    data: {
+  	        edition_code: app.globalData.version
+  	    },
+  	    success: function (res) {
+  	        if (res.status == 'SUCCESS') {
+				if(res.result.flag){
+					that.videoContext = wx.createVideoContext('myVideo')
+					wx.showLoading({
+					  title: '加载中......',
+					})
+					that.setData({
+					  index: app.globalData.playIndex,
+					  musicList: app.globalData.songInfo,
+					  showPage: true
+					})
+					that.videoContext.play()
+					that.getCollectStatus()
+				}
+  	        }
+  	    }
+  	})
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.videoContext = wx.createVideoContext('myVideo')
-    wx.showLoading({
-      title: '加载中......',
-    })
-    this.setData({
-      index: app.globalData.playIndex,
-      musicList: app.globalData.songInfo
-    })
-    this.videoContext.play()
-    this.getCollectStatus()
+	  this.getVersion()
+   //  this.videoContext = wx.createVideoContext('myVideo')
+   //  wx.showLoading({
+   //    title: '加载中......',
+   //  })
+   //  this.setData({
+   //    index: app.globalData.playIndex,
+   //    musicList: app.globalData.songInfo,
+	  // showPage: true
+   //  })
+   //  this.videoContext.play()
+   //  this.getCollectStatus()
   },
 
   /**

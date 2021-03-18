@@ -10,7 +10,8 @@ Page({
     al_id: '',
     start: 0,
     info: {},
-    musicList: []
+    musicList: [],
+	showPage: false
   },
 
   //获取音乐列表
@@ -41,6 +42,26 @@ Page({
       url: '../playing/playing',
     })
   },
+  getVersion: function(){
+  	let that = this
+  	common.ajax({
+  	    url: 'Index/getNowEdition',
+  		type: 'get',
+  	    data: {
+  	        edition_code: app.globalData.version
+  	    },
+  	    success: function (res) {
+  	        if (res.status == 'SUCCESS') {
+  				if(res.result.flag){
+  					that.setData({
+  					  showPage: true
+  					})
+					that.getList()
+  				}
+  	        }
+  	    }
+  	})
+  },
 
   /**
    * 生命周期函数--监听页面加载
@@ -49,7 +70,8 @@ Page({
     this.setData({
       al_id: options.al_id
     })
-    this.getList()
+    // this.getList()
+	this.getVersion()
   },
 
   /**

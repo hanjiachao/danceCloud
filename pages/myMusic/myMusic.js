@@ -1,12 +1,14 @@
 // pages/myMusic/myMusic.js
 var common = require("../../utils/util.js");
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    classifyList: []
+    classifyList: [],
+	showPage: false
   },
 
   //获取专辑列表
@@ -30,11 +32,32 @@ Page({
       url: '../musicList/musicList?al_id=' + al_id,
     })
   },
+  getVersion: function(){
+  	let that = this
+  	common.ajax({
+  	    url: 'Index/getNowEdition',
+  		type: 'get',
+  	    data: {
+  	        edition_code: app.globalData.version
+  	    },
+  	    success: function (res) {
+  	        if (res.status == 'SUCCESS') {
+  				if(res.result.flag){
+  					that.setData({
+  					  showPage: true
+  					})
+  					that.getClassify()
+  				}
+  	        }
+  	    }
+  	})
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getClassify()
+	  this.getVersion()
+    // this.getClassify()
   },
 
   /**

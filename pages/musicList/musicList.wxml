@@ -1,5 +1,5 @@
 <!--pages/musicList/musicList.wxml-->
-<view class="conts">
+<view class="conts" wx:if="{{showPage}}">
   <view class="head">
     <image src="{{info.al_cover}}"></image>
     <view class="top">

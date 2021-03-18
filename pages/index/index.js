@@ -1,6 +1,7 @@
 // pages/aboutUs/aboutUs.js
 var common = require("../../utils/util.js");
 const backgroundAudioManager = wx.getBackgroundAudioManager()
+const app = getApp();
 Page({
 
     /**
@@ -184,7 +185,7 @@ Page({
 		    url: 'Index/getNowEdition',
 			type: 'get',
 		    data: {
-		        edition_code: '4.0.2'
+		        edition_code: app.globalData.version
 		    },
 		    success: function (res) {
 		        if (res.status == 'SUCCESS') {
